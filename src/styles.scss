@@ -54,9 +54,7 @@
 	border: none;
 	outline: none;
 	
-	font-family: "Shabnam", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-	"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-	
+	font-family: "Roboto", sans-serif;
 	text-decoration: none;
 }
 
@@ -92,79 +90,42 @@
 
 html {
 	font-size: 62.5%;
-	font-weight: 300;
+	font-weight: 400;
 }
 
 /************** DEFAULTS **************/
 body {
-	direction: rtl;
-	
-	background-color: styles.$color-body-background !important;
-	color: styles.$color-body-foreground !important;
-	
-	margin: 0;
-	
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	
-	a {
-		color: styles.$color-body-foreground;
-	}
-	
-	button {
-		@include styles.typography-button;
-		
-		outline: none;
-	}
-	
-	label {
-		@include styles.typography-label;
-	}
-	
-	input,
-	textarea {
-		@include styles.typography-input;
-		
-		color: styles.$color-input-foreground;
-		background-color: styles.$color-input-background;
-		
-		outline: none;
-		
-		&::placeholder {
-			color: styles.$color-input-placeholder;
-		}
-		
-		&::-ms-clear,
-		&::-ms-reveal {
-			display: none;
-		}
-	}
-	
-	ul {
-		margin: 0;
-		padding: 0;
-		
-		li {
-			list-style: none;
-		}
-	}
-	
-	svg {
-		display: flex;
-	}
+	background-color: styles.$color-body-background;
+	color: styles.$color-body-foreground;
+}
+
+a {
+	color: styles.$color-body-foreground;
+}
+
+ul {
+	list-style: none;
+}
+
+svg {
+	display: flex;
 }
 
 /************ PAGE LAYOUT *************/
-#root {
+app-root {
 	display: flex;
 	flex-direction: column;
 	
 	min-height: 100vh;
 	
-	main {
+	> :not(router-outlet) {
 		flex: 1;
 		
 		display: flex;
+		
+		main {
+			flex: 1;
+		}
 	}
 }
 
@@ -198,12 +159,13 @@ p {
 }
 
 /************** CLASSES ***************/
-.content-wrapper {
+.content {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	
 	width: 100%;
+	height: 100%;
 	
 	> * {
 		width: 100%;
