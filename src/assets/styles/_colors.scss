@@ -1,0 +1,106 @@
+/*************** COLORS ***************/
+$color-primary--lighter: rgb(140, 26, 255);
+$color-primary: rgb(120, 11, 230);
+$color-primary--darker: rgb(96, 0, 191);
+$color-success--lighter: rgb(0, 128, 43);
+$color-success: rgb(0, 102, 34);
+$color-success--darker: rgb(0, 77, 26);
+$color-danger--lighter: rgb(230, 23, 23);
+$color-danger: rgb(204, 0, 0);
+$color-danger--darker: rgb(179, 0, 0);
+
+$color-white: #ffffff;
+$color-gray-98: #fafafa;
+$color-gray-95: #f2f2f2;
+$color-gray-92: #ebebeb;
+$color-gray-90: #e6e6e6;
+$color-gray-85: #d9d9d9;
+$color-gray-80: #cccccc;
+$color-gray-75: #bfbfbf;
+$color-gray-70: #b3b3b3;
+$color-gray-65: #a6a6a6;
+$color-gray-60: #999999;
+$color-gray-55: #8c8c8c;
+$color-gray-50: #808080;
+$color-gray-45: #737373;
+$color-gray-40: #666666;
+$color-gray-35: #595959;
+$color-gray-30: #4d4d4d;
+$color-gray-25: #3f3f3f;
+$color-gray-20: #333333;
+$color-gray-15: #262626;
+$color-gray-10: #1a1a1a;
+$color-gray-08: #141414;
+$color-gray-05: #0c0c0c;
+$color-gray-02: #050505;
+$color-black: #000000;
+
+$color-body-background: $color-gray-10;
+$color-body-foreground: $color-gray-98;
+
+$color-card_background: $color-gray-98;
+$color-spoiler-divider: $color-gray-50;
+
+$color-input-background: $color-gray-95;
+$color-input-foreground: $color-gray-10;
+$color-input-placeholder: $color-gray-75;
+$color-textarea: $color-input-background;
+$color-image: $color-input-background;
+
+$color-table-darker: $color-gray-95;
+
+/*************** SHADES ***************/
+$shade-dark-gray-90: transparentize($color-gray-10, 0.9);
+$shade-dark-gray-70: transparentize($color-gray-10, 0.7);
+$shade-dark-gray-50: transparentize($color-gray-10, 0.5);
+$shade-dark-gray-30: transparentize($color-gray-10, 0.3);
+$shade-dark-gray-10: transparentize($color-gray-10, 0.1);
+
+$shade-light-gray-90: transparentize($color-gray-95, 0.9);
+$shade-light-gray-70: transparentize($color-gray-95, 0.7);
+$shade-light-gray-50: transparentize($color-gray-95, 0.5);
+$shade-light-gray-30: transparentize($color-gray-95, 0.3);
+$shade-light-gray-10: transparentize($color-gray-95, 0.1);
+
+/************** GRADIENTS *************/
+$linear-gradient-100-50-100: linear-gradient(
+		0deg,
+		$color-gray-10,
+		$shade-dark-gray-50,
+		$color-gray-10
+);
+
+/************** SHADOWS ***************/
+$shadow-subtle: 0 0 0.2rem $shade-dark-gray-90;
+$shadow-subtle-larger: 0 0 2rem $shade-dark-gray-90;
+$shadow-less-subtle: 0 0 0.5rem -0.1rem $shade-dark-gray-70;
+$shadow-less-subtle-larger: 0 0 2rem -0.1rem $shade-dark-gray-70;
+$shadow-less-subtle-bottom: 0 0.5rem 0.5rem $shade-dark-gray-70;
+$shadow-medium: 0 0 0.5rem $shade-dark-gray-50;
+$shadow-medium-larger: 0 0 2rem $shade-dark-gray-50;
+
+/*********** UTILITY CLASSES **********/
+$color-palette: (
+	"primary": $color-primary,
+	"success": $color-success,
+	"danger": $color-danger,
+	"white": $color-white,
+	"gray-light": $color-gray-60,
+	"gray": $color-gray-50,
+	"gray-dark": $color-gray-40,
+	"black": $color-black,
+);
+
+@each $name, $color in $color-palette {
+	.#{$name} {
+		color: $color !important;
+	}
+	
+	.bg-#{$name} {
+		background: $color !important;
+	}
+	
+	.fill-#{$name} {
+		fill: $color !important;
+	}
+}

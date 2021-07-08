@@ -1,0 +1,161 @@
+@use "./colors";
+@use "./mixins";
+
+/*************** MIXINS ***************/
+@mixin silhouette() {
+  background-color: colors.$color-gray-90;
+
+  position: relative;
+  overflow: hidden;
+
+  @include mixins.rounded-corners(small);
+
+  &::after {
+    content: '';
+
+    background-image: linear-gradient(
+      90deg,
+      transparent 0,
+      rgba(colors.$color-gray-98, 0.2) 20%,
+      rgba(colors.$color-gray-98, 0.5) 60%,
+      transparent
+    );
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    transform: translateX(-100%);
+
+    animation: silhouette-animation 2s infinite;
+  }
+}
+
+@mixin rotate-animation(
+  $minimum-rotation-angle,
+  $maximum-rotation-angle,
+  $duration,
+  $delay,
+  $animation-timing-function: ease-in-out,
+  $animation-direction: alternate-reverse
+) {
+  --minimum-rotation-angle: #{$minimum-rotation-angle};
+  --maximum-rotation-angle: #{$maximum-rotation-angle};
+
+  animation: rotate-animation $duration $animation-timing-function $animation-direction infinite
+    $delay;
+}
+
+@mixin wiggle-animation($duration, $delay) {
+  animation: wiggle-animation $duration ease-in-out alternate-reverse infinite $delay;
+}
+
+/************** KEYFRAMES *************/
+@keyframes silhouette-animation {
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes rotate-animation {
+  from {
+    transform: rotate(var(--minimum-rotation-angle));
+  }
+
+  to {
+    transform: rotate(var(--maximum-rotation-angle));
+  }
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: scale(1);
+  }
+
+  20% {
+    transform: scale(1.8);
+  }
+
+  40% {
+    transform: scale(1);
+  }
+}
+
+@keyframes wave-fade-animation {
+  0% {
+    transform: scale(0);
+  }
+
+  5% {
+    transform: scale(1.5);
+  }
+
+  10%,
+  80% {
+    transform: scale(1);
+  }
+
+  81% {
+    transform: scale(0);
+  }
+}
+
+@keyframes wiggle-animation {
+  0% {
+    transform: translate(0.87px, 3.18px) rotate(0deg);
+  }
+
+  20% {
+    transform: translate(-0.72px, -6.51px) rotate(0deg);
+  }
+
+  40% {
+    transform: translate(5.01px, -2.1px) rotate(-3deg);
+  }
+
+  60% {
+    transform: translate(-2.6px, -5.3px) rotate(-4deg);
+  }
+
+  80% {
+    transform: translate(-5.22px, 2.27px) rotate(-2deg);
+  }
+
+  100% {
+    transform: translate(0.52px, -6.29px) rotate(-4deg);
+  }
+}
+
+@keyframes write-animation {
+  0% {
+    transform: scaleX(0);
+  }
+
+  20%,
+  70% {
+    transform: scaleX(1);
+  }
+
+  71% {
+    transform: scaleX(0);
+  }
+}
+
+@keyframes spark-animation {
+  0% {
+    opacity: var(--minimum-opacity, 0);
+    transform: scale(var(--minimum-scale, 0));
+  }
+
+  20% {
+    opacity: var(--maximum-opacity, 1);
+    transform: scale(var(--maximum-scale, 1.5));
+  }
+
+  70% {
+    opacity: var(--minimum-opacity, 0);
+    transform: scale(var(--minimum-scale, 0));
+  }
+}

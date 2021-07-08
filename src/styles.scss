@@ -1,1 +1,250 @@
-/* You can add global styles to this file, and also import other style files */
+@use "src/assets/styles";
+
+/*************** MIXINS ***************/
+@mixin _generate-typography($name, $size, $weight, $letter-spacing, $line-height) {
+	--font-size-#{$name}: #{$size};
+	--font-weight-#{$name}: #{$weight};
+	--letter-spacing-#{$name}: #{$letter-spacing};
+	--line-height-#{$name}: #{$line-height};
+}
+
+/************* VARIABLES **************/
+:root {
+	@include _generate-typography(h1, 9.6rem, 300, -0.15rem, 200%);
+	@include _generate-typography(h2, 6rem, 300, -0.05rem, 200%);
+	@include _generate-typography(h3, 4.8rem, 400, 0, 200%);
+	@include _generate-typography(h4, 3.4rem, 400, 0.025rem, 200%);
+	@include _generate-typography(h5, 2.4rem, 400, 0, 200%);
+	@include _generate-typography(h6, 2rem, 500, 0.015rem, 200%);
+	@include _generate-typography(subtitle1, 1.6rem, 100, 0.015rem, 200%);
+	@include _generate-typography(subtitle2, 1.4rem, 500, 0.01rem, 200%);
+	@include _generate-typography(body1, 1.6rem, 400, 0.05rem, 150%);
+	@include _generate-typography(body2, 1.4rem, 400, 0.025rem, 150%);
+	@include _generate-typography(button, 1.4rem, 500, 0.125rem, 150%);
+	@include _generate-typography(caption, 1.2rem, 400, 0.04rem, 150%);
+	@include _generate-typography(overline, 1rem, 400, 0.15rem, 150%);
+	
+	--density--smaller: 0.2rem;
+	--density--small: 0.5rem;
+	--density--normal: 1rem;
+	--density--large: 2rem;
+	--density--larger: 4rem;
+	--density--largest: 8rem;
+	
+	--rounded-corner-border-radius--small: 0.5rem;
+	--rounded-corner-border-radius--large: 1rem;
+	
+	--header-height: 5rem;
+	
+	--content-max-width: 168rem;
+	--content-inline-padding: 1rem;
+}
+
+/*************** RESET ****************/
+*,
+*:before,
+*:after {
+	background: none;
+	
+	box-sizing: border-box;
+	
+	margin: 0;
+	padding: 0;
+	
+	border: none;
+	outline: none;
+	
+	font-family: "Shabnam", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+	"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+	
+	text-decoration: none;
+}
+
+*:focus {
+	outline: none;
+}
+
+*::-webkit-scrollbar {
+	width: 1rem;
+	height: 1rem;
+}
+
+*::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+	background: styles.$color-gray-85;
+	
+	border: none;
+	@include styles.ellipse;
+}
+
+*::selection {
+	background: styles.$color-primary;
+	color: styles.$color-white;
+}
+
+*::-moz-selection {
+	background: styles.$color-primary;
+	color: styles.$color-white;
+}
+
+html {
+	font-size: 62.5%;
+	font-weight: 300;
+}
+
+/************** DEFAULTS **************/
+body {
+	direction: rtl;
+	
+	background-color: styles.$color-body-background !important;
+	color: styles.$color-body-foreground !important;
+	
+	margin: 0;
+	
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	
+	a {
+		color: styles.$color-body-foreground;
+	}
+	
+	button {
+		@include styles.typography-button;
+		
+		outline: none;
+	}
+	
+	label {
+		@include styles.typography-label;
+	}
+	
+	input,
+	textarea {
+		@include styles.typography-input;
+		
+		color: styles.$color-input-foreground;
+		background-color: styles.$color-input-background;
+		
+		outline: none;
+		
+		&::placeholder {
+			color: styles.$color-input-placeholder;
+		}
+		
+		&::-ms-clear,
+		&::-ms-reveal {
+			display: none;
+		}
+	}
+	
+	ul {
+		margin: 0;
+		padding: 0;
+		
+		li {
+			list-style: none;
+		}
+	}
+	
+	svg {
+		display: flex;
+	}
+}
+
+/************ PAGE LAYOUT *************/
+#root {
+	display: flex;
+	flex-direction: column;
+	
+	min-height: 100vh;
+	
+	main {
+		flex: 1;
+		
+		display: flex;
+	}
+}
+
+/*************** TAGS *****************/
+h1 {
+	@include styles.typography-h1;
+}
+
+h2 {
+	@include styles.typography-h2;
+}
+
+h3 {
+	@include styles.typography-h3;
+}
+
+h4 {
+	@include styles.typography-h4;
+}
+
+h5 {
+	@include styles.typography-h5;
+}
+
+h6 {
+	@include styles.typography-h6;
+}
+
+p {
+	@include styles.typography-body1;
+}
+
+/************** CLASSES ***************/
+.content-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+	width: 100%;
+	
+	> * {
+		width: 100%;
+		
+		padding: 0 var(--content-inline-padding);
+	}
+}
+
+/*********** MEDIA QUERIES ************/
+@media (width >= 480px) {
+	:root {
+		--content-inline-padding: 2rem;
+	}
+}
+
+@media (width >= 600px) {
+	:root {
+		--content-inline-padding: 4rem;
+	}
+}
+
+@media (width >= 768px) {
+	:root {
+		--content-inline-padding: 6rem;
+	}
+}
+
+@media (width >= 900px) {
+	:root {
+		--content-inline-padding: 8rem;
+	}
+}
+
+@media (width >= 1200px) {
+	:root {
+		--content-inline-padding: 12rem;
+	}
+}
+
+@media (width >= 1920px) {
+	:root {
+		--content-inline-padding: calc(calc(100% - var(--content-max-width)) / 2);
+	}
+}

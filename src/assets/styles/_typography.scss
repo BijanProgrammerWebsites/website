@@ -1,0 +1,69 @@
+@use "colors" as *;
+
+/************** TYPOGRAPHY ************/
+@mixin _typography($name) {
+  font-size: var(--font-size-#{$name});
+  font-weight: var(--font-weight-#{$name});
+  letter-spacing: var(--letter-spacing-#{$name});
+  line-height: var(--line-height-#{$name});
+}
+
+@mixin typography-h1 {
+  @include _typography(h1);
+}
+
+@mixin typography-h2 {
+  @include _typography(h2);
+}
+
+@mixin typography-h3 {
+  @include _typography(h3);
+}
+
+@mixin typography-h4 {
+  @include _typography(h4);
+}
+
+@mixin typography-h5 {
+  @include _typography(h5);
+}
+
+@mixin typography-h6 {
+  @include _typography(h6);
+}
+
+@mixin typography-subtitle1 {
+  @include _typography(subtitle1);
+}
+
+@mixin typography-subtitle2 {
+  @include _typography(subtitle2);
+}
+
+@mixin typography-body1 {
+  @include _typography(body1);
+}
+
+@mixin typography-body2 {
+  @include _typography(body2);
+}
+
+@mixin typography-button {
+  @include _typography(button);
+}
+
+@mixin typography-caption {
+  @include _typography(caption);
+}
+
+@mixin typography-overline {
+  @include _typography(overline);
+}
+
+/************** ADDITIONAL ************/
+@mixin typography-input {
+  @include typography-body2;
+}
+@mixin typography-label {
+  @include typography-subtitle1;
+}
