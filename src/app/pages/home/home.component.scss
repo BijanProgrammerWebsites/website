@@ -3,4 +3,9 @@
 main {
 	display: grid;
 	place-items: center;
+	
+	h1 {
+		line-height: 110%;
+		text-align: center;
+	}
 }
