@@ -17,6 +17,7 @@ jobs:
           port: 22
           script: |
             cd /repos/website
+            git fetch
             git checkout production
             git pull origin production
             npm i
