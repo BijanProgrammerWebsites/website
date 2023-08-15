@@ -1,25 +1,17 @@
-name: Deployment Workflow
+name: Deploy
 on:
-  push:
-    branches: [production]
+    push:
+        branches: [master]
 
 jobs:
-  deply_job:
-    name: Deploy
-    runs-on: ubuntu-latest
-    steps:
-      - name: Establish a Connection to Server and Update Website
-        uses: appleboy/ssh-action@master
-        with:
-          host: 130.185.76.173
-          username: root
-          key: ${{secrets.SSH_KEY}}
-          port: 22
-          script: |
-            cd /repos/website
-            git fetch
-            git checkout production
-            git pull origin production
-            npm i
-            ng build
-            cp -a dist/website/. /var/www/bijanprogrammer.com/html/
+    deploy:
+        runs-on: self-hosted
+
+        steps:
+            - uses: actions/checkout@v3
+
+            - name: Move Files to Corresponding Folder
+              run: |
+                  rm -rf /var/www/bijanprogrammer.com/html/
+                  mkdir -p /var/www/bijanprogrammer.com/html/
+                  cp public/* /var/www/bijanprogrammer.com/html/
