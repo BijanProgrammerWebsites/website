@@ -1,3 +1,30 @@
+:root {
+    --color-gray-98: hsl(30deg 100% 98%);
+    --color-gray-95: hsl(30deg 100% 95%);
+    --color-gray-90: hsl(30deg 100% 90%);
+    --color-gray-80: hsl(30deg 100% 80%);
+    --color-gray-70: hsl(30deg 100% 70%);
+    --color-gray-40: hsl(30deg 100% 40%);
+    --color-gray-30: hsl(30deg 100% 30%);
+    --color-gray-20: hsl(30deg 100% 20%);
+    --color-gray-10: hsl(30deg 100% 10%);
+
+    --color-primary: hsl(30deg 100% 50%);
+    --color-primary-opposite: var(--color-gray-98);
+
+    --color-box-shadow-subtle: hsl(0deg 0% 10% / 12%);
+    --box-shadow-subtle: 0 0.2rem 0.5rem 0 var(--color-box-shadow-subtle);
+
+    --border-radius: 0.2rem;
+
+    --full-width: 120rem;
+    --full-width-padding-inline: calc(max(100% - var(--full-width), 4rem) / 2);
+
+    --animation-duration-fast: 0.1s;
+    --animation-duration-normal: 0.5s;
+    --animation-duration-slow: 1s;
+}
+
 *,
 *::before,
 *::after {
@@ -8,28 +35,49 @@
 }
 
 html {
-    color-scheme: dark;
+    color-scheme: light;
 
-    font-family: sans-serif;
+    font-family: "Vazirmatn", sans-serif;
     font-size: 62.5%;
 }
 
-body {
-    background-color: hsl(0deg 0% 10%);
-    color: hsl(0deg 0% 90%);
-
-    display: grid;
-    place-items: center;
-
-    min-height: 100vh;
-    min-height: 100dvh;
-
-    padding: 2rem;
+input,
+label,
+select,
+textarea,
+button,
+fieldset,
+legend,
+datalist,
+output,
+option,
+optgroup {
+    font-family: inherit;
 }
 
-h1 {
-    font-size: clamp(4.8rem, 1rem + 9.5vw, 9.6rem);
-    font-weight: 700;
+p {
+    line-height: 1.5;
+}
 
-    text-align: center;
+ul {
+    list-style: none;
+}
+
+img {
+    display: block;
+
+    max-inline-size: 100%;
+}
+
+body {
+    background-color: var(--color-gray-80);
+    color: var(--color-gray-10);
+
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+
+    min-block-size: 100vh;
+    min-block-size: 100dvh;
+
+    font-size: 1.6rem;
 }
