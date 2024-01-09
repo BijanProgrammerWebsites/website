@@ -1,0 +1,74 @@
+main {
+    > section {
+        &#jobs {
+            display: grid;
+            gap: 8rem;
+
+            > ul {
+                display: grid;
+                gap: 2rem;
+
+                > li {
+                    background-color: var(--color-gray-98);
+
+                    display: grid;
+                    grid-template-columns: 16rem 1fr auto;
+                    gap: 2rem;
+
+                    padding: 2rem;
+
+                    border-radius: var(--border-radius);
+
+                    .logo {
+                        img {
+                        }
+                    }
+
+                    .text {
+                        display: grid;
+                        align-content: start;
+                        gap: 0 1rem;
+
+                        .title {
+                            font-size: 2.8rem;
+                            font-weight: 700;
+                        }
+
+                        .duration {
+                            opacity: 0.5;
+                        }
+
+                        .corporate {
+                            opacity: 0.8;
+                        }
+
+                        .description {
+                            max-inline-size: 70ch;
+
+                            margin-block-start: 2rem;
+                        }
+                    }
+
+                    .tags {
+                        direction: ltr;
+
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        justify-items: end;
+                        justify-content: end;
+                        align-content: start;
+                        gap: 2rem;
+
+                        li {
+                            img {
+                                block-size: 4rem;
+                                inline-size: 4rem;
+                                object-fit: contain;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
