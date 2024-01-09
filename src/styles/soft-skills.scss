@@ -1,0 +1,55 @@
+main {
+    > section {
+        &#soft-skills {
+            background-color: var(--color-gray-98);
+
+            display: grid;
+            gap: 8rem;
+
+            .skills {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 4rem 2rem;
+
+                li {
+                    flex: 0 0 16rem;
+
+                    display: grid;
+                    place-items: center;
+                    gap: 1rem;
+
+                    border-radius: var(--border-radius);
+
+                    font-size: 2rem;
+                    text-align: center;
+
+                    .icon {
+                        background-image: radial-gradient(
+                            circle at 0% 0%,
+                            var(--color-primary-lighter),
+                            var(--color-primary)
+                        );
+
+                        display: grid;
+                        place-items: center;
+
+                        aspect-ratio: 1 / 1;
+
+                        border-radius: 2rem;
+
+                        padding: 2rem;
+
+                        img {
+                            block-size: 6rem;
+                        }
+                    }
+
+                    .title {
+                        line-height: 1.2;
+                    }
+                }
+            }
+        }
+    }
+}
