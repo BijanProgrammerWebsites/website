@@ -6,43 +6,55 @@ main {
 
             > ul {
                 display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
                 gap: 2rem;
 
                 > li {
                     background-color: var(--color-gray-98);
+                    box-shadow: var(--box-shadow-subtle);
 
                     display: grid;
-                    grid-template-columns: 16rem 1fr auto;
+                    grid-template-rows: 1fr auto;
                     gap: 2rem;
 
                     padding: 2rem;
 
                     border-radius: var(--border-radius);
 
-                    .logo {
-                        img {
-                        }
-                    }
-
-                    .text {
+                    .info {
                         display: grid;
+                        grid-template-areas: "header logo" "description description";
+                        grid-template-columns: 1fr 8rem;
                         align-content: start;
                         gap: 0 1rem;
 
-                        .title {
-                            font-size: 2.8rem;
-                            font-weight: 700;
+                        .header {
+                            grid-area: header;
+
+                            .title {
+                                font-size: 2.8rem;
+                                font-weight: 700;
+                            }
+
+                            .duration {
+                                opacity: 0.5;
+                            }
+
+                            .corporate {
+                                opacity: 0.8;
+                            }
                         }
 
-                        .duration {
-                            opacity: 0.5;
-                        }
+                        .logo {
+                            grid-area: logo;
 
-                        .corporate {
-                            opacity: 0.8;
+                            img {
+                            }
                         }
 
                         .description {
+                            grid-area: description;
+
                             max-inline-size: 70ch;
 
                             margin-block-start: 2rem;
@@ -50,19 +62,13 @@ main {
                     }
 
                     .tags {
-                        direction: ltr;
-
                         display: grid;
-                        grid-template-columns: 1fr 1fr;
-                        justify-items: end;
-                        justify-content: end;
-                        align-content: start;
+                        grid-template-columns: repeat(auto-fill, minmax(4rem, 1fr));
                         gap: 2rem;
 
                         li {
                             img {
-                                block-size: 4rem;
-                                inline-size: 4rem;
+                                aspect-ratio: 1 / 1;
                                 object-fit: contain;
                             }
                         }
