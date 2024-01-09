@@ -176,6 +176,8 @@ main {
 
                         img {
                             block-size: 100%;
+                            inline-size: 100%;
+                            aspect-ratio: 1 / 1;
                             object-fit: contain;
                         }
 
