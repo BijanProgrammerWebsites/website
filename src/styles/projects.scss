@@ -1,0 +1,90 @@
+main {
+    > section {
+        &#projects {
+            background-color: var(--color-gray-98);
+
+            display: grid;
+            gap: 8rem;
+
+            > ul {
+                display: grid;
+                align-items: center;
+                gap: 8rem;
+
+                > li {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+
+                    .info {
+                        display: grid;
+                        gap: 1rem;
+
+                        .header {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            gap: 1rem;
+
+                            .title {
+                                a {
+                                    color: inherit;
+
+                                    display: inline-flex;
+                                    align-items: center;
+                                    gap: 1rem;
+
+                                    font-size: 2.8rem;
+                                    font-weight: 700;
+                                    text-decoration: none;
+                                }
+                            }
+
+                            .button {
+                                background-color: var(--color-gray-10);
+                                color: var(--color-gray-90);
+
+                                display: inline-flex;
+                                align-items: center;
+                                gap: 1ch;
+
+                                padding: 1rem 1.5rem;
+
+                                border-radius: var(--border-radius);
+
+                                font-size: 1.6rem;
+                                text-decoration: none;
+
+                                img {
+                                    block-size: 1.5em;
+                                }
+                            }
+                        }
+
+                        .description {
+                            font-size: 1.8rem;
+                            line-height: 1.5;
+                        }
+
+                        .tags {
+                            display: grid;
+                            grid-template-columns: repeat(auto-fill, minmax(4rem, 1fr));
+                            gap: 2rem;
+
+                            li {
+                                img {
+                                    aspect-ratio: 1 / 1;
+                                    object-fit: contain;
+                                }
+                            }
+                        }
+                    }
+
+                    .mockup {
+                        img {
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
