@@ -92,7 +92,11 @@ main {
                     }
 
                     .mockup {
+                        display: grid;
+                        place-items: center;
+
                         img {
+                            max-block-size: 50rem;
                         }
                     }
                 }
