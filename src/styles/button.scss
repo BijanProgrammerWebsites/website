@@ -7,13 +7,13 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 0.2em;
+    gap: 0.5em;
 
     padding: 1rem 2rem;
 
     border-radius: var(--border-radius);
 
-    @include utils.font-size-clamp(16, 24);
+    @include utils.font-size-clamp(16, 18);
 
     cursor: pointer;
 
@@ -33,6 +33,11 @@
     &--primary {
         --background-color: var(--color-primary);
         --color: var(--color-primary-opposite);
+    }
+
+    &--github {
+        --background-color: var(--color-gray-10);
+        --color: var(--color-gray-90);
     }
 
     &--icon {
@@ -77,5 +82,9 @@
                 --background-color: var(--color-primary-fade);
             }
         }
+    }
+
+    &--large {
+        @include utils.font-size-clamp(18, 24);
     }
 }

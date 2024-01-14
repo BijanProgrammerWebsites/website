@@ -1,21 +1,23 @@
+@use "/src/styles/utils";
+
 main {
     > section {
         &#projects {
             > ul {
                 display: grid;
-                align-items: center;
                 gap: 16rem;
 
                 > li {
                     display: grid;
-                    grid-template-columns: 1fr 1fr;
-                    align-items: center;
+                    justify-items: center;
                     gap: 2rem;
 
                     .info {
                         display: grid;
-                        align-content: start;
+                        justify-items: center;
                         gap: 2rem;
+
+                        text-align: center;
 
                         .title {
                             a {
@@ -25,23 +27,28 @@ main {
                                 align-items: center;
                                 gap: 1rem;
 
-                                font-size: 2.8rem;
+                                @include utils.font-size-clamp(24, 28);
                                 font-weight: 700;
                                 text-decoration: none;
                             }
                         }
 
                         .description {
-                            font-size: 1.8rem;
+                            max-inline-size: 70ch;
+
+                            @include utils.font-size-clamp(16, 18);
                             line-height: 1.5;
                         }
 
                         .tags {
-                            display: grid;
-                            grid-template-columns: repeat(auto-fill, minmax(4rem, 1fr));
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: center;
                             gap: 2rem;
 
                             li {
+                                flex: 0 0 4rem;
+
                                 img {
                                     aspect-ratio: 1 / 1;
                                     object-fit: contain;
@@ -51,35 +58,14 @@ main {
 
                         .links {
                             display: flex;
+                            flex-wrap: wrap;
+                            justify-content: center;
                             gap: 1rem;
 
                             li {
                                 .button {
-                                    justify-self: start;
-
-                                    display: inline-flex;
-                                    align-items: center;
-                                    gap: 1ch;
-
-                                    padding: 1rem 1.5rem;
-
-                                    border-radius: var(--border-radius);
-
-                                    font-size: 1.6rem;
-                                    text-decoration: none;
-
                                     img {
                                         block-size: 1.5em;
-                                    }
-
-                                    &--primary {
-                                        background-color: var(--color-primary);
-                                        color: var(--color-gray-98);
-                                    }
-
-                                    &--github {
-                                        background-color: var(--color-gray-10);
-                                        color: var(--color-gray-90);
                                     }
                                 }
                             }
@@ -91,7 +77,44 @@ main {
                         place-items: center;
 
                         img {
-                            max-block-size: 50rem;
+                            max-block-size: 40rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1000px) {
+    main {
+        > section {
+            &#projects {
+                > ul {
+                    > li {
+                        grid-template-columns: 1fr 1fr;
+                        align-items: center;
+
+                        .info {
+                            justify-items: start;
+
+                            text-align: start;
+
+                            .tags {
+                                justify-content: start;
+                            }
+
+                            .links {
+                                justify-content: start;
+                            }
+                        }
+
+                        .mockup {
+                            order: 2;
+
+                            img {
+                                max-block-size: 50rem;
+                            }
                         }
                     }
                 }
