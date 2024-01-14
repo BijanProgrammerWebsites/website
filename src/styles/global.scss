@@ -1,18 +1,19 @@
 @use "/src/styles/utils";
 
 :root {
-    --color-gray-98: hsl(120deg 20% 98%);
-    --color-gray-95: hsl(120deg 20% 95%);
-    --color-gray-90: hsl(120deg 20% 90%);
-    --color-gray-80: hsl(120deg 20% 80%);
-    --color-gray-70: hsl(120deg 20% 70%);
-    --color-gray-40: hsl(120deg 20% 40%);
-    --color-gray-30: hsl(120deg 20% 30%);
-    --color-gray-20: hsl(120deg 20% 20%);
-    --color-gray-10: hsl(120deg 20% 10%);
+    --color-gray-98: hsl(0deg 0% 98%);
+    --color-gray-95: hsl(0deg 0% 95%);
+    --color-gray-90: hsl(0deg 0% 90%);
+    --color-gray-80: hsl(0deg 0% 80%);
+    --color-gray-70: hsl(0deg 0% 70%);
+    --color-gray-40: hsl(0deg 0% 40%);
+    --color-gray-30: hsl(0deg 0% 30%);
+    --color-gray-20: hsl(0deg 0% 20%);
+    --color-gray-10: hsl(0deg 0% 10%);
 
     --color-primary: hsl(120deg 70% 40%);
     --color-primary-lighter: hsl(120deg 90% 70%);
+    --color-primary-section: hsl(120deg 20% 90%);
     --color-primary-fade: hsl(120deg 70% 95%);
     --color-primary-opposite: var(--color-gray-98);
 
@@ -77,7 +78,7 @@ img {
 }
 
 body {
-    background-color: var(--color-gray-90);
+    background-color: var(--color-gray-98);
     color: var(--color-gray-10);
 
     display: grid;

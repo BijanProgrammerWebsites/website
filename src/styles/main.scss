@@ -16,13 +16,13 @@ main {
             @include utils.font-size-clamp(24, 36);
         }
 
-        &:nth-of-type(2n + 1) {
-            background-color: var(--color-gray-98);
+        &:nth-of-type(2n) {
+            background-color: var(--color-primary-section);
         }
     }
 
     .divider {
-        background-color: var(--color-gray-98);
+        background-color: var(--color-primary-section);
 
         block-size: 8rem;
 
