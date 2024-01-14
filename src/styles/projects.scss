@@ -49,8 +49,11 @@ main {
                             li {
                                 flex: 0 0 4rem;
 
+                                aspect-ratio: 1 / 1;
+
                                 img {
-                                    aspect-ratio: 1 / 1;
+                                    block-size: 100%;
+                                    inline-size: 100%;
                                     object-fit: contain;
                                 }
                             }
