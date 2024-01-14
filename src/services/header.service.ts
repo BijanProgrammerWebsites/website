@@ -23,11 +23,13 @@ export class HeaderService {
 
     private showMobileNav(): void {
         this.navElement.classList.remove('hidden');
+        this.menuButton.classList.add('hidden');
         this.closeButton.classList.remove('hidden');
     }
 
     private hideMobileNav(): void {
         this.navElement.classList.add('hidden');
+        this.menuButton.classList.remove('hidden');
         this.closeButton.classList.add('hidden');
     }
 

@@ -1,11 +1,6 @@
 main {
     > section {
         &#soft-skills {
-            background-color: var(--color-gray-98);
-
-            display: grid;
-            gap: 8rem;
-
             .skills {
                 display: flex;
                 flex-wrap: wrap;

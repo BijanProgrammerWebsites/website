@@ -1,11 +1,6 @@
 main {
     > section {
         &#projects {
-            background-color: var(--color-gray-98);
-
-            display: grid;
-            gap: 8rem;
-
             > ul {
                 display: grid;
                 align-items: center;

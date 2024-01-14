@@ -1,15 +1,23 @@
+@use "/src/styles/utils";
+
 main {
     > section {
-        padding-block: 4rem;
+        display: grid;
+        gap: 3em;
 
+        padding-block: 4rem;
         padding-inline: var(--full-width-padding-inline);
 
         h2 {
-            font-size: 4.8rem;
+            @include utils.font-size-clamp(32, 48);
         }
 
         h3 {
-            font-size: 3.6rem;
+            @include utils.font-size-clamp(24, 36);
+        }
+
+        &:nth-of-type(2n + 1) {
+            background-color: var(--color-gray-98);
         }
     }
 

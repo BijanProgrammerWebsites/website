@@ -3,9 +3,6 @@
 main {
     > section {
         &#introduction {
-            background-color: var(--color-gray-98);
-
-            display: grid;
             grid-template-columns: 1fr;
             gap: 2rem;
 
@@ -79,7 +76,6 @@ main {
         > section {
             &#introduction {
                 grid-template-columns: 1fr 3fr;
-                gap: 8rem;
 
                 padding-block: 8rem;
             }
