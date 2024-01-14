@@ -1,1 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 99.7 100"><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><g id="Page-1"><g id="jwt_logo" data-name="jwt logo"><g id="Group"><g id="Shape"><path d="M57.4,26.9,57.3,0h-15l.1,26.9,7.5,10.3Z" style="fill:#fff;fill-rule:evenodd"/><path d="M42.4,73v27h15V73L49.9,62.7Z" style="fill:#fff;fill-rule:evenodd"/><path d="M57.4,73,73.2,94.8,85.3,86,69.5,64.2,57.4,60.3Z" style="fill:#00f2e6;fill-rule:evenodd"/><path d="M42.4,26.9,26.5,5.1,14.4,13.9,30.2,35.7l12.2,3.9Z" style="fill:#00f2e6;fill-rule:evenodd"/><path d="M30.2,35.7,4.6,27.4,0,41.6,25.6,50l12.1-4Z" style="fill:#00b9f1;fill-rule:evenodd"/><path d="M62,53.9l7.5,10.3,25.6,8.3,4.6-14.2L74.1,50Z" style="fill:#00b9f1;fill-rule:evenodd"/><path d="M74.1,50l25.6-8.4L95.1,27.4,69.5,35.7,62,46Z" style="fill:#d63aff;fill-rule:evenodd"/><path d="M25.6,50,0,58.3,4.6,72.5l25.6-8.3,7.5-10.3Z" style="fill:#d63aff;fill-rule:evenodd"/><path d="M30.2,64.2,14.4,86l12.1,8.8L42.4,73V60.3Z" style="fill:#fb015b;fill-rule:evenodd"/><path d="M69.5,35.7,85.3,13.9,73.2,5.1,57.4,26.9V39.6Z" style="fill:#fb015b;fill-rule:evenodd"/></g></g></g></g></g></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Artboard" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#231F20;}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#00F2E6;}
+	.st3{fill-rule:evenodd;clip-rule:evenodd;fill:#00B9F1;}
+	.st4{fill-rule:evenodd;clip-rule:evenodd;fill:#D63AFF;}
+	.st5{fill-rule:evenodd;clip-rule:evenodd;fill:#FB015B;}
+</style>
+<g id="Circle">
+	<circle class="st0" cx="50" cy="50" r="50"/>
+</g>
+<g id="Logo">
+	<path class="st1" d="M54.5,36.1L54.5,20h-9l0.1,16.1l4.5,6.2L54.5,36.1z"/>
+	<path class="st1" d="M45.5,63.8V80h9V63.8L50,57.6L45.5,63.8z"/>
+	<path class="st2" d="M54.5,63.8l9.5,13.1l7.3-5.3l-9.5-13.1l-7.3-2.3V63.8z"/>
+	<path class="st2" d="M45.5,36.1l-9.6-13.1l-7.3,5.3l9.5,13.1l7.3,2.3V36.1z"/>
+	<path class="st3" d="M38.2,41.4l-15.4-5L20,45l15.4,5l7.3-2.4L38.2,41.4z"/>
+	<path class="st3" d="M57.3,52.3l4.5,6.2l15.4,5L80,55l-15.4-5L57.3,52.3z"/>
+	<path class="st4" d="M64.6,50L80,45l-2.8-8.5l-15.4,5l-4.5,6.2L64.6,50z"/>
+	<path class="st4" d="M35.4,50L20,55l2.8,8.5l15.4-5l4.5-6.2L35.4,50z"/>
+	<path class="st5" d="M38.2,58.5l-9.5,13.1l7.3,5.3l9.6-13.1v-7.6L38.2,58.5z"/>
+	<path class="st5" d="M61.8,41.4l9.5-13.1l-7.3-5.3l-9.5,13.1v7.6L61.8,41.4z"/>
+</g>
+</svg>

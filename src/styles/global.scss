@@ -90,12 +90,6 @@ body {
     font-size: 1.6rem;
 }
 
-img[src*="jwt.svg"] {
-    background-color: var(--color-gray-10);
-    padding: 10%;
-    border-radius: 999rem;
-}
-
 a:not(.button) {
     color: inherit;
 
