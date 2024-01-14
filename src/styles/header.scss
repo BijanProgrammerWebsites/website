@@ -24,11 +24,15 @@ header {
         }
     }
 
+    .button.menu {
+    }
+
+    .button.close {
+        z-index: 2;
+    }
+
     nav {
         ul {
-            display: flex;
-            gap: 2rem;
-
             li {
                 &.active {
                     a {
@@ -37,6 +41,61 @@ header {
                         font-weight: 700;
                     }
                 }
+            }
+        }
+    }
+}
+
+@media (max-width: 999px) {
+    header {
+        nav {
+            background-color: var(--color-gray-98);
+
+            position: fixed;
+            inset: 0;
+            z-index: 1;
+
+            display: grid;
+            align-content: start;
+
+            padding: inherit;
+
+            ul {
+                display: grid;
+                gap: 2rem;
+
+                li {
+                    &.active {
+                        a {
+                            color: var(--color-primary);
+
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+        }
+
+        .hidden {
+            display: none;
+        }
+    }
+}
+
+@media (min-width: 1000px) {
+    header {
+        .button.menu {
+            display: none;
+        }
+
+        .button.close {
+            display: none;
+        }
+
+        nav {
+            ul {
+                display: flex;
+                gap: 2rem;
             }
         }
     }

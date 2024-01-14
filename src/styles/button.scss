@@ -1,0 +1,77 @@
+.button {
+    background-color: var(--background-color);
+    color: var(--color);
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2em;
+
+    padding: 1rem 2rem;
+
+    border-radius: var(--border-radius);
+
+    font-size: 2.4rem;
+
+    cursor: pointer;
+
+    text-decoration: none;
+
+    svg {
+        block-size: 1em;
+        inline-size: 1em;
+    }
+
+    .highlight {
+        font-weight: 700;
+    }
+
+    &--primary {
+        --background-color: var(--color-primary);
+        --color: var(--color-primary-opposite);
+    }
+
+    &--icon {
+        --background-color: transparent;
+        --background-color-hover: var(--color-gray-90);
+        --color: inherit;
+
+        background-color: transparent;
+
+        position: relative;
+        isolation: isolate;
+
+        display: inline-grid;
+        place-items: center;
+
+        padding: 0;
+
+        border: none;
+
+        &::before {
+            content: "";
+
+            background-color: var(--background-color);
+
+            position: absolute;
+            inset: -0.5rem;
+            z-index: -1;
+
+            border-radius: 999rem;
+        }
+
+        &:hover {
+            --background-color: var(--background-color-hover);
+        }
+
+        &--primary {
+            --background-color: transparent;
+            --background-color-hover: var(--color-primary-fade);
+            --color: var(--color-primary);
+
+            &:hover {
+                --background-color: var(--color-primary-fade);
+            }
+        }
+    }
+}

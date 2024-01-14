@@ -46,27 +46,6 @@ main {
                         margin-block-end: 4rem;
                     }
                 }
-
-                a.button {
-                    background-color: var(--color-primary);
-                    color: var(--color-primary-opposite);
-
-                    display: inline-flex;
-                    align-items: center;
-                    gap: 0.2em;
-
-                    padding: 1rem 2rem;
-
-                    border-radius: var(--border-radius);
-
-                    font-size: 2.4rem;
-
-                    text-decoration: none;
-
-                    .highlight {
-                        font-weight: 700;
-                    }
-                }
             }
         }
     }
