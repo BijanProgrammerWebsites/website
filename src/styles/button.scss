@@ -1,3 +1,5 @@
+@use "/src/styles/utils";
+
 .button {
     background-color: var(--background-color);
     color: var(--color);
@@ -11,15 +13,17 @@
 
     border-radius: var(--border-radius);
 
-    font-size: 2.4rem;
+    @include utils.font-size-clamp(16, 24);
 
     cursor: pointer;
 
     text-decoration: none;
 
     svg {
-        block-size: 1em;
-        inline-size: 1em;
+        --size: 1.25em;
+
+        block-size: var(--size);
+        inline-size: var(--size);
     }
 
     .highlight {
