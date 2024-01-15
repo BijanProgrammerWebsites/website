@@ -3,7 +3,7 @@ import {Image} from 'astro:assets';
 
 import bijanImage from '@assets/images/bijan-eisapour.webp';
 
-import phoneIcon from '@assets/icons/phone.svg?raw';
+import ctaIcon from '@assets/icons/cta.svg?raw';
 ---
 
 <section id="introduction">
@@ -24,13 +24,9 @@ import phoneIcon from '@assets/icons/phone.svg?raw';
             <span class="highlight">زمان مقرر</span>
             انجام میشن.
         </p>
-        <a class="button button--primary button--large" href="#contact">
-            <Fragment set:html={phoneIcon} />
-            <span>
-                همین
-                <span class="highlight">حالا</span>
-                تماس بگیرید
-            </span>
+        <a class="cta" href="#contact">
+            <span class="title">شروع یک همکاری خاطره‌انگیز</span>
+            <span class="icon"><Fragment set:html={ctaIcon} /></span>
         </a>
     </div>
 </section>
