@@ -4,25 +4,25 @@ import {Image} from 'astro:assets';
 import mohaymenLogo from '@assets/logos/mohaymen.webp';
 import codestarLogo from '@assets/logos/codestar.svg';
 
-import angularIcon from '@assets/brands/angular.svg';
-import sassIcon from '@assets/brands/sass.svg';
-import antDesignIcon from '@assets/brands/ant-design.svg';
-import swaggerIcon from '@assets/brands/swagger.svg';
-import typescriptIcon from '@assets/brands/typescript.svg';
-import highchartsIcon from '@assets/brands/highcharts.svg';
-import docusaurusIcon from '@assets/brands/docusaurus.svg';
-import jwtIcon from '@assets/brands/jwt.svg';
-import nodeJsIcon from '@assets/brands/node-js.svg';
-import cSharpIcon from '@assets/brands/c-sharp.svg';
-import postgresqlIcon from '@assets/brands/postgresql.svg';
-import mysqlIcon from '@assets/brands/mysql.svg';
-import cypressIcon from '@assets/brands/cypress.svg';
-import azureIcon from '@assets/brands/azure.svg';
-import jiraIcon from '@assets/brands/jira.svg';
-import confluenceIcon from '@assets/brands/confluence.svg';
-import gulpIcon from '@assets/brands/gulp.svg';
-import mapboxIcon from '@assets/brands/mapbox.svg';
-import puppeteerIcon from '@assets/brands/puppeteer.svg';
+import angularIcon from '@assets/brands/angular.svg?raw';
+import sassIcon from '@assets/brands/sass.svg?raw';
+import antDesignIcon from '@assets/brands/ant-design.svg?raw';
+import swaggerIcon from '@assets/brands/swagger.svg?raw';
+import typescriptIcon from '@assets/brands/typescript.svg?raw';
+import highchartsIcon from '@assets/brands/highcharts.svg?raw';
+import docusaurusIcon from '@assets/brands/docusaurus.svg?raw';
+import jwtIcon from '@assets/brands/jwt.svg?raw';
+import nodeJsIcon from '@assets/brands/node-js.svg?raw';
+import cSharpIcon from '@assets/brands/c-sharp.svg?raw';
+import postgresqlIcon from '@assets/brands/postgresql.svg?raw';
+import mysqlIcon from '@assets/brands/mysql.svg?raw';
+import cypressIcon from '@assets/brands/cypress.svg?raw';
+import azureIcon from '@assets/brands/azure.svg?raw';
+import jiraIcon from '@assets/brands/jira.svg?raw';
+import confluenceIcon from '@assets/brands/confluence.svg?raw';
+import gulpIcon from '@assets/brands/gulp.svg?raw';
+import mapboxIcon from '@assets/brands/mapbox.svg?raw';
+import puppeteerIcon from '@assets/brands/puppeteer.svg?raw';
 ---
 
 <section id="jobs">
@@ -43,11 +43,11 @@ import puppeteerIcon from '@assets/brands/puppeteer.svg';
                 </p>
             </div>
             <ul class="tags">
-                <li><Image src={jiraIcon} alt="Jira" /></li>
-                <li><Image src={confluenceIcon} alt="Confluence" /></li>
-                <li><Image src={cSharpIcon} alt="C#" /></li>
-                <li><Image src={postgresqlIcon} alt="PostgreSQL" /></li>
-                <li><Image src={mapboxIcon} alt="Mapbox" /></li>
+                <li><Fragment set:html={jiraIcon} title="Jira" /></li>
+                <li><Fragment set:html={confluenceIcon} title="Confluence" /></li>
+                <li><Fragment set:html={cSharpIcon} title="C#" /></li>
+                <li><Fragment set:html={postgresqlIcon} title="PostgreSQL" /></li>
+                <li><Fragment set:html={mapboxIcon} title="Mapbox" /></li>
             </ul>
         </li>
         <li>
@@ -67,13 +67,13 @@ import puppeteerIcon from '@assets/brands/puppeteer.svg';
                 </p>
             </div>
             <ul class="tags">
-                <li><Image src={nodeJsIcon} alt="Node.js" /></li>
-                <li><Image src={swaggerIcon} alt="Swagger" /></li>
-                <li><Image src={docusaurusIcon} alt="Docusaurus" /></li>
-                <li><Image src={jwtIcon} alt="JWT" /></li>
-                <li><Image src={mysqlIcon} alt="MySQL" /></li>
-                <li><Image src={puppeteerIcon} alt="Puppeteer" /></li>
-                <li><Image src={cypressIcon} alt="Cypress" /></li>
+                <li><Fragment set:html={nodeJsIcon} title="Node.js" /></li>
+                <li><Fragment set:html={swaggerIcon} title="Swagger" /></li>
+                <li><Fragment set:html={docusaurusIcon} title="Docusaurus" /></li>
+                <li><Fragment set:html={jwtIcon} title="JWT" /></li>
+                <li><Fragment set:html={mysqlIcon} title="MySQL" /></li>
+                <li><Fragment set:html={puppeteerIcon} title="Puppeteer" /></li>
+                <li><Fragment set:html={cypressIcon} title="Cypress" /></li>
             </ul>
         </li>
         <li>
@@ -91,13 +91,13 @@ import puppeteerIcon from '@assets/brands/puppeteer.svg';
                 </p>
             </div>
             <ul class="tags">
-                <li><Image src={angularIcon} alt="Angular" /></li>
-                <li><Image src={typescriptIcon} alt="TypeScript" /></li>
-                <li><Image src={sassIcon} alt="Sass" /></li>
-                <li><Image src={antDesignIcon} alt="Ant Design" /></li>
-                <li><Image src={highchartsIcon} alt="Highcharts" /></li>
-                <li><Image src={gulpIcon} alt="Gulp.js" /></li>
-                <li><Image src={azureIcon} alt="Azure" /></li>
+                <li><Fragment set:html={angularIcon} title="Angular" /></li>
+                <li><Fragment set:html={typescriptIcon} title="TypeScript" /></li>
+                <li><Fragment set:html={sassIcon} title="Sass" /></li>
+                <li><Fragment set:html={antDesignIcon} title="Ant Design" /></li>
+                <li><Fragment set:html={highchartsIcon} title="Highcharts" /></li>
+                <li><Fragment set:html={gulpIcon} title="Gulp.js" /></li>
+                <li><Fragment set:html={azureIcon} title="Azure" /></li>
             </ul>
         </li>
     </ul>

@@ -5,15 +5,15 @@ import codestarMockup from '@assets/mockups/codestar.webp';
 import schortMockup from '@assets/mockups/schort.webp';
 import passaidMockup from '@assets/mockups/passaid.webp';
 
-import htmlIcon from '@assets/brands/html.svg';
-import cssIcon from '@assets/brands/css.svg';
-import angularIcon from '@assets/brands/angular.svg';
-import sassIcon from '@assets/brands/sass.svg';
-import nextJsIcon from '@assets/brands/next-js.svg';
-import javascriptIcon from '@assets/brands/javascript.svg';
-import typescriptIcon from '@assets/brands/typescript.svg';
-import postgresqlIcon from '@assets/brands/postgresql.svg';
-import prismaIcon from '@assets/brands/prisma.svg';
+import htmlIcon from '@assets/brands/html.svg?raw';
+import cssIcon from '@assets/brands/css.svg?raw';
+import angularIcon from '@assets/brands/angular.svg?raw';
+import sassIcon from '@assets/brands/sass.svg?raw';
+import nextJsIcon from '@assets/brands/next-js.svg?raw';
+import javascriptIcon from '@assets/brands/javascript.svg?raw';
+import typescriptIcon from '@assets/brands/typescript.svg?raw';
+import postgresqlIcon from '@assets/brands/postgresql.svg?raw';
+import prismaIcon from '@assets/brands/prisma.svg?raw';
 
 import externalLinkIcon from '@assets/icons/external-link.svg?raw';
 import githubIcon from '@assets/icons/github.svg?raw';
@@ -44,9 +44,9 @@ import githubIcon from '@assets/icons/github.svg?raw';
                     علاوه بر اجرای مسئولیت برگزاری کل دوره، به‌عنوان منتور و مدرس نیز حضور داشتم.
                 </p>
                 <ul class="tags">
-                    <li><Image src={angularIcon} alt="Angular" /></li>
-                    <li><Image src={typescriptIcon} alt="TypeScript" /></li>
-                    <li><Image src={sassIcon} alt="Sass" /></li>
+                    <li><Fragment set:html={angularIcon} title="Angular" /></li>
+                    <li><Fragment set:html={typescriptIcon} title="TypeScript" /></li>
+                    <li><Fragment set:html={sassIcon} title="Sass" /></li>
                 </ul>
                 <ul class="links">
                     <li>
@@ -89,11 +89,11 @@ import githubIcon from '@assets/icons/github.svg?raw';
                     لینک‌های تولیدشده‌ی خود را ببینید و آن‌ها را ویرایش یا حذف کنید.
                 </p>
                 <ul class="tags">
-                    <li><Image src={nextJsIcon} alt="Next.js" /></li>
-                    <li><Image src={prismaIcon} alt="Prisma" /></li>
-                    <li><Image src={postgresqlIcon} alt="PostgreSQL" /></li>
-                    <li><Image src={typescriptIcon} alt="TypeScript" /></li>
-                    <li><Image src={sassIcon} alt="Sass" /></li>
+                    <li><Fragment set:html={nextJsIcon} title="Next.js" /></li>
+                    <li><Fragment set:html={prismaIcon} title="Prisma" /></li>
+                    <li><Fragment set:html={postgresqlIcon} title="PostgreSQL" /></li>
+                    <li><Fragment set:html={typescriptIcon} title="TypeScript" /></li>
+                    <li><Fragment set:html={sassIcon} title="Sass" /></li>
                 </ul>
                 <ul class="links">
                     <li>
@@ -133,9 +133,9 @@ import githubIcon from '@assets/icons/github.svg?raw';
                     یا نیاز خود بتواند Password مورد نظر را تولید نماید.
                 </p>
                 <ul class="tags">
-                    <li><Image src={htmlIcon} alt="HTML" /></li>
-                    <li><Image src={cssIcon} alt="CSS" /></li>
-                    <li><Image src={javascriptIcon} alt="JavaScript" /></li>
+                    <li><Fragment set:html={htmlIcon} title="HTML" /></li>
+                    <li><Fragment set:html={cssIcon} title="CSS" /></li>
+                    <li><Fragment set:html={javascriptIcon} title="JavaScript" /></li>
                 </ul>
                 <ul class="links">
                     <li>
