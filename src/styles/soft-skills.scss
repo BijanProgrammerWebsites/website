@@ -35,8 +35,11 @@ main {
 
                         padding: 2rem;
 
-                        img {
+                        svg {
+                            color: var(--color-gray-98);
+
                             block-size: 6rem;
+                            inline-size: 6rem;
                         }
                     }
 

@@ -73,8 +73,8 @@ ul {
 img {
     display: block;
 
-    max-block-size: 100%;
     max-inline-size: 100%;
+    block-size: auto;
 }
 
 body {

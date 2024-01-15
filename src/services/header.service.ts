@@ -1,9 +1,9 @@
-import {Utils} from '../scripts/utils.ts';
+import {DomUtils} from '@utils/dom.utils.ts';
 
 export class HeaderService {
-    private menuButton = Utils.select('body > header .button.menu');
-    private closeButton = Utils.select('body > header .button.close');
-    private navElement = Utils.select('body > header nav');
+    private menuButton = DomUtils.select('body > header .button.menu');
+    private closeButton = DomUtils.select('body > header .button.close');
+    private navElement = DomUtils.select('body > header nav');
 
     public init(): void {
         this.addMenuButtonClickListener();

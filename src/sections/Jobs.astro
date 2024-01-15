@@ -1,0 +1,104 @@
+---
+import {Image} from 'astro:assets';
+
+import mohaymenLogo from '@assets/logos/mohaymen.webp';
+import codestarLogo from '@assets/logos/codestar.svg';
+
+import angularIcon from '@assets/brands/angular.svg';
+import sassIcon from '@assets/brands/sass.svg';
+import antDesignIcon from '@assets/brands/ant-design.svg';
+import swaggerIcon from '@assets/brands/swagger.svg';
+import typescriptIcon from '@assets/brands/typescript.svg';
+import highchartsIcon from '@assets/brands/highcharts.svg';
+import docusaurusIcon from '@assets/brands/docusaurus.svg';
+import jwtIcon from '@assets/brands/jwt.svg';
+import nodeJsIcon from '@assets/brands/node-js.svg';
+import cSharpIcon from '@assets/brands/c-sharp.svg';
+import postgresqlIcon from '@assets/brands/postgresql.svg';
+import mysqlIcon from '@assets/brands/mysql.svg';
+import cypressIcon from '@assets/brands/cypress.svg';
+import azureIcon from '@assets/brands/azure.svg';
+import jiraIcon from '@assets/brands/jira.svg';
+import confluenceIcon from '@assets/brands/confluence.svg';
+import gulpIcon from '@assets/brands/gulp.svg';
+import mapboxIcon from '@assets/brands/mapbox.svg';
+import puppeteerIcon from '@assets/brands/puppeteer.svg';
+---
+
+<section id="jobs">
+    <h2>سوابق شغلی</h2>
+    <ul>
+        <li>
+            <div class="info">
+                <div class="logo">
+                    <Image src={mohaymenLogo} alt="" />
+                </div>
+                <div class="header">
+                    <div class="duration">مهر 1401 تا فروردین 1402</div>
+                    <div class="title">مدیر تیم</div>
+                    <div class="corporate">شرکت فناوری اطلاعات و ارتباطات مهیمن</div>
+                </div>
+                <p class="description">
+                    <!-- [BIJAN] TODO: Write a description. -->
+                </p>
+            </div>
+            <ul class="tags">
+                <li><Image src={jiraIcon} alt="Jira" /></li>
+                <li><Image src={confluenceIcon} alt="Confluence" /></li>
+                <li><Image src={cSharpIcon} alt="C#" /></li>
+                <li><Image src={postgresqlIcon} alt="PostgreSQL" /></li>
+                <li><Image src={mapboxIcon} alt="Mapbox" /></li>
+            </ul>
+        </li>
+        <li>
+            <div class="info">
+                <div class="logo">
+                    <Image src={codestarLogo} alt="" />
+                </div>
+                <div class="header">
+                    <div class="duration">دی 1400 تا شهریور 1401</div>
+                    <div class="title">مسئول برگزاری کارآموزی کداستار</div>
+                    <div class="corporate">شرکت فناوری اطلاعات و ارتباطات مهیمن</div>
+                </div>
+                <p class="description">
+                    تابستان 1399 به‌عنوان کارآموز وارد اولین دورۀ کارآموزی کداستار شدم؛ پس از طی‌کردن دوره و استخدام در
+                    شرکت، زمستان 1399 به‌عنوان منتور در برگزاری دوره سهیم بودم. تابستان 1400 به‌عنوان مسئول دورۀ
+                    فرانت‌اند و در نهایت تابستان 1401 به‌عنوان مسئول کل دوره حضور داشتم.
+                </p>
+            </div>
+            <ul class="tags">
+                <li><Image src={nodeJsIcon} alt="Node.js" /></li>
+                <li><Image src={swaggerIcon} alt="Swagger" /></li>
+                <li><Image src={docusaurusIcon} alt="Docusaurus" /></li>
+                <li><Image src={jwtIcon} alt="JWT" /></li>
+                <li><Image src={mysqlIcon} alt="MySQL" /></li>
+                <li><Image src={puppeteerIcon} alt="Puppeteer" /></li>
+                <li><Image src={cypressIcon} alt="Cypress" /></li>
+            </ul>
+        </li>
+        <li>
+            <div class="info">
+                <div class="logo">
+                    <Image src={mohaymenLogo} alt="" />
+                </div>
+                <div class="header">
+                    <div class="duration">مهر 1399 تا شهریور 1401</div>
+                    <div class="title">مهندس نرم‌افزار</div>
+                    <div class="corporate">شرکت فناوری اطلاعات و ارتباطات مهیمن</div>
+                </div>
+                <p class="description">
+                    <!-- [BIJAN] TODO: Write a description. -->
+                </p>
+            </div>
+            <ul class="tags">
+                <li><Image src={angularIcon} alt="Angular" /></li>
+                <li><Image src={typescriptIcon} alt="TypeScript" /></li>
+                <li><Image src={sassIcon} alt="Sass" /></li>
+                <li><Image src={antDesignIcon} alt="Ant Design" /></li>
+                <li><Image src={highchartsIcon} alt="Highcharts" /></li>
+                <li><Image src={gulpIcon} alt="Gulp.js" /></li>
+                <li><Image src={azureIcon} alt="Azure" /></li>
+            </ul>
+        </li>
+    </ul>
+</section>

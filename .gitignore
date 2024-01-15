@@ -1,5 +1,10 @@
-# Created by https://www.toptal.com/developers/gitignore/api/webstorm+all,visualstudiocode,node
-# Edit at https://www.toptal.com/developers/gitignore?templates=webstorm+all,visualstudiocode,node
+# Created by https://www.toptal.com/developers/gitignore/api/webstorm+all,visualstudiocode,node,astro
+# Edit at https://www.toptal.com/developers/gitignore?templates=webstorm+all,visualstudiocode,node,astro
+
+### Astro ###
+# Gitignore template for Astro projects
+# Ignore content collection generated files
+.astro
 
 ### Node ###
 # Logs
@@ -248,7 +253,7 @@ fabric.properties
 !.idea/codeStyles
 !.idea/runConfigurations
 
-# End of https://www.toptal.com/developers/gitignore/api/webstorm+all,visualstudiocode,node
+# End of https://www.toptal.com/developers/gitignore/api/webstorm+all,visualstudiocode,node,astro
 
 .idea/
 .vscode/

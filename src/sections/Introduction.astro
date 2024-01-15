@@ -1,0 +1,36 @@
+---
+import {Image} from 'astro:assets';
+
+import bijanImage from '@assets/images/bijan-eisapour.webp';
+
+import phoneIcon from '@assets/icons/phone.svg?raw';
+---
+
+<section id="introduction">
+    <Image class="me" src={bijanImage} alt="تصویری از چهره‌ی بیژن با پس‌زمینه‌ی طبیعت" />
+    <div class="text">
+        <h1>
+            <span class="keep-it-together">کیفیتی که شما را</span>
+            <br />
+            <span class="highlight">شگفت‌زده</span>
+            <span class="keep-it-together">خواهد کرد!</span>
+        </h1>
+        <p>
+            من یا مسئولیتی رو نمی‌پذیرم یا اگه پذیرفتم به
+            <span class="highlight">بهترین شکل ممکن</span>
+            انجامش میدم. وقتی با من کار کنید همیشه مطمئن هستید که پروژه‌ها با
+            <span class="highlight">بهترین کیفیت</span>
+            و در
+            <span class="highlight">زمان مقرر</span>
+            انجام میشن.
+        </p>
+        <a class="button button--primary button--large" href="#contact">
+            <Fragment set:html={phoneIcon} />
+            <span>
+                همین
+                <span class="highlight">حالا</span>
+                تماس بگیرید
+            </span>
+        </a>
+    </div>
+</section>

@@ -1,4 +1,4 @@
-export class Utils {
+export class DomUtils {
     public static select(selectors: string): HTMLElement {
         const result = document.querySelector(selectors);
 

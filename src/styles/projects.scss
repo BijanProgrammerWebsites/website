@@ -51,7 +51,7 @@ main {
 
                                 aspect-ratio: 1 / 1;
 
-                                img {
+                                svg {
                                     block-size: 100%;
                                     inline-size: 100%;
                                     object-fit: contain;
@@ -67,7 +67,7 @@ main {
 
                             li {
                                 .button {
-                                    img {
+                                    svg {
                                         block-size: 1.5em;
                                     }
                                 }
@@ -80,6 +80,7 @@ main {
                         place-items: center;
 
                         img {
+                            inline-size: auto;
                             max-block-size: 40rem;
                         }
                     }

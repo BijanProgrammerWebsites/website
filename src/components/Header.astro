@@ -1,0 +1,39 @@
+---
+import menuIcon from '@assets/icons/menu.svg?raw';
+import closeIcon from '@assets/icons/close.svg?raw';
+---
+
+<header>
+    <h1 class="logo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="600" height="828.92595" viewBox="0 0 600 828.92595">
+            <path
+                d="M600,528.92595c0,166.37848-135.42848,301.11563-302.067,299.993C134.059,827.815,0,690.86671,0,526.98905V78.926q0-4.65975.28062-9.25064C6.139-26.6044,150-21.474,150,74.98377V528.92595a149.92332,149.92332,0,1,0,200.14012-141.4565A75.08014,75.08014,0,0,1,300,316.71671v-.00015c0-51.67179,51.06594-87.97619,99.79691-70.79286C516.42421,287.04839,600,398.2239,600,528.92595Z"
+                style="fill: currentColor"></path>
+        </svg>
+        بیژن عیسی‌پور
+    </h1>
+    <button class="button button--icon menu" aria-label="باز کردن فهرست سایت">
+        <Fragment set:html={menuIcon} />
+    </button>
+    <button class="button button--icon close hidden" aria-label="بستن فهرست سایت">
+        <Fragment set:html={closeIcon} />
+    </button>
+    <nav class="hidden">
+        <ul>
+            <li class="active"><a href="#introduction">معرفی</a></li>
+            <li><a href="#hard-skills">مهارت‌های فنی</a></li>
+            <li><a href="#soft-skills">مهارت‌های نرم</a></li>
+            <li><a href="#jobs">سوابق شغلی</a></li>
+            <li><a href="#projects">پروژه‌ها</a></li>
+            <li><a href="#educations">سوابق تحصیلی</a></li>
+            <li><a href="#contact">تماس با من</a></li>
+        </ul>
+    </nav>
+</header>
+
+<script>
+    import {HeaderService} from '@services/header.service';
+
+    const headerService = new HeaderService();
+    headerService.init();
+</script>

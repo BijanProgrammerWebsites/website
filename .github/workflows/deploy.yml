@@ -5,7 +5,7 @@ on:
 
 jobs:
     deploy:
-        uses: BijanProgrammerWebsites/hub/.github/workflows/deploy-vite.yml@master
+        uses: BijanProgrammerWebsites/hub/.github/workflows/deploy-astro.yml@master
         with:
             host: bijanprogrammer.com
             base-href: /

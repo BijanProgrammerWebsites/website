@@ -1,0 +1,35 @@
+---
+import '@styles/fonts.scss';
+import '@styles/global.scss';
+import '@styles/button.scss';
+import '@styles/header.scss';
+import '@styles/main.scss';
+import '@styles/introduction.scss';
+import '@styles/hard-skills.scss';
+import '@styles/soft-skills.scss';
+import '@styles/jobs.scss';
+import '@styles/projects.scss';
+import '@styles/footer.scss';
+
+import Header from '@components/Header.astro';
+---
+
+<!doctype html>
+<html lang="fa" dir="rtl">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>BijanProgrammer</title>
+        <meta name="description" content="رزومه آنلاین بیژن عیسی‌پور" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    </head>
+    <body>
+        <Header />
+        <main>
+            <slot />
+        </main>
+    </body>
+</html>

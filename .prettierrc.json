@@ -7,11 +7,18 @@
     "bracketSpacing": false,
     "arrowParens": "always",
     "endOfLine": "auto",
+    "plugins": ["prettier-plugin-astro"],
     "overrides": [
         {
             "files": ["*.css", "*.scss"],
             "options": {
                 "singleQuote": false
+            }
+        },
+        {
+            "files": "*.astro",
+            "options": {
+                "parser": "astro"
             }
         }
     ]
