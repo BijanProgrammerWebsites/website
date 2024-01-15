@@ -1,0 +1,14 @@
+---
+import arrowUpIcon from '@assets/icons/arrow-up.svg?raw';
+---
+
+<button class="button button--icon hidden" id="back-to-top" title="بازگشت به ابتدای صفحه">
+    <Fragment set:html={arrowUpIcon} />
+</button>
+
+<script>
+    import {BackToTopService} from '../services/back-to-top.service';
+
+    const backToTopService = new BackToTopService();
+    backToTopService.init();
+</script>

@@ -30,6 +30,10 @@
         font-weight: 700;
     }
 
+    &:hover {
+        background-color: var(--background-color-hover, var(--background-color));
+    }
+
     &--primary {
         --background-color: var(--color-primary);
         --color: var(--color-primary-opposite);
@@ -44,6 +48,7 @@
         --background-color: transparent;
         --background-color-hover: var(--color-gray-95);
         --color: inherit;
+        --padding: 0.5rem;
 
         background-color: transparent;
 
@@ -63,24 +68,24 @@
             background-color: var(--background-color);
 
             position: absolute;
-            inset: -0.5rem;
+            inset: calc(-1 * var(--padding));
             z-index: -1;
 
             border-radius: 999rem;
         }
 
         &:hover {
-            --background-color: var(--background-color-hover);
+            background-color: transparent;
+
+            &::before {
+                background-color: var(--background-color-hover, var(--background-color));
+            }
         }
 
         &--primary {
             --background-color: transparent;
             --background-color-hover: var(--color-primary-fade);
             --color: var(--color-primary);
-
-            &:hover {
-                --background-color: var(--color-primary-fade);
-            }
         }
     }
 
