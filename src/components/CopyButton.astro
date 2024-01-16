@@ -1,0 +1,20 @@
+---
+import copyIcon from '@assets/icons/copy.svg?raw';
+
+interface Props {
+    content: string;
+}
+
+const {content} = Astro.props;
+---
+
+<button class="button button--icon copy" title="کپی" data-content={content}>
+    <Fragment set:html={copyIcon} />
+</button>
+
+<script>
+    import {CopyService} from '@services/copy.service';
+
+    const copyService = new CopyService();
+    copyService.init();
+</script>
