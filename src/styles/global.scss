@@ -96,7 +96,7 @@ body {
     font-size: 1.6rem;
 }
 
-a:where(:not(.button):not(.cta)) {
+a:where(:not(.button):not(.logo):not(.cta)) {
     color: inherit;
 
     position: relative;

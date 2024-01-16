@@ -16,17 +16,24 @@ header {
     padding-inline: var(--full-width-padding-inline);
 
     .logo {
+        color: inherit;
+
         display: flex;
         align-items: center;
         gap: 0.5rem;
 
         font-size: 2.4rem;
+        text-decoration: none;
 
         svg {
             --size: 1.5em;
 
             block-size: var(--size);
             inline-size: var(--size);
+        }
+
+        h1 {
+            font-size: inherit;
         }
     }
 
