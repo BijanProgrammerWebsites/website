@@ -4,6 +4,9 @@
     background-color: var(--background-color);
     color: var(--color);
 
+    position: relative;
+    isolation: isolate;
+
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -19,6 +22,24 @@
 
     text-decoration: none;
 
+    &::before {
+        --padding: 0;
+
+        content: "";
+
+        background-color: var(--background-color-hover);
+        opacity: 0;
+
+        position: absolute;
+        inset: calc(-1 * var(--padding));
+        z-index: -1;
+
+        block-size: 100%;
+        inline-size: 100%;
+
+        transition: opacity var(--animation-duration-fast) ease-in-out;
+    }
+
     svg {
         --size: 1.25em;
 
@@ -26,34 +47,43 @@
         inline-size: var(--size);
     }
 
-    .highlight {
-        font-weight: 700;
+    &:hover {
+        &::before {
+            opacity: 1;
+        }
     }
 
-    &:hover {
-        background-color: var(--background-color-hover, var(--background-color));
+    &:focus-visible {
+        outline: none;
+
+        &::before {
+            opacity: 1;
+
+            outline: var(--outline-focus-visible);
+
+            transition: none;
+        }
     }
 
     &--primary {
         --background-color: var(--color-primary);
+        --background-color-hover: var(--color-primary-darker);
         --color: var(--color-primary-opposite);
     }
 
     &--github {
         --background-color: var(--color-gray-10);
+        --background-color-hover: var(--color-gray-20);
         --color: var(--color-gray-90);
     }
 
     &--icon {
         --background-color: transparent;
-        --background-color-hover: var(--color-gray-95);
+        --background-color-hover: var(--color-gray-90);
         --color: inherit;
         --padding: 0.5rem;
 
         background-color: transparent;
-
-        position: relative;
-        isolation: isolate;
 
         display: inline-grid;
         place-items: center;
@@ -63,23 +93,12 @@
         border: none;
 
         &::before {
-            content: "";
+            --padding: 0.5rem;
 
-            background-color: var(--background-color);
-
-            position: absolute;
-            inset: calc(-1 * var(--padding));
-            z-index: -1;
+            block-size: unset;
+            inline-size: unset;
 
             border-radius: 999rem;
-        }
-
-        &:hover {
-            background-color: transparent;
-
-            &::before {
-                background-color: var(--background-color-hover, var(--background-color));
-            }
         }
 
         &--primary {

@@ -13,6 +13,7 @@
 
     --color-primary: hsl(120deg 70% 40%);
     --color-primary-lighter: hsl(120deg 90% 70%);
+    --color-primary-darker: hsl(120deg 70% 36%);
     --color-primary-section: hsl(120deg 20% 90%);
     --color-primary-fade: hsl(120deg 70% 95%);
     --color-primary-opposite: var(--color-gray-98);
@@ -23,6 +24,8 @@
     --box-shadow-subtle: 0 0.2rem 0.5rem 0 var(--color-box-shadow-subtle);
 
     --border-radius: 0.25rem;
+
+    --outline-focus-visible: 0.2rem dashed var(--color-gray-10);
 
     --full-width: 120rem;
     --full-width-padding-inline: calc(max(100% - var(--full-width), 4rem) / 2);
@@ -92,7 +95,7 @@ body {
     font-size: 1.6rem;
 }
 
-a:not(.button):not(.cta) {
+a:where(:not(.button):not(.cta)) {
     color: inherit;
 
     position: relative;
@@ -127,6 +130,10 @@ a:not(.button):not(.cta) {
 
             transform: scaleX(1);
         }
+    }
+
+    &:focus-visible {
+        outline: var(--outline-focus-visible);
     }
 }
 

@@ -63,8 +63,7 @@
         }
     }
 
-    &:hover,
-    &:focus {
+    &:hover {
         &::before {
             box-shadow: -1rem 1rem 0 var(--color-secondary);
 
@@ -96,6 +95,11 @@
                 }
             }
         }
+    }
+
+    &:focus-visible {
+        outline: var(--outline-focus-visible);
+        outline-offset: 1rem;
     }
 }
 

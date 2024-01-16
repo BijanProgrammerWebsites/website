@@ -60,6 +60,12 @@ main {
                                 &::after {
                                     inset-block-end: 0.4em;
                                 }
+
+                                &:focus-visible {
+                                    color: var(--color-primary);
+
+                                    outline: none;
+                                }
                             }
                         }
                     }
