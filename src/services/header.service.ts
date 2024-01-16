@@ -1,6 +1,7 @@
 import {DomUtils} from '@utils/dom.utils.ts';
 
 export class HeaderService {
+    private headerElement = DomUtils.select('body > header');
     private menuButton = DomUtils.select('body > header .button.menu');
     private closeButton = DomUtils.select('body > header .button.close');
     private navElement = DomUtils.select('body > header nav');
@@ -9,6 +10,9 @@ export class HeaderService {
         this.addMenuButtonClickListener();
         this.addHashChangeListener();
         this.addWindowResizeObserver();
+        this.addDocumentScrollListener();
+
+        this.updateStickiness();
     }
 
     private addMenuButtonClickListener(): void {
@@ -47,5 +51,19 @@ export class HeaderService {
         });
 
         observer.observe(document.body);
+    }
+
+    private addDocumentScrollListener(): void {
+        document.addEventListener('scroll', () => {
+            this.updateStickiness();
+        });
+    }
+
+    private updateStickiness(): void {
+        if (window.scrollY > 0) {
+            this.headerElement.classList.add('stuck');
+        } else {
+            this.headerElement.classList.remove('stuck');
+        }
     }
 }

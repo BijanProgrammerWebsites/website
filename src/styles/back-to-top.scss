@@ -10,6 +10,7 @@
     position: fixed;
     inset-block-end: var(--inset);
     inset-inline-end: var(--inset);
+    z-index: 1;
 
     transition: var(--animation-duration-fast) ease-in-out;
     transition-property: transform, opacity;
