@@ -21,6 +21,7 @@ import Footer from '@components/Footer.astro';
 const title = 'وب‌سایت شخصی بیژن عیسی‌پور';
 const description =
     'من یا مسئولیتی رو نمی‌پذیرم یا اگه پذیرفتم به بهترین شکل ممکن انجامش میدم. وقتی با من کار کنید همیشه مطمئن هستید که پروژه‌ها با بهترین کیفیت و در زمان مقرر انجام میشن.';
+const keywords = ['BijanProgrammer', 'بیژن عیسی‌پور', 'Bijan', 'Programmer', 'بیژن', 'عیسی‌پور'].join(',');
 const imageAlt = 'تصویری از چهره‌ی بیژن با پس‌زمینه‌ی طبیعت';
 ---
 
@@ -32,8 +33,9 @@ const imageAlt = 'تصویری از چهره‌ی بیژن با پس‌زمین�
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <meta name="description" content={description} />
         <meta name="author" content="بیژن عیسی‌پور" />
+        <meta name="description" content={description} />
+        <meta name="keywords" content={keywords} />
 
         <meta property="profile:first_name" content="بیژن" />
         <meta property="profile:last_name" content="عیسی‌پور" />
