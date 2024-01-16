@@ -4,8 +4,13 @@
     $numerator: ($end-width * $min-font-size) - ($start-width * $max-font-size);
     $denominator: $end-width - $start-width;
     $base-px: math.div($numerator, $denominator);
-    $base-rem: $base-px * 0.1rem;
-    $vi: math.div($min-font-size - $base-px, $start-width) * 100vi;
+    $base-rem: precise($base-px * 0.1rem);
+    $vi: precise(math.div($min-font-size - $base-px, $start-width) * 100vi);
 
     font-size: clamp($min-font-size * 0.1rem, $base-rem + $vi, $max-font-size * 0.1rem);
+}
+
+@function precise($value, $precision: 2) {
+    $multiplier: math.pow(10, $precision);
+    @return math.div(math.round($value * $multiplier), $multiplier);
 }
