@@ -12,10 +12,10 @@
     inset-inline-end: var(--inset);
     z-index: 1;
 
+    font-size: 2.4rem;
+
     transition: var(--animation-duration-fast) ease-in-out;
     transition-property: transform, opacity;
-
-    font-size: 2.4rem;
 
     &::before {
         opacity: 0.7;

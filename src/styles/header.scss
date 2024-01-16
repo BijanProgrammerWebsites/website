@@ -23,6 +23,7 @@ header {
         gap: 0.5rem;
 
         font-size: 2.4rem;
+
         text-decoration: none;
 
         svg {
@@ -41,9 +42,6 @@ header {
         font-size: 2.4rem;
     }
 
-    .button.menu {
-    }
-
     .button.close {
         z-index: 2;
     }
@@ -53,15 +51,15 @@ header {
     }
 }
 
-@media (max-width: 999px) {
+@media (width < 1000px) {
     header {
         nav {
             background-color: var(--color-gray-98);
 
             position: fixed;
             inset: 0;
-            z-index: 1;
             overflow: auto;
+            z-index: 1;
 
             display: grid;
             align-content: start;
@@ -82,7 +80,7 @@ header {
     }
 }
 
-@media (min-width: 1000px) {
+@media (width >= 1000px) {
     header {
         .button.menu {
             display: none;

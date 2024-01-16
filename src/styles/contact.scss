@@ -4,9 +4,9 @@ main {
     > section {
         &#contact {
             > ul {
-                direction: ltr;
-
                 color: var(--color-gray-40);
+
+                direction: ltr;
 
                 display: grid;
                 grid-template-columns: repeat(auto-fit, minmax(min(40rem, 100%), 1fr));
@@ -53,8 +53,9 @@ main {
                             overflow: hidden;
 
                             font-weight: 700;
-                            white-space: nowrap;
+
                             text-overflow: ellipsis;
+                            white-space: nowrap;
 
                             a {
                                 &::after {

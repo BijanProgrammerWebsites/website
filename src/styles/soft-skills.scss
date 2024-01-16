@@ -17,6 +17,7 @@ main {
                     border-radius: var(--border-radius);
 
                     font-size: 2rem;
+
                     text-align: center;
 
                     .icon {
@@ -31,9 +32,9 @@ main {
 
                         aspect-ratio: 1 / 1;
 
-                        border-radius: 2rem;
-
                         padding: 2rem;
+
+                        border-radius: 2rem;
 
                         svg {
                             color: var(--color-gray-98);

@@ -50,7 +50,7 @@ html {
     scroll-behavior: smooth;
     scroll-padding: 6rem;
 
-    font-family: "Vazirmatn", sans-serif;
+    font-family: Vazirmatn, sans-serif;
     font-size: 62.5%;
 }
 
@@ -79,8 +79,8 @@ ul {
 img {
     display: block;
 
-    max-inline-size: 100%;
     block-size: auto;
+    max-inline-size: 100%;
 }
 
 body {
@@ -96,7 +96,7 @@ body {
     font-size: 1.6rem;
 }
 
-a:where(:not(.button):not(.logo):not(.cta)) {
+a:where(:not(.button, .logo, .cta)) {
     color: inherit;
 
     position: relative;
@@ -120,9 +120,8 @@ a:where(:not(.button):not(.logo):not(.cta)) {
 
         transform: scaleX(0);
 
+        transition: var(--animation-duration-fast) ease-in-out;
         transition-property: transform, opacity;
-        transition-duration: var(--animation-duration-fast);
-        transition-timing-function: ease-in-out;
     }
 
     &:hover {

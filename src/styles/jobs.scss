@@ -31,6 +31,7 @@ main {
 
                                 @include utils.font-size-clamp(24, 28);
                                 font-weight: 700;
+
                                 line-height: 1.2;
                             }
 
@@ -73,7 +74,7 @@ main {
     }
 }
 
-@media (max-width: 599px) {
+@media (width < 600px) {
     main {
         > section {
             &#jobs {
@@ -105,7 +106,7 @@ main {
     }
 }
 
-@media (min-width: 600px) {
+@media (width >= 600px) {
     main {
         > section {
             &#jobs {

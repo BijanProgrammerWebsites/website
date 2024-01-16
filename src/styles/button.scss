@@ -16,11 +16,11 @@
 
     border-radius: var(--border-radius);
 
-    @include utils.font-size-clamp(16, 18);
+    text-decoration: none;
 
     cursor: pointer;
 
-    text-decoration: none;
+    @include utils.font-size-clamp(16, 18);
 
     &::before {
         --padding: 0;

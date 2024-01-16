@@ -13,6 +13,7 @@
 
     @include utils.font-size-clamp(18, 24);
     font-weight: 700;
+
     text-decoration: none;
 
     &::before {
@@ -26,8 +27,8 @@
 
         transform-origin: right;
 
-        transition-property: inset, box-shadow;
         transition-duration: var(--animation-duration-normal);
+        transition-property: inset, box-shadow;
     }
 
     .title,
@@ -107,9 +108,11 @@
     0% {
         fill: var(--color-primary-opposite);
     }
+
     50% {
         fill: var(--color-secondary);
     }
+
     100% {
         fill: var(--color-primary-opposite);
     }
