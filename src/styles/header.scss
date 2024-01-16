@@ -5,7 +5,7 @@ header {
 
     position: sticky;
     inset-block-start: 0;
-    z-index: 1;
+    z-index: 2;
 
     display: flex;
     align-items: center;
@@ -41,20 +41,6 @@ header {
         z-index: 2;
     }
 
-    nav {
-        ul {
-            li {
-                &.active {
-                    a {
-                        color: var(--color-primary);
-
-                        font-weight: 700;
-                    }
-                }
-            }
-        }
-    }
-
     &.stuck {
         box-shadow: var(--box-shadow-subtle);
     }
@@ -68,6 +54,7 @@ header {
             position: fixed;
             inset: 0;
             z-index: 1;
+            overflow: auto;
 
             display: grid;
             align-content: start;
@@ -79,16 +66,6 @@ header {
             ul {
                 display: grid;
                 gap: 2rem;
-
-                li {
-                    &.active {
-                        a {
-                            color: var(--color-primary);
-
-                            font-weight: 700;
-                        }
-                    }
-                }
             }
         }
 

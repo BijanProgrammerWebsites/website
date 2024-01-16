@@ -5,10 +5,11 @@ export class HeaderService {
     private menuButton = DomUtils.select('body > header .button.menu');
     private closeButton = DomUtils.select('body > header .button.close');
     private navElement = DomUtils.select('body > header nav');
+    private navLinks = document.querySelectorAll<HTMLAnchorElement>('body > header nav a');
 
     public init(): void {
         this.addMenuButtonClickListener();
-        this.addHashChangeListener();
+        this.addNavLinksClickListener();
         this.addWindowResizeObserver();
         this.addDocumentScrollListener();
 
@@ -37,9 +38,11 @@ export class HeaderService {
         this.closeButton.classList.add('hidden');
     }
 
-    private addHashChangeListener(): void {
-        addEventListener('hashchange', () => {
-            this.hideMobileNav();
+    private addNavLinksClickListener(): void {
+        this.navLinks.forEach((navLink) => {
+            navLink.addEventListener('click', () => {
+                this.hideMobileNav();
+            });
         });
     }
 
