@@ -1,60 +1,56 @@
 @use "/src/styles/utils";
 
-main {
-    > section {
-        &#hard-skills {
-            .group {
+#hard-skills {
+    .group {
+        display: grid;
+        gap: 1rem;
+
+        .skills {
+            direction: ltr;
+
+            display: grid;
+            grid-auto-flow: dense;
+            grid-auto-rows: 1em;
+            grid-template-columns: repeat(auto-fill, minmax(1em, 1fr));
+            gap: 1rem;
+
+            @include utils.font-size-clamp(100, 180);
+
+            li {
+                background-color: var(--color-gray-98);
+                box-shadow: var(--box-shadow-subtle);
+
                 display: grid;
-                gap: 1rem;
+                grid-template-columns: minmax(0, 1fr);
+                grid-template-rows: minmax(0, 1fr) auto;
+                align-items: center;
+                justify-items: center;
+                gap: 2rem;
 
-                .skills {
-                    direction: ltr;
+                padding: 2rem;
 
-                    display: grid;
-                    grid-auto-flow: dense;
-                    grid-auto-rows: 1em;
-                    grid-template-columns: repeat(auto-fill, minmax(1em, 1fr));
-                    gap: 1rem;
+                border-radius: var(--border-radius);
 
-                    @include utils.font-size-clamp(100, 180);
+                text-align: center;
 
-                    li {
-                        background-color: var(--color-gray-98);
-                        box-shadow: var(--box-shadow-subtle);
+                img {
+                    block-size: 100%;
+                    inline-size: 100%;
+                    aspect-ratio: 1 / 1;
+                    object-fit: contain;
+                }
 
-                        display: grid;
-                        grid-template-columns: minmax(0, 1fr);
-                        grid-template-rows: minmax(0, 1fr) auto;
-                        align-items: center;
-                        justify-items: center;
-                        gap: 2rem;
+                .title {
+                    @include utils.font-size-clamp(16, 24);
+                    line-height: 1;
+                }
 
-                        padding: 2rem;
+                &.wider {
+                    grid-column: span 2;
+                }
 
-                        border-radius: var(--border-radius);
-
-                        text-align: center;
-
-                        img {
-                            block-size: 100%;
-                            inline-size: 100%;
-                            aspect-ratio: 1 / 1;
-                            object-fit: contain;
-                        }
-
-                        .title {
-                            @include utils.font-size-clamp(16, 24);
-                            line-height: 1;
-                        }
-
-                        &.wider {
-                            grid-column: span 2;
-                        }
-
-                        &.taller {
-                            grid-row: span 2;
-                        }
-                    }
+                &.taller {
+                    grid-row: span 2;
                 }
             }
         }

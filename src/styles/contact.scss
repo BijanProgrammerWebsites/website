@@ -1,80 +1,76 @@
 @use "/src/styles/utils";
 
-main {
-    > section {
-        &#contact {
-            > ul {
-                color: var(--color-gray-40);
+#contact {
+    > ul {
+        color: var(--color-gray-40);
 
-                direction: ltr;
+        direction: ltr;
 
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(40rem, 100%), 1fr));
+        gap: 2rem;
+
+        > li {
+            --spacing: 2rem;
+
+            background-color: var(--color-gray-98);
+            box-shadow: var(--box-shadow-subtle);
+
+            display: grid;
+            grid-template-columns: auto minmax(0, 1fr) auto;
+            align-items: center;
+            column-gap: var(--spacing);
+
+            padding: var(--spacing);
+
+            border-radius: var(--border-radius);
+
+            @include utils.font-size-clamp(18, 24);
+
+            .icon {
                 display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(min(40rem, 100%), 1fr));
-                gap: 2rem;
+                place-items: center;
 
-                > li {
-                    --spacing: 2rem;
+                svg {
+                    block-size: 1.25em;
+                    inline-size: 1.25em;
+                }
+            }
 
-                    background-color: var(--color-gray-98);
-                    box-shadow: var(--box-shadow-subtle);
+            .text {
+                display: grid;
+                gap: 0.5rem;
 
-                    display: grid;
-                    grid-template-columns: auto minmax(0, 1fr) auto;
-                    align-items: center;
-                    column-gap: var(--spacing);
+                line-height: 1;
 
-                    padding: var(--spacing);
+                .title {
+                    font-size: 0.7em;
+                }
 
-                    border-radius: var(--border-radius);
+                .username {
+                    overflow: hidden;
 
-                    @include utils.font-size-clamp(18, 24);
+                    font-weight: 700;
 
-                    .icon {
-                        display: grid;
-                        place-items: center;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
 
-                        svg {
-                            block-size: 1.25em;
-                            inline-size: 1.25em;
-                        }
-                    }
-
-                    .text {
-                        display: grid;
-                        gap: 0.5rem;
-
-                        line-height: 1;
-
-                        .title {
-                            font-size: 0.7em;
+                    a {
+                        &::after {
+                            inset-block-end: 0.4em;
                         }
 
-                        .username {
-                            overflow: hidden;
+                        &:focus-visible {
+                            color: var(--color-primary);
 
-                            font-weight: 700;
-
-                            text-overflow: ellipsis;
-                            white-space: nowrap;
-
-                            a {
-                                &::after {
-                                    inset-block-end: 0.4em;
-                                }
-
-                                &:focus-visible {
-                                    color: var(--color-primary);
-
-                                    outline: none;
-                                }
-                            }
+                            outline: none;
                         }
-                    }
-
-                    .button.copy {
-                        --padding: 1rem;
                     }
                 }
+            }
+
+            .button.copy {
+                --padding: 1rem;
             }
         }
     }

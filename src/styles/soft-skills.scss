@@ -1,53 +1,45 @@
-main {
-    > section {
-        &#soft-skills {
-            .skills {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 4rem 2rem;
+#soft-skills {
+    .skills {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 4rem 2rem;
 
-                li {
-                    flex: 0 0 16rem;
+        li {
+            flex: 0 0 16rem;
 
-                    display: grid;
-                    place-items: center;
-                    gap: 1rem;
+            display: grid;
+            place-items: center;
+            gap: 1rem;
 
-                    border-radius: var(--border-radius);
+            border-radius: var(--border-radius);
 
-                    font-size: 2rem;
+            font-size: 2rem;
 
-                    text-align: center;
+            text-align: center;
 
-                    .icon {
-                        background-image: radial-gradient(
-                            circle at 0% 0%,
-                            var(--color-primary-lighter),
-                            var(--color-primary)
-                        );
+            .icon {
+                background-image: radial-gradient(circle at 0% 0%, var(--color-primary-lighter), var(--color-primary));
 
-                        display: grid;
-                        place-items: center;
+                display: grid;
+                place-items: center;
 
-                        aspect-ratio: 1 / 1;
+                aspect-ratio: 1 / 1;
 
-                        padding: 2rem;
+                padding: 2rem;
 
-                        border-radius: 2rem;
+                border-radius: 2rem;
 
-                        svg {
-                            color: var(--color-gray-98);
+                svg {
+                    color: var(--color-gray-98);
 
-                            block-size: 6rem;
-                            inline-size: 6rem;
-                        }
-                    }
-
-                    .title {
-                        line-height: 1.2;
-                    }
+                    block-size: 6rem;
+                    inline-size: 6rem;
                 }
+            }
+
+            .title {
+                line-height: 1.2;
             }
         }
     }

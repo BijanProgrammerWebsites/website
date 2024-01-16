@@ -1,85 +1,73 @@
 @use "/src/styles/utils";
 
-main {
-    > section {
-        &#introduction {
-            grid-template-columns: 1fr;
-            gap: 2rem;
+#introduction {
+    grid-template-columns: 1fr;
+    gap: 2rem;
 
-            padding-block: 2rem;
+    padding-block: 2rem;
 
-            img.me {
-                place-self: center;
+    img.me {
+        place-self: center;
 
-                max-block-size: 1em;
-                max-inline-size: 1em;
+        max-block-size: 1em;
+        max-inline-size: 1em;
 
-                border-radius: 999rem;
+        border-radius: 999rem;
 
-                @include utils.font-size-clamp(160, 280);
+        @include utils.font-size-clamp(160, 280);
+    }
+
+    .text {
+        h1 {
+            margin-block-end: 2rem;
+
+            @include utils.font-size-clamp(28, 72);
+            font-weight: 400;
+
+            line-height: 1.2;
+
+            .highlight {
+                color: var(--color-primary);
+
+                font-size: 1.4em;
+                font-weight: 700;
+            }
+        }
+
+        p {
+            max-inline-size: 50ch;
+
+            margin-block-end: 2rem;
+
+            @include utils.font-size-clamp(16, 24);
+
+            .highlight {
+                color: var(--color-primary);
             }
 
-            .text {
-                h1 {
-                    margin-block-end: 2rem;
-
-                    @include utils.font-size-clamp(28, 72);
-                    font-weight: 400;
-
-                    line-height: 1.2;
-
-                    .highlight {
-                        color: var(--color-primary);
-
-                        font-size: 1.4em;
-                        font-weight: 700;
-                    }
-                }
-
-                p {
-                    max-inline-size: 50ch;
-
-                    margin-block-end: 2rem;
-
-                    @include utils.font-size-clamp(16, 24);
-
-                    .highlight {
-                        color: var(--color-primary);
-                    }
-
-                    &:last-of-type {
-                        margin-block-end: 4rem;
-                    }
-                }
+            &:last-of-type {
+                margin-block-end: 4rem;
             }
         }
     }
 }
 
 @media (width < 1000px) {
-    main {
-        > section {
-            &#introduction {
-                .text {
-                    text-align: center;
+    #introduction {
+        .text {
+            text-align: center;
 
-                    p {
-                        margin-inline: auto;
-                    }
-                }
+            p {
+                margin-inline: auto;
             }
         }
     }
 }
 
 @media (width >= 1000px) {
-    main {
-        > section {
-            &#introduction {
-                grid-template-columns: 1fr 3fr;
+    #introduction {
+        grid-template-columns: 1fr 3fr;
 
-                padding-block: 8rem;
-            }
-        }
+        padding-block: 8rem;
     }
 }
