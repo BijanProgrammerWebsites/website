@@ -1,4 +1,21 @@
 ---
+import '@styles/button.scss';
+import '@styles/cta.scss';
+import '@styles/header.scss';
+import '@styles/main.scss';
+import '@styles/introduction.scss';
+import '@styles/hard-skills.scss';
+import '@styles/soft-skills.scss';
+import '@styles/jobs.scss';
+import '@styles/projects.scss';
+import '@styles/contact.scss';
+import '@styles/footer.scss';
+import '@styles/back-to-top.scss';
+
+import Header from '@components/Header.astro';
+import BackToTop from '@components/BackToTop.astro';
+import Footer from '@components/Footer.astro';
+
 import Layout from '@layouts/Layout.astro';
 import Introduction from '@sections/Introduction.astro';
 import HardSkills from '@sections/HardSkills.astro';
@@ -9,19 +26,22 @@ import Contact from '@sections/Contact.astro';
 ---
 
 <Layout>
-    <Introduction />
-    <div class="divider narrow-to-wide">&nbsp;</div>
-    <HardSkills />
-    <div class="divider wide-to-narrow">&nbsp;</div>
-    <SoftSkills />
-    <div class="divider narrow-to-wide">&nbsp;</div>
-    <Jobs />
-    <div class="divider wide-to-narrow">&nbsp;</div>
-    <Projects />
-    <div class="divider narrow-to-wide">&nbsp;</div>
-    <section></section>
-    <div class="divider wide-to-narrow">&nbsp;</div>
-    <Contact />
+    <Header />
+    <main>
+        <Introduction />
+        <div class="divider narrow-to-wide">&nbsp;</div>
+        <HardSkills />
+        <div class="divider wide-to-narrow">&nbsp;</div>
+        <SoftSkills />
+        <div class="divider narrow-to-wide">&nbsp;</div>
+        <Jobs />
+        <div class="divider wide-to-narrow">&nbsp;</div>
+        <Projects />
+        <div class="divider narrow-to-wide">&nbsp;</div>
+        <section></section>
+        <div class="divider wide-to-narrow">&nbsp;</div>
+        <Contact />
+    </main>
+    <Footer />
+    <BackToTop />
 </Layout>
-
-<style></style>
