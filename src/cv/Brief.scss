@@ -3,9 +3,9 @@
 
     display: grid;
     align-content: start;
-    gap: var(--cv-gutter-normal);
+    gap: var(--cv-gutter-700);
 
-    padding: var(--cv-gutter-normal);
+    padding: var(--cv-gutter-700);
 
     img {
         inline-size: 100%;
@@ -15,9 +15,12 @@
 
     section {
         display: grid;
-        gap: var(--cv-gutter-small);
+        gap: var(--cv-gutter-100);
 
         ul {
+            display: grid;
+            gap: var(--cv-gutter-100);
+
             li {
                 display: flex;
                 justify-content: space-between;

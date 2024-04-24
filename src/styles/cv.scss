@@ -1,6 +1,7 @@
 :root {
-    --cv-gutter-small: 2mm;
-    --cv-gutter-normal: 5mm;
+    --cv-gutter-100: 1mm;
+    --cv-gutter-400: 2mm;
+    --cv-gutter-700: 5mm;
 }
 
 body {
@@ -54,7 +55,7 @@ h2 {
     page-break-after: always;
 
     .content {
-        padding: var(--cv-gutter-normal);
+        padding: var(--cv-gutter-700);
     }
 }
 
@@ -73,6 +74,6 @@ h2 {
         background-color: var(--color-white);
         box-shadow: var(--box-shadow-subtle);
 
-        margin: var(--cv-gutter-normal) auto;
+        margin: var(--cv-gutter-700) auto;
     }
 }
