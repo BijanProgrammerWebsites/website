@@ -1,0 +1,125 @@
+---
+import {Image} from 'astro:assets';
+
+import bijanImage from '@assets/images/bijan-eisapour.webp';
+
+import emailIcon from '@assets/socials/email.svg?raw';
+import linkedinIcon from '@assets/socials/linkedin.svg?raw';
+import telegramIcon from '@assets/socials/telegram.svg?raw';
+import phoneIcon from '@assets/socials/phone.svg?raw';
+import githubIcon from '@assets/socials/github.svg?raw';
+import websiteIcon from '@assets/socials/website.svg?raw';
+
+import './Brief.scss';
+
+const age = ((birthday) => {
+    console.log(birthday);
+    const millisecondsPassedFromBirthday = Date.now() - birthday.getTime();
+    return new Date(millisecondsPassedFromBirthday).getUTCFullYear() - 1970;
+})(new Date(2001, 1, 3));
+---
+
+<section id="brief">
+    <Image class="me" src={bijanImage} alt="تصویری از چهره‌ی بیژن با پس‌زمینه‌ی طبیعت" loading="eager" />
+
+    <section class="contact">
+        <h2>اطلاعات تماس</h2>
+        <ul>
+            <li class="phone">
+                <div class="icon">
+                    <Fragment set:html={phoneIcon} />
+                </div>
+                <div class="text">
+                    <a href="tel:+989124210720">0912 4210 720</a>
+                </div>
+            </li>
+            <li class="email">
+                <div class="icon">
+                    <Fragment set:html={emailIcon} />
+                </div>
+                <div class="text">
+                    <a href="mailto:bijaneisapour@gmail.com">bijaneisapour@gmail.com</a>
+                </div>
+            </li>
+            <li class="website">
+                <div class="icon">
+                    <Fragment set:html={websiteIcon} />
+                </div>
+                <div class="text">
+                    <a href="https://bijanprogrammer.com/" target="_blank">BijanProgrammer.com</a>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <section class="personal">
+        <h2>اطلاعات فردی</h2>
+        <ul>
+            <li>
+                <div class="label">سن</div>
+                <div class="value">{age}</div>
+            </li>
+            <li>
+                <div class="label">وضعیت تأهل</div>
+                <div class="value">متأهل</div>
+            </li>
+            <li>
+                <div class="label">محل سکونت</div>
+                <div class="value">تهران</div>
+            </li>
+            <li>
+                <div class="label">جنسیت</div>
+                <div class="value">آقا</div>
+            </li>
+            <li>
+                <div class="label">وضعیت سربازی</div>
+                <div class="value">معافیت تحصیلی</div>
+            </li>
+        </ul>
+    </section>
+    <section class="job">
+        <h2>اطلاعات شغلی</h2>
+        <ul>
+            <li>
+                <div class="label">وضعیت اشتغال</div>
+                <div class="value">بدون شغل</div>
+            </li>
+            <li>
+                <div class="label">نوع شغل دلخواه</div>
+                <div class="value">دورکاری تمام‌وقت</div>
+            </li>
+            <li>
+                <div class="label">حداقل حقوق درخواستی</div>
+                <div class="value">15 میلیون تومان</div>
+            </li>
+        </ul>
+    </section>
+    <section class="social">
+        <h2>شبکه‌های اجتماعی</h2>
+        <ul>
+            <li class="linkedin">
+                <div class="icon">
+                    <Fragment set:html={linkedinIcon} />
+                </div>
+                <div class="text">
+                    <a href="https://www.linkedin.com/in/bijanprogrammer/" target="_blank">@BijanProgrammer</a>
+                </div>
+            </li>
+            <li class="telegram">
+                <div class="icon">
+                    <Fragment set:html={telegramIcon} />
+                </div>
+                <div class="text">
+                    <a href="https://t.me/BijanEisapour/" target="_blank">@BijanEisapour</a>
+                </div>
+            </li>
+            <li class="github">
+                <div class="icon">
+                    <Fragment set:html={githubIcon} />
+                </div>
+                <div class="text">
+                    <a href="https://github.com/BijanProgrammer/" target="_blank">@BijanProgrammer</a>
+                </div>
+            </li>
+        </ul>
+    </section>
+</section>

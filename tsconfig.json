@@ -6,6 +6,7 @@
             "@src/*": ["src/*"],
             "@assets/*": ["src/assets/*"],
             "@components/*": ["src/components/*"],
+            "@cv/*": ["src/cv/*"],
             "@layouts/*": ["src/layouts/*"],
             "@pages/*": ["src/pages/*"],
             "@sections/*": ["src/sections/*"],

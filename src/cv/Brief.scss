@@ -1,0 +1,43 @@
+#brief {
+    background-color: var(--color-primary-section);
+
+    display: grid;
+    align-content: start;
+    gap: var(--cv-gutter);
+
+    padding: var(--cv-gutter);
+
+    img {
+        inline-size: 100%;
+
+        border-radius: var(--border-radius);
+    }
+
+    section {
+        display: grid;
+        gap: 1mm;
+
+        ul {
+            li {
+                display: flex;
+                justify-content: space-between;
+
+                .text,
+                .value {
+                    font-weight: 500;
+                }
+            }
+        }
+
+        &.contact,
+        &.social {
+            ul {
+                li {
+                    .text {
+                        direction: ltr;
+                    }
+                }
+            }
+        }
+    }
+}

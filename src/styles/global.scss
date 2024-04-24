@@ -1,6 +1,7 @@
 @use "/src/styles/utils";
 
 :root {
+    --color-white: hsl(0deg 0% 100%);
     --color-gray-98: hsl(0deg 0% 98%);
     --color-gray-95: hsl(0deg 0% 95%);
     --color-gray-90: hsl(0deg 0% 90%);
@@ -10,6 +11,7 @@
     --color-gray-30: hsl(0deg 0% 30%);
     --color-gray-20: hsl(0deg 0% 20%);
     --color-gray-10: hsl(0deg 0% 10%);
+    --color-black: hsl(0deg 0% 0%);
 
     --color-primary: hsl(120deg 70% 40%);
     --color-primary-lighter: hsl(120deg 90% 70%);
