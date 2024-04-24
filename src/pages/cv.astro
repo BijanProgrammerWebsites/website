@@ -4,21 +4,23 @@ import '@styles/cv.scss';
 import Layout from '@layouts/Layout.astro';
 
 import Brief from '@cv/Brief.astro';
-// import Header from '@slides/Header.astro';
-// import Introduction from '@slides/Introduction.astro';
-// import Jobs from '@slides/Jobs.astro';
-// import Education from '@slides/Education.astro';
-// import HardSkills from '@slides/HardSkills.astro';
-// import SoftSkills from '@slides/SoftSkills.astro';
-// import English from '@slides/English.astro';
-// import Projects from '@slides/Projects.astro';
+import Header from '@cv/Header.astro';
+// import Introduction from '@cv/Introduction.astro';
+// import Jobs from '@cv/Jobs.astro';
+// import Education from '@cv/Education.astro';
+// import HardSkills from '@cv/HardSkills.astro';
+// import SoftSkills from '@cv/SoftSkills.astro';
+// import English from '@cv/English.astro';
+// import Projects from '@cv/Projects.astro';
 ---
 
 <Layout>
     <main>
         <div class="sheet">
             <Brief />
-            <div class="content"></div>
+            <div class="content">
+                <Header />
+            </div>
         </div>
     </main>
 </Layout>

@@ -1,5 +1,6 @@
 #brief {
-    background-color: var(--color-primary-section);
+    background-color: var(--cv-color-primary);
+    color: var(--cv-color-primary-opposite);
 
     display: grid;
     align-content: start;
@@ -10,7 +11,8 @@
     img {
         inline-size: 100%;
 
-        border-radius: var(--border-radius);
+        border: 0.5mm solid var(--color-white);
+        border-radius: 2mm;
     }
 
     section {

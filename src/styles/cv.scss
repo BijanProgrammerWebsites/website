@@ -1,4 +1,11 @@
 :root {
+    --cv-color-primary: hsl(200deg 24% 24%);
+    --cv-color-primary-lighter: hsl(200deg 30% 30%);
+    --cv-color-primary-darker: hsl(200deg 20% 20%);
+    --cv-color-primary-section: hsl(200deg 20% 90%);
+    --cv-color-primary-fade: hsl(200deg 70% 95%);
+    --cv-color-primary-opposite: var(--color-white);
+
     --cv-gutter-100: 1mm;
     --cv-gutter-400: 2mm;
     --cv-gutter-700: 5mm;
@@ -9,10 +16,6 @@ body {
     color: var(--color-black) !important;
 
     font-size: 1rem !important;
-}
-
-h1 {
-    font-size: 2rem;
 }
 
 h2 {
