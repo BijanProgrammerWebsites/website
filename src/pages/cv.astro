@@ -1,17 +1,19 @@
 ---
 import '@styles/cv.scss';
+import '@cv/jobs.scss';
 
 import Layout from '@layouts/Layout.astro';
 
 import Brief from '@cv/Brief.astro';
 import Header from '@cv/Header.astro';
 import Introduction from '@cv/Introduction.astro';
-// import Jobs from '@cv/Jobs.astro';
 // import Education from '@cv/Education.astro';
 // import HardSkills from '@cv/HardSkills.astro';
 // import SoftSkills from '@cv/SoftSkills.astro';
 // import English from '@cv/English.astro';
 // import Projects from '@cv/Projects.astro';
+
+import Jobs from '@sections/Jobs.astro';
 ---
 
 <Layout>
@@ -21,6 +23,7 @@ import Introduction from '@cv/Introduction.astro';
             <div class="content">
                 <Header />
                 <Introduction />
+                <Jobs />
             </div>
         </div>
     </main>
