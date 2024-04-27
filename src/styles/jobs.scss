@@ -45,7 +45,20 @@
                 }
 
                 .description {
+                    display: grid;
+                    align-content: start;
+
                     max-inline-size: 70ch;
+
+                    > *:not(:has(+ ul)) {
+                        margin-block-end: 1rem;
+                    }
+
+                    ul {
+                        list-style: disc;
+
+                        padding-inline-start: 2rem;
+                    }
                 }
             }
 
