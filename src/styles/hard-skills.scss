@@ -8,49 +8,37 @@
         .skills {
             direction: ltr;
 
-            display: grid;
-            grid-auto-flow: dense;
-            grid-auto-rows: 1em;
-            grid-template-columns: repeat(auto-fill, minmax(1em, 1fr));
+            display: flex;
+            flex-wrap: wrap;
             gap: 1rem;
 
-            @include utils.font-size-clamp(100, 180);
-
             li {
+                flex: 1 0 auto;
+
                 background-color: var(--color-gray-98);
                 box-shadow: var(--box-shadow-subtle);
 
-                display: grid;
-                grid-template-columns: minmax(0, 1fr);
-                grid-template-rows: minmax(0, 1fr) auto;
+                display: flex;
                 align-items: center;
-                justify-items: center;
-                gap: 2rem;
+                justify-content: center;
+                gap: 1rem;
 
                 padding: 2rem;
 
                 border-radius: var(--border-radius);
 
+                @include utils.font-size-clamp(16, 24);
+
                 text-align: center;
 
                 img {
-                    block-size: 100%;
-                    inline-size: 100%;
-                    aspect-ratio: 1 / 1;
+                    block-size: 2em;
+                    inline-size: auto;
                     object-fit: contain;
                 }
 
                 .title {
-                    @include utils.font-size-clamp(16, 24);
                     line-height: 1;
-                }
-
-                &.wider {
-                    grid-column: span 2;
-                }
-
-                &.taller {
-                    grid-row: span 2;
                 }
             }
         }

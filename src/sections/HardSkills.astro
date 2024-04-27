@@ -43,6 +43,185 @@ import kibanaIcon from '@assets/brands/kibana.svg';
 import puppeteerIcon from '@assets/brands/puppeteer.svg';
 import rxjsIcon from '@assets/brands/rxjs.svg';
 import reduxIcon from '@assets/brands/redux.svg';
+
+type Skill = {title: string; image: typeof reactIcon};
+
+const perfectSkills: Skill[] = [
+    {
+        title: 'React',
+        image: reactIcon,
+    },
+    {
+        title: 'Next.js',
+        image: nextJsIcon,
+    },
+    {
+        title: 'Angular',
+        image: angularIcon,
+    },
+    {
+        title: 'Material UI',
+        image: muiIcon,
+    },
+    {
+        title: 'Ant Design',
+        image: antDesignIcon,
+    },
+    {
+        title: 'JavaScript',
+        image: javascriptIcon,
+    },
+    {
+        title: 'TypeScript',
+        image: typescriptIcon,
+    },
+    {
+        title: 'Node.js',
+        image: nodeJsIcon,
+    },
+    {
+        title: 'Swagger',
+        image: swaggerIcon,
+    },
+    {
+        title: 'JWT',
+        image: jwtIcon,
+    },
+    {
+        title: 'GSAP',
+        image: gsapIcon,
+    },
+    {
+        title: 'Git',
+        image: gitIcon,
+    },
+    {
+        title: 'GitHub',
+        image: githubIcon,
+    },
+    {
+        title: 'Sass',
+        image: sassIcon,
+    },
+    {
+        title: 'Highcharts',
+        image: highchartsIcon,
+    },
+    {
+        title: 'Docusaurus',
+        image: docusaurusIcon,
+    },
+];
+
+const goodSkills: Skill[] = [
+    {
+        title: 'Redux',
+        image: reduxIcon,
+    },
+    {
+        title: 'Storybook',
+        image: storybookIcon,
+    },
+    {
+        title: 'Jest',
+        image: jestIcon,
+    },
+    {
+        title: 'Cypress',
+        image: cypressIcon,
+    },
+    {
+        title: 'Puppeteer',
+        image: puppeteerIcon,
+    },
+    {
+        title: 'jQuery',
+        image: jqueryIcon,
+    },
+    {
+        title: 'PostgreSQL',
+        image: postgresqlIcon,
+    },
+    {
+        title: 'MongoDB',
+        image: mongodbIcon,
+    },
+    {
+        title: 'MySQL',
+        image: mysqlIcon,
+    },
+    {
+        title: 'Postman',
+        image: postmanIcon,
+    },
+    {
+        title: 'C#',
+        image: cSharpIcon,
+    },
+    {
+        title: 'Python',
+        image: pythonIcon,
+    },
+    {
+        title: 'Azure',
+        image: azureIcon,
+    },
+    {
+        title: 'Jira',
+        image: jiraIcon,
+    },
+    {
+        title: 'Confluence',
+        image: confluenceIcon,
+    },
+    {
+        title: 'Trello',
+        image: trelloIcon,
+    },
+];
+
+const normalSkills: Skill[] = [
+    {
+        title: 'ASP.NET Core',
+        image: aspDotnetCoreIcon,
+    },
+    {
+        title: 'Entity Framework Core',
+        image: entityFrameworkCoreIcon,
+    },
+    {
+        title: 'xUnit.net',
+        image: xunitIcon,
+    },
+    {
+        title: 'NGINX',
+        image: nginxIcon,
+    },
+    {
+        title: 'RxJS',
+        image: rxjsIcon,
+    },
+    {
+        title: 'Prisma',
+        image: prismaIcon,
+    },
+    {
+        title: 'Gulp.js',
+        image: gulpIcon,
+    },
+    {
+        title: 'Elasticsearch',
+        image: elasticsearchIcon,
+    },
+    {
+        title: 'Kibana',
+        image: kibanaIcon,
+    },
+    {
+        title: 'Mapbox',
+        image: mapboxIcon,
+    },
+];
 ---
 
 <section id="hard-skills">
@@ -50,184 +229,40 @@ import reduxIcon from '@assets/brands/redux.svg';
     <div class="group perfect">
         <h3>تسلط کامل</h3>
         <ul class="skills">
-            <li class="wider taller">
-                <Image src={angularIcon} alt="" />
-                <div class="title">Angular</div>
-            </li>
-            <li>
-                <Image src={reactIcon} alt="" />
-                <div class="title">React</div>
-            </li>
-            <li>
-                <Image src={sassIcon} alt="" />
-                <div class="title">Sass</div>
-            </li>
-            <li class="wider taller">
-                <Image src={nextJsIcon} alt="" />
-                <div class="title">Next.js</div>
-            </li>
-            <li>
-                <Image src={antDesignIcon} alt="" />
-                <div class="title">Ant Design</div>
-            </li>
-            <li>
-                <Image src={muiIcon} alt="" />
-                <div class="title">Material UI</div>
-            </li>
-            <li>
-                <Image src={swaggerIcon} alt="" />
-                <div class="title">Swagger</div>
-            </li>
-            <li>
-                <Image src={javascriptIcon} alt="" />
-                <div class="title">JavaScript</div>
-            </li>
-            <li class="wider taller">
-                <Image src={typescriptIcon} alt="" />
-                <div class="title">TypeScript</div>
-            </li>
-            <li>
-                <Image src={highchartsIcon} alt="" />
-                <div class="title">Highcharts</div>
-            </li>
-            <li>
-                <Image src={docusaurusIcon} alt="" />
-                <div class="title">Docusaurus</div>
-            </li>
-            <li>
-                <Image src={jwtIcon} alt="" />
-                <div class="title">JWT</div>
-            </li>
-            <li>
-                <Image src={gsapIcon} alt="" />
-                <div class="title">GSAP</div>
-            </li>
-            <li>
-                <Image src={gitIcon} alt="" />
-                <div class="title">Git</div>
-            </li>
-            <li>
-                <Image src={githubIcon} alt="" />
-                <div class="title">GitHub</div>
-            </li>
+            {
+                perfectSkills.map((skill) => (
+                    <li>
+                        <Image src={skill.image} alt="" />
+                        <div class="title">{skill.title}</div>
+                    </li>
+                ))
+            }
         </ul>
     </div>
     <div class="group good">
         <h3>تسلط کافی</h3>
         <ul class="skills">
-            <li class="wider taller">
-                <Image src={nodeJsIcon} alt="" />
-                <div class="title">Node.js</div>
-            </li>
-            <li>
-                <Image src={cSharpIcon} alt="" />
-                <div class="title">C#</div>
-            </li>
-            <li>
-                <Image src={pythonIcon} alt="" />
-                <div class="title">Python</div>
-            </li>
-            <li class="wider taller">
-                <Image src={postgresqlIcon} alt="" />
-                <div class="title">PostgreSQL</div>
-            </li>
-            <li>
-                <Image src={mongodbIcon} alt="" />
-                <div class="title">MongoDB</div>
-            </li>
-            <li>
-                <Image src={mysqlIcon} alt="" />
-                <div class="title">MySQL</div>
-            </li>
-            <li>
-                <Image src={postmanIcon} alt="" />
-                <div class="title">Postman</div>
-            </li>
-            <li>
-                <Image src={jestIcon} alt="" />
-                <div class="title">Jest</div>
-            </li>
-            <li class="wider taller">
-                <Image src={cypressIcon} alt="" />
-                <div class="title">Cypress</div>
-            </li>
-            <li>
-                <Image src={storybookIcon} alt="" />
-                <div class="title">Storybook</div>
-            </li>
-            <li>
-                <Image src={jqueryIcon} alt="" />
-                <div class="title">jQuery</div>
-            </li>
-            <li>
-                <Image src={azureIcon} alt="" />
-                <div class="title">Azure</div>
-            </li>
-            <li>
-                <Image src={jiraIcon} alt="" />
-                <div class="title">Jira</div>
-            </li>
-            <li>
-                <Image src={confluenceIcon} alt="" />
-                <div class="title">Confluence</div>
-            </li>
-            <li>
-                <Image src={trelloIcon} alt="" />
-                <div class="title">Trello</div>
-            </li>
+            {
+                goodSkills.map((skill) => (
+                    <li>
+                        <Image src={skill.image} alt="" />
+                        <div class="title">{skill.title}</div>
+                    </li>
+                ))
+            }
         </ul>
     </div>
     <div class="group normal">
         <h3>سابقه استفاده</h3>
         <ul class="skills">
-            <li class="wider taller">
-                <Image src={aspDotnetCoreIcon} alt="" />
-                <div class="title">ASP.NET Core</div>
-            </li>
-            <li>
-                <Image src={nginxIcon} alt="" />
-                <div class="title">NGINX</div>
-            </li>
-            <li>
-                <Image src={xunitIcon} alt="" />
-                <div class="title">xUnit.net</div>
-            </li>
-            <li class="wider taller">
-                <Image src={entityFrameworkCoreIcon} alt="" />
-                <div class="title">Entity Framework Core</div>
-            </li>
-            <li>
-                <Image src={prismaIcon} alt="" />
-                <div class="title">Prisma</div>
-            </li>
-            <li>
-                <Image src={gulpIcon} alt="" />
-                <div class="title">Gulp.js</div>
-            </li>
-            <li>
-                <Image src={mapboxIcon} alt="" />
-                <div class="title">Mapbox</div>
-            </li>
-            <li class="wider taller">
-                <Image src={elasticsearchIcon} alt="" />
-                <div class="title">Elasticsearch</div>
-            </li>
-            <li class="wider taller">
-                <Image src={kibanaIcon} alt="" />
-                <div class="title">Kibana</div>
-            </li>
-            <li>
-                <Image src={puppeteerIcon} alt="" />
-                <div class="title">Puppeteer</div>
-            </li>
-            <li>
-                <Image src={rxjsIcon} alt="" />
-                <div class="title">RxJS</div>
-            </li>
-            <li>
-                <Image src={reduxIcon} alt="" />
-                <div class="title">Redux</div>
-            </li>
+            {
+                normalSkills.map((skill) => (
+                    <li>
+                        <Image src={skill.image} alt="" />
+                        <div class="title">{skill.title}</div>
+                    </li>
+                ))
+            }
         </ul>
     </div>
 </section>
