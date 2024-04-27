@@ -1,0 +1,128 @@
+---
+import {Image} from 'astro:assets';
+
+import mohaymenLogo from '@assets/logos/mohaymen.webp';
+
+import angularIcon from '@assets/brands/angular.svg';
+import sassIcon from '@assets/brands/sass.svg';
+import antDesignIcon from '@assets/brands/ant-design.svg';
+import typescriptIcon from '@assets/brands/typescript.svg';
+import highchartsIcon from '@assets/brands/highcharts.svg';
+import azureIcon from '@assets/brands/azure.svg';
+import gulpIcon from '@assets/brands/gulp.svg';
+---
+
+<li>
+    <div class="info">
+        <div class="logo">
+            <Image src={mohaymenLogo} alt="" />
+        </div>
+        <div class="header">
+            <div class="duration">مهر 1399 تا شهریور 1401</div>
+            <div class="title">مهندس نرم‌افزار</div>
+            <div class="corporate">شرکت فناوری اطلاعات و ارتباطات مهیمن</div>
+        </div>
+        <div class="description">
+            <p>
+                پس از گذراندن 2 ماه کارآموزی و ارائه پروژه پایانی، در مهرماه 1399 وارد شرکت مهیمن شدم. ابتدا به‌عنوان
+                <strong>توسعه‌دهندۀ فرانت‌اند</strong>
+                مشغول به‌کار شدم اما به‌مرور زمان مسئولیت‌های بیشتری گرفتم و در نهایت
+                <strong>Frontend Chapter Lead</strong>
+                شدم.
+            </p>
+            <p>
+                به‌عنوان
+                <strong>توسعه‌دهنده فرانت‌اند</strong>
+                مسئولیت‌های متنوعی بر عهدۀ من بود:
+            </p>
+            <ul>
+                <li>
+                    <strong>ارتقای نسخه Angular</strong>
+                    از 8 به 14 در پروژه‌ای با ابعاد
+                    <strong>چند صدهزار خط کد</strong>
+                </li>
+                <li>
+                    <strong>بازنویسی (Refactor)</strong>
+                    و
+                    <strong>بازطراحی (Redesign)</strong>
+                    قسمت اعظمی از سامانه‌ها
+                </li>
+                <li>
+                    مهاجرت
+                    <strong>اَبَرکامپوننت Grid با بیش از 2000 خط کد</strong>
+                    از jQuery به Angular
+                </li>
+                <li>
+                    مهاجرت
+                    <strong>بیش از 20 نوع نمودار تخصصی تحلیل داده</strong>
+                    از jQuery به Angular
+                </li>
+                <li>
+                    طراحی و ساخت
+                    <strong>Pipeline اختصاصی</strong>
+                    برای جاری‌سازی داده‌ها بین کامپوننت‌های سلسله‌مراتبی
+                </li>
+                <li>
+                    <strong>افزایش چندبرابری سرعت سایت</strong>
+                    پس از به‌کارگیری تکنیک‌های متنوع
+                </li>
+                <li>
+                    <strong>حذف کدهای خاص‌منظوره و Dependencyهای غیرضروری</strong>
+                    داخلی و خارجی و
+                    <strong>کاهش چشم‌گیر حجم پروژه</strong>
+                    پس از بازنگری‌های متعدد
+                </li>
+                <li>
+                    <strong>بررسی اسناد</strong>
+                    تهیه‌شده توسط تیم طراحی محصول
+                </li>
+            </ul>
+            <p>
+                به‌عنوان
+                <strong>Chapter Lead</strong>
+                مسئولیت تمام توسعه‌دهندگان و زیرساخت‌های فرانت‌اند برعهدۀ من بود:
+            </p>
+            <ul>
+                <li>
+                    <strong>بررسی کد (Code Review)</strong>
+                    تمام توسعه‌دهندگان فرانت‌اند
+                </li>
+                <li>
+                    حصول اطمینان از
+                    <strong>صحت عملکرد</strong>
+                    و
+                    <strong>کارایی کدها</strong>
+                </li>
+                <li>
+                    بازطراحی ساختار
+                    <strong>پروژۀ Monorepo</strong>
+                    طبق استانداردهای جهانی
+                </li>
+                <li>
+                    کمک به تیم DevOps برای
+                    <strong>Dockerizeکردن</strong>
+                    پروژه
+                </li>
+                <li>
+                    بازنویسی و بازطراحی کامل فرآیند
+                    <strong>Localization</strong>
+                    و
+                    <strong>Internationalization</strong>
+                </li>
+                <li>
+                    اصلاح کدها و روال‌ها در جهت
+                    <strong>پیاده‌سازی نسخه انگلیسی</strong>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <ul class="tags">
+        <li><Image src={angularIcon} alt="Angular" /></li>
+        <li><Image src={typescriptIcon} alt="TypeScript" /></li>
+        <li><Image src={sassIcon} alt="Sass" /></li>
+        <li><Image src={antDesignIcon} alt="Ant Design" /></li>
+        <li><Image src={highchartsIcon} alt="Highcharts" /></li>
+        <li><Image src={gulpIcon} alt="Gulp.js" /></li>
+        <li><Image src={azureIcon} alt="Azure" /></li>
+    </ul>
+</li>

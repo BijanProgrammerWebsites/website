@@ -13,17 +13,38 @@ import Introduction from '@cv/Introduction.astro';
 // import English from '@cv/English.astro';
 // import Projects from '@cv/Projects.astro';
 
-import Jobs from '@sections/Jobs.astro';
+import MohaymenTeamLeadJob from '@jobs/MohaymenTeamLeadJob.astro';
+import MohaymenFrontendDeveloperJob from '@jobs/MohaymenFrontendDeveloperJob.astro';
+import CodeStarInternshipOfficer from '@jobs/CodeStarInternshipOfficer.astro';
 ---
 
 <Layout>
     <main>
         <div class="sheet">
-            <Brief />
+            <div class="side">
+                <Brief />
+            </div>
             <div class="content">
                 <Header />
                 <Introduction />
-                <Jobs />
+                <section>
+                    <h2>سوابق شغلی</h2>
+                    <ul class="jobs">
+                        <MohaymenTeamLeadJob />
+                    </ul>
+                </section>
+            </div>
+        </div>
+        <div class="sheet">
+            <div class="side"></div>
+            <div class="content">
+                <section>
+                    <h2>ادامه سوابق شغلی</h2>
+                    <ul class="jobs">
+                        <MohaymenFrontendDeveloperJob />
+                        <CodeStarInternshipOfficer />
+                    </ul>
+                </section>
             </div>
         </div>
     </main>

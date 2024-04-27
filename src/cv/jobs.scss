@@ -1,88 +1,97 @@
 @use "/src/styles/utils";
 
-#jobs {
-    > ul {
+.jobs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(50rem, 100%), 1fr));
+    gap: var(--cv-gutter-900);
+
+    > li {
+        --logo-size: 16mm;
+        --column-gap: var(--cv-gutter-400);
+
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(min(50rem, 100%), 1fr));
-        gap: var(--cv-gutter-900);
+        align-content: space-between;
+        gap: var(--cv-gutter-400);
 
-        > li {
-            --logo-size: 16mm;
-            --column-gap: var(--cv-gutter-400);
+        border-radius: var(--border-radius);
 
+        .info {
             display: grid;
-            align-content: space-between;
-            gap: var(--cv-gutter-400);
+            grid-template-areas: "logo header" ". description";
+            grid-template-columns: var(--logo-size) 1fr;
+            align-content: start;
+            gap: 0 var(--column-gap);
 
-            border-radius: var(--border-radius);
+            .header {
+                grid-area: header;
 
-            .info {
                 display: grid;
-                grid-template-areas: "logo header" ". description";
-                grid-template-columns: var(--logo-size) 1fr;
+                grid-template-areas: "title" "corporate" "duration";
                 align-content: start;
-                gap: 0 var(--column-gap);
 
-                .header {
-                    grid-area: header;
+                .title {
+                    grid-area: title;
 
-                    display: grid;
-                    grid-template-areas: "title" "corporate" "duration";
-                    align-content: start;
+                    font-size: 1.4rem;
+                    font-weight: 700;
 
-                    .title {
-                        grid-area: title;
-
-                        font-size: 1.4rem;
-                        font-weight: 700;
-
-                        line-height: 1.5;
-                    }
-
-                    .duration {
-                        grid-area: duration;
-                        align-self: end;
-
-                        opacity: 0.7;
-
-                        margin-block-start: var(--cv-gutter-100);
-                    }
-
-                    .corporate {
-                        grid-area: corporate;
-                    }
+                    line-height: 1.5;
                 }
 
-                .logo {
-                    grid-area: logo;
+                .duration {
+                    grid-area: duration;
+                    align-self: end;
+
+                    opacity: 0.7;
+
+                    margin-block-start: var(--cv-gutter-100);
                 }
 
-                .description {
-                    grid-area: description;
-
-                    max-inline-size: 70ch;
-
-                    margin-block-start: var(--cv-gutter-400);
+                .corporate {
+                    grid-area: corporate;
                 }
             }
 
-            .tags {
-                display: flex;
-                flex-wrap: wrap;
-                gap: var(--cv-gutter-400);
+            .logo {
+                grid-area: logo;
+            }
 
-                padding-inline-start: calc(var(--logo-size) + var(--column-gap));
+            .description {
+                grid-area: description;
 
-                li {
-                    flex: 0 0 6mm;
+                display: grid;
+                align-content: start;
 
-                    aspect-ratio: 1 / 1;
+                max-inline-size: 70ch;
 
-                    img {
-                        block-size: 100%;
-                        inline-size: 100%;
-                        object-fit: contain;
-                    }
+                margin-block-start: var(--cv-gutter-400);
+
+                > *:not(:has(+ ul)) {
+                    margin-block-end: var(--cv-gutter-400);
+                }
+
+                ul {
+                    list-style: disc inside;
+                }
+            }
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--cv-gutter-400);
+
+            padding-inline-start: calc(var(--logo-size) + var(--column-gap));
+
+            li {
+                flex: 0 0 6mm;
+
+                aspect-ratio: 1 / 1;
+
+                img {
+                    block-size: 100%;
+                    inline-size: 100%;
+                    object-fit: contain;
                 }
             }
         }

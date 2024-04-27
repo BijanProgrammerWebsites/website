@@ -1,0 +1,101 @@
+---
+import {Image} from 'astro:assets';
+
+import mohaymenLogo from '@assets/logos/mohaymen.webp';
+
+import cSharpIcon from '@assets/brands/c-sharp.svg';
+import postgresqlIcon from '@assets/brands/postgresql.svg';
+import jiraIcon from '@assets/brands/jira.svg';
+import confluenceIcon from '@assets/brands/confluence.svg';
+import mapboxIcon from '@assets/brands/mapbox.svg';
+---
+
+<li>
+    <div class="info">
+        <div class="logo">
+            <Image src={mohaymenLogo} alt="" />
+        </div>
+        <div class="header">
+            <div class="duration">مهر 1401 تا فروردین 1402</div>
+            <div class="title">مدیر تیم</div>
+            <div class="corporate">شرکت فناوری اطلاعات و ارتباطات مهیمن</div>
+        </div>
+        <div class="description">
+            <p>
+                بعد از 2 سال فعالیت در شرکت مهیمن، ترفیع گرفتم و
+                <strong>Team Lead</strong>
+                یک تیم توسعه نرم‌افزار شدم.
+                <strong>مسئولیت 3 سامانه اصلی و 1 سامانه زیرساختی</strong>
+                بر عهدۀ من و تیمم بود. وظیفۀ ما توسعه و پشتیبانی کامل سامانه‌ها
+                <strong>(فرانت‌اند و بک‌اند)</strong>
+                و همچنین ارتباط مؤثر با تیم‌های مدیریت محصول، طراحی محصول، تست نرم‌افزار و DevOps بود.
+            </p>
+            <p>علاوه بر مسئولیت‌های راهبری فنی تیم، مسئولیت‌های مدیریتی نیز بر عهدۀ من بود:</p>
+            <ul>
+                <li>
+                    <strong>مشارکت در جلسات با کارفرمایان و مدیران ارشد</strong>
+                    در جهت بررسی نیازمندی‌ها و چگونگی پیشبرد پروژه‌ها
+                </li>
+                <li>
+                    مشارکت در تصمیم‌گیری‌ها و
+                    <strong>مسائل کلان واحد</strong>
+                </li>
+                <li>
+                    مصاحبه‌های فنی و غیرفنی و
+                    <strong>عزل و نصب</strong>
+                    اعضای تیم
+                </li>
+                <li>
+                    <strong>تخصیص پاداش فصلی</strong>
+                    براساس عملکرد افراد
+                </li>
+                <li>
+                    <strong>جلسات یک‌به‌یک</strong>
+                    با اعضای تیم و
+                    <strong>برنامه‌ریزی کوتاه‌مدت و بلندمدت</strong>
+                    برای رفع چالش‌ها
+                </li>
+                <li>
+                    برنامه‌ریزی برای
+                    <strong>رشد افراد</strong>
+                    در جهت ارتقاء مهارت‌های فنی و مهارت‌های نرم
+                </li>
+                <li>
+                    <strong>تفویض اختیارات (Delegation)</strong>
+                    به‌صورت کنترل‌شده در جهت
+                    <strong>آماده‌سازی اعضای تیم برای سطوح مدیریتی</strong>
+                </li>
+                <li>
+                    برگزاری
+                    <strong>جلسات هم‌افزایی</strong>
+                    در جهت ارتقای دانش تخصصی افراد و آشنایی بیشتر با
+                    <strong>Best Practiceها</strong>
+                    و
+                    <strong>تکنولوژی روز دنیا</strong>
+                    در سطح کل واحد تحلیل داده
+                </li>
+                <li>
+                    برگزاری جلسات فنی مانند
+                    <strong>Tip of The Day</strong>
+                    با مشارکت تمام اعضای تیم
+                </li>
+                <li>
+                    برگزاری
+                    <strong>جلسات کتاب‌خوانی</strong>
+                    در حوزه‌های فنی و غیرفنی
+                </li>
+                <li>
+                    جمع‌آوری انتقادات و پیشنهادات اعضای واحد و
+                    <strong>انتقال به سطوح بالاتر مدیریتی</strong>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <ul class="tags">
+        <li><Image src={jiraIcon} alt="Jira" /></li>
+        <li><Image src={confluenceIcon} alt="Confluence" /></li>
+        <li><Image src={cSharpIcon} alt="C#" /></li>
+        <li><Image src={postgresqlIcon} alt="PostgreSQL" /></li>
+        <li><Image src={mapboxIcon} alt="Mapbox" /></li>
+    </ul>
+</li>

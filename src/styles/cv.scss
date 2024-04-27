@@ -56,14 +56,19 @@ body {
     display: grid;
     grid-template-columns: 1.2fr 3fr;
 
-    block-size: 296mm;
+    block-size: 297mm;
     inline-size: 210mm;
 
     margin: 0;
 
     page-break-after: always;
 
-    .content {
+    > .side {
+        background-color: var(--cv-color-primary);
+        color: var(--cv-color-primary-opposite);
+    }
+
+    > .content {
         padding: var(--cv-gutter-700);
     }
 }
