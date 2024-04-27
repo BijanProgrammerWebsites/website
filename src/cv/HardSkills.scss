@@ -1,0 +1,7 @@
+@use "/src/styles/utils";
+
+#hard-skills {
+    > ul {
+        list-style: disc inside;
+    }
+}
