@@ -5,6 +5,8 @@
     grid-template-columns: repeat(auto-fit, minmax(min(50rem, 100%), 1fr));
     gap: var(--cv-gutter-900);
 
+    font-size: 1.2rem;
+
     > li {
         --logo-size: 16mm;
         --column-gap: var(--cv-gutter-400);
@@ -44,7 +46,7 @@
 
                     opacity: 0.7;
 
-                    margin-block-start: var(--cv-gutter-100);
+                    font-size: 1rem;
                 }
 
                 .corporate {
