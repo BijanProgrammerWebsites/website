@@ -1,0 +1,59 @@
+---
+import {Image} from 'astro:assets';
+
+import codestarMockup from '@assets/mockups/codestar.webp';
+
+import angularIcon from '@assets/brands/angular.svg';
+import sassIcon from '@assets/brands/sass.svg';
+import typescriptIcon from '@assets/brands/typescript.svg';
+
+import externalLinkIcon from '@assets/icons/external-link.svg?raw';
+import githubIcon from '@assets/icons/github.svg?raw';
+---
+
+<li>
+    <div class="mockup">
+        <Image src={codestarMockup} alt="" />
+    </div>
+    <div class="info">
+        <div class="title">
+            <a href="https://codestar.ir/" target="_blank">
+                وب‌سایت codestar.ir
+                <Fragment set:html={externalLinkIcon} />
+            </a>
+        </div>
+        <p class="description">
+            این وب‌سایت را برای معرفی دوره کارآموزی کداستار توسعه دادم.
+            <br />
+            از آنجایی که طراحی و توسعه تماماً برعهدۀ من بود، سعی کردم از سبک مینیمال استفاده کنم؛ اما برای آنکه قالب وب‌سایت
+            خسته‌کننده نباشد از انیمیشن‌های مختلف در نقاط گوناگون استفاده کردم.
+            <br />
+            تمام کامپوننت‌ها و انیمیشن‌ها به‌صورت دستی پیاده‌سازی شدند و از هیچ پکیجی استفاده نکردم.
+            <br />
+            علاوه بر اجرای مسئولیت برگزاری کل دوره، به‌عنوان منتور و مدرس نیز حضور داشتم.
+        </p>
+        <ul class="tags">
+            <li><Image src={angularIcon} alt="Angular" /></li>
+            <li><Image src={typescriptIcon} alt="TypeScript" /></li>
+            <li><Image src={sassIcon} alt="Sass" /></li>
+        </ul>
+        <ul class="links">
+            <li>
+                <a class="button button--primary" href="https://codestar.ir/" target="_blank">
+                    مشاهده وب‌سایت
+                    <Fragment set:html={externalLinkIcon} />
+                </a>
+            </li>
+            <li>
+                <a
+                    class="button button--github"
+                    href="https://github.com/BijanProgrammerWebsites/projects-codestar/tree/production"
+                    target="_blank"
+                >
+                    مشاهده کد
+                    <Fragment set:html={githubIcon} />
+                </a>
+            </li>
+        </ul>
+    </div>
+</li>

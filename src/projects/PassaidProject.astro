@@ -1,0 +1,55 @@
+---
+import {Image} from 'astro:assets';
+
+import passaidMockup from '@assets/mockups/passaid.webp';
+
+import htmlIcon from '@assets/brands/html.svg';
+import cssIcon from '@assets/brands/css.svg';
+import javascriptIcon from '@assets/brands/javascript.svg';
+
+import externalLinkIcon from '@assets/icons/external-link.svg?raw';
+import githubIcon from '@assets/icons/github.svg?raw';
+---
+
+<li>
+    <div class="mockup">
+        <Image src={passaidMockup} alt="" />
+    </div>
+    <div class="info">
+        <div class="title">
+            <a href="https://passaid.ir/" target="_blank">
+                وب‌سایت passaid.ir
+                <Fragment set:html={externalLinkIcon} />
+            </a>
+        </div>
+        <p class="description">
+            ابزاری که با استفاده از آن می‌توانید Password تصادفی تولید کنید.
+            <br />
+            تنظیمات مختلفی برای شخصی‌سازی‌کردنِ نحوۀ تولید Passwordها در اختیار کاربر قرار گرفته تا باتوجه به سلیقه یا نیاز
+            خود بتواند Password مورد نظر را تولید نماید.
+        </p>
+        <ul class="tags">
+            <li><Image src={htmlIcon} alt="HTML" /></li>
+            <li><Image src={cssIcon} alt="CSS" /></li>
+            <li><Image src={javascriptIcon} alt="JavaScript" /></li>
+        </ul>
+        <ul class="links">
+            <li>
+                <a class="button button--primary" href="https://passaid.ir/" target="_blank">
+                    مشاهده وب‌سایت
+                    <Fragment set:html={externalLinkIcon} />
+                </a>
+            </li>
+            <li>
+                <a
+                    class="button button--github"
+                    href="https://github.com/BijanProgrammerWebsites/projects-passaid"
+                    target="_blank"
+                >
+                    مشاهده کد
+                    <Fragment set:html={githubIcon} />
+                </a>
+            </li>
+        </ul>
+    </div>
+</li>
