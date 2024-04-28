@@ -3,6 +3,7 @@ import '@styles/cv.scss';
 import '@cv/HardSkills.scss';
 import '@cv/SoftSkills.scss';
 import '@cv/Jobs.scss';
+import '@cv/Projects.scss';
 
 import Layout from '@layouts/Layout.astro';
 
@@ -18,6 +19,10 @@ import SoftSkills from '@cv/SoftSkills.astro';
 import MohaymenTeamLeadJob from '@jobs/MohaymenTeamLeadJob.astro';
 import MohaymenFrontendDeveloperJob from '@jobs/MohaymenFrontendDeveloperJob.astro';
 import CodeStarInternshipOfficer from '@jobs/CodeStarInternshipOfficer.astro';
+
+import CodeStarProject from '@projects/CodeStarProject.astro';
+import PassaidProject from '@projects/PassaidProject.astro';
+import SchortProject from '@projects/SchortProject.astro';
 ---
 
 <Layout>
@@ -52,6 +57,24 @@ import CodeStarInternshipOfficer from '@jobs/CodeStarInternshipOfficer.astro';
                     <h2>ادامه سوابق شغلی</h2>
                     <ul class="jobs">
                         <CodeStarInternshipOfficer />
+                    </ul>
+                </section>
+                <section>
+                    <h2>پروژه‌ها</h2>
+                    <ul class="projects">
+                        <CodeStarProject />
+                        <SchortProject />
+                    </ul>
+                </section>
+            </div>
+        </div>
+        <div class="sheet">
+            <div class="side"></div>
+            <div class="content">
+                <section>
+                    <h2>ادامه پروژه‌ها</h2>
+                    <ul class="projects">
+                        <PassaidProject />
                     </ul>
                 </section>
             </div>
