@@ -1,0 +1,55 @@
+@use "/src/styles/utils";
+
+#education {
+    > ul {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(50rem, 100%), 1fr));
+        gap: 2rem;
+
+        > li {
+            background-color: var(--color-gray-98);
+            box-shadow: var(--box-shadow-subtle);
+
+            display: grid;
+            grid-template-columns: 8rem 1fr;
+            align-content: start;
+            gap: 0 1rem;
+
+            padding: 2rem;
+
+            border-radius: var(--border-radius);
+
+            .logo {
+                min-block-size: 100%;
+                block-size: 0;
+
+                img {
+                    block-size: 100%;
+                    inline-size: 100%;
+                    object-fit: contain;
+                }
+            }
+
+            .text {
+                .title {
+                    margin-block-start: 0.5rem;
+
+                    @include utils.font-size-clamp(24, 28);
+                    font-weight: 700;
+
+                    line-height: 1.2;
+                }
+
+                .duration {
+                    opacity: 0.5;
+
+                    font-size: 1.4rem;
+                }
+
+                .institute {
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+}

@@ -4,6 +4,7 @@ import '@cv/HardSkills.scss';
 import '@cv/SoftSkills.scss';
 import '@cv/Jobs.scss';
 import '@cv/Projects.scss';
+import '@cv/Education.scss';
 
 import Layout from '@layouts/Layout.astro';
 
@@ -12,9 +13,10 @@ import Header from '@cv/Header.astro';
 import Introduction from '@cv/Introduction.astro';
 import HardSkills from '@cv/HardSkills.astro';
 import SoftSkills from '@cv/SoftSkills.astro';
-// import Education from '@cv/Education.astro';
 // import English from '@cv/English.astro';
 // import Projects from '@cv/Projects.astro';
+
+import Education from '@sections/Education.astro';
 
 import MohaymenTeamLeadJob from '@jobs/MohaymenTeamLeadJob.astro';
 import MohaymenFrontendDeveloperJob from '@jobs/MohaymenFrontendDeveloperJob.astro';
@@ -22,7 +24,7 @@ import CodeStarInternshipOfficer from '@jobs/CodeStarInternshipOfficer.astro';
 
 import CodeStarProject from '@projects/CodeStarProject.astro';
 import SchortProject from '@projects/SchortProject.astro';
-import ShafafstuProject from '../projects/ShafafstuProject.astro';
+import ShafafstuProject from '@projects/ShafafstuProject.astro';
 import PassaidProject from '@projects/PassaidProject.astro';
 ---
 
@@ -79,6 +81,12 @@ import PassaidProject from '@projects/PassaidProject.astro';
                         <PassaidProject />
                     </ul>
                 </section>
+            </div>
+        </div>
+        <div class="sheet">
+            <div class="side"></div>
+            <div class="content">
+                <Education />
             </div>
         </div>
     </main>
