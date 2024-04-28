@@ -75,23 +75,7 @@
         }
 
         .tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: var(--cv-gutter-400);
-
-            padding-inline-start: calc(var(--logo-size) + var(--column-gap));
-
-            li {
-                flex: 0 0 6mm;
-
-                aspect-ratio: 1 / 1;
-
-                img {
-                    block-size: 100%;
-                    inline-size: 100%;
-                    object-fit: contain;
-                }
-            }
+            display: none;
         }
     }
 }
