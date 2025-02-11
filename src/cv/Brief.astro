@@ -3,10 +3,8 @@ import {Image} from 'astro:assets';
 
 import bijanImage from '@assets/images/bijan-eisapour.webp';
 
-import emailIcon from '@assets/socials/email.svg?raw';
 import linkedinIcon from '@assets/socials/linkedin.svg?raw';
 import telegramIcon from '@assets/socials/telegram.svg?raw';
-import phoneIcon from '@assets/socials/phone.svg?raw';
 import githubIcon from '@assets/socials/github.svg?raw';
 import websiteIcon from '@assets/socials/website.svg?raw';
 
@@ -25,22 +23,6 @@ const age = ((birthday) => {
     <section class="contact">
         <h2>اطلاعات تماس</h2>
         <ul>
-            <li class="phone">
-                <div class="icon">
-                    <Fragment set:html={phoneIcon} />
-                </div>
-                <div class="text">
-                    <a href="tel:+989124210720">0912 4210 720</a>
-                </div>
-            </li>
-            <li class="email">
-                <div class="icon">
-                    <Fragment set:html={emailIcon} />
-                </div>
-                <div class="text">
-                    <a href="mailto:bijaneisapour@gmail.com">bijaneisapour@gmail.com</a>
-                </div>
-            </li>
             <li class="website">
                 <div class="icon">
                     <Fragment set:html={websiteIcon} />

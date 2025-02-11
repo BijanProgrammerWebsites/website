@@ -1,8 +1,6 @@
 ---
-import emailIcon from '@assets/socials/email.svg?raw';
 import linkedinIcon from '@assets/socials/linkedin.svg?raw';
 import telegramIcon from '@assets/socials/telegram.svg?raw';
-import phoneIcon from '@assets/socials/phone.svg?raw';
 import githubIcon from '@assets/socials/github.svg?raw';
 import websiteIcon from '@assets/socials/website.svg?raw';
 
@@ -12,18 +10,6 @@ import CopyButton from '@components/CopyButton.astro';
 <section id="contact">
     <h2>تماس با من</h2>
     <ul>
-        <li class="email">
-            <div class="icon">
-                <Fragment set:html={emailIcon} />
-            </div>
-            <div class="text">
-                <div class="title">Email</div>
-                <div class="username">
-                    <a href="mailto:bijaneisapour@gmail.com">bijaneisapour@gmail.com</a>
-                </div>
-            </div>
-            <CopyButton content="bijaneisapour@gmail.com" />
-        </li>
         <li class="linkedin">
             <div class="icon">
                 <Fragment set:html={linkedinIcon} />
@@ -47,18 +33,6 @@ import CopyButton from '@components/CopyButton.astro';
                 </div>
             </div>
             <CopyButton content="BijanEisapour" />
-        </li>
-        <li class="phone">
-            <div class="icon">
-                <Fragment set:html={phoneIcon} />
-            </div>
-            <div class="text">
-                <div class="title">Phone</div>
-                <div class="username">
-                    <a href="tel:+989124210720">+98 912 4210 720</a>
-                </div>
-            </div>
-            <CopyButton content="+989124210720" />
         </li>
         <li class="github">
             <div class="icon">
