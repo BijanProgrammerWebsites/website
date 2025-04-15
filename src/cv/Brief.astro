@@ -3,8 +3,10 @@ import {Image} from 'astro:assets';
 
 import bijanImage from '@assets/images/bijan-eisapour.webp';
 
+import emailIcon from '@assets/socials/email.svg?raw';
 import linkedinIcon from '@assets/socials/linkedin.svg?raw';
 import telegramIcon from '@assets/socials/telegram.svg?raw';
+import phoneIcon from '@assets/socials/phone.svg?raw';
 import githubIcon from '@assets/socials/github.svg?raw';
 import websiteIcon from '@assets/socials/website.svg?raw';
 
@@ -23,6 +25,28 @@ const age = ((birthday) => {
     <section class="contact">
         <h2>اطلاعات تماس</h2>
         <ul>
+            {
+                import.meta.env.MODE === 'development' && (
+                    <>
+                        <li class="phone">
+                            <div class="icon">
+                                <Fragment set:html={phoneIcon} />
+                            </div>
+                            <div class="text">
+                                <a href={`tel:${import.meta.env.PHONE_NUMBER}`}>{import.meta.env.PHONE_NUMBER_TITLE}</a>
+                            </div>
+                        </li>
+                        <li class="email">
+                            <div class="icon">
+                                <Fragment set:html={emailIcon} />
+                            </div>
+                            <div class="text">
+                                <a href={`mailto:${import.meta.env.EMAIL}`}>{import.meta.env.EMAIL}</a>
+                            </div>
+                        </li>
+                    </>
+                )
+            }
             <li class="website">
                 <div class="icon">
                     <Fragment set:html={websiteIcon} />
