@@ -5,6 +5,7 @@ import '@cv/SoftSkills.scss';
 import '@cv/Jobs.scss';
 import '@cv/Projects.scss';
 import '@cv/Education.scss';
+import '@cv/Honors.scss';
 import '@cv/Teaching.scss';
 import '@cv/English.scss';
 
@@ -15,6 +16,7 @@ import Header from '@cv/Header.astro';
 import Introduction from '@cv/Introduction.astro';
 import HardSkills from '@cv/HardSkills.astro';
 import SoftSkills from '@cv/SoftSkills.astro';
+import Honors from '@cv/Honors.astro';
 import Teaching from '@cv/Teaching.astro';
 import English from '@cv/English.astro';
 
@@ -27,7 +29,6 @@ import CodeStarInternshipOfficer from '@jobs/CodeStarInternshipOfficer.astro';
 import CodeStarProject from '@projects/CodeStarProject.astro';
 import SchortProject from '@projects/SchortProject.astro';
 import ShafafstuProject from '@projects/ShafafstuProject.astro';
-import PassaidProject from '@projects/PassaidProject.astro';
 ---
 
 <Layout>
@@ -67,8 +68,9 @@ import PassaidProject from '@projects/PassaidProject.astro';
                 <section>
                     <h2>پروژه‌ها</h2>
                     <ul class="projects">
-                        <CodeStarProject />
                         <SchortProject />
+                        <CodeStarProject />
+                        <ShafafstuProject />
                     </ul>
                 </section>
             </div>
@@ -76,13 +78,7 @@ import PassaidProject from '@projects/PassaidProject.astro';
         <div class="sheet">
             <div class="side"></div>
             <div class="content">
-                <section>
-                    <h2>ادامه پروژه‌ها</h2>
-                    <ul class="projects">
-                        <ShafafstuProject />
-                        <PassaidProject />
-                    </ul>
-                </section>
+                <Honors />
                 <Teaching />
                 <Education />
                 <English />
