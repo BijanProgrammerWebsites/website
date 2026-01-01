@@ -1,59 +1,59 @@
 @use "/src/styles/utils";
 
 :root {
-    --color-white: hsl(0deg 0% 100%);
-    --color-gray-98: hsl(0deg 0% 98%);
-    --color-gray-95: hsl(0deg 0% 95%);
-    --color-gray-90: hsl(0deg 0% 90%);
-    --color-gray-80: hsl(0deg 0% 80%);
-    --color-gray-70: hsl(0deg 0% 70%);
-    --color-gray-40: hsl(0deg 0% 40%);
-    --color-gray-30: hsl(0deg 0% 30%);
-    --color-gray-20: hsl(0deg 0% 20%);
-    --color-gray-10: hsl(0deg 0% 10%);
-    --color-black: hsl(0deg 0% 0%);
+  --color-white: hsl(0deg 0% 100%);
+  --color-gray-98: hsl(0deg 0% 98%);
+  --color-gray-95: hsl(0deg 0% 95%);
+  --color-gray-90: hsl(0deg 0% 90%);
+  --color-gray-80: hsl(0deg 0% 80%);
+  --color-gray-70: hsl(0deg 0% 70%);
+  --color-gray-40: hsl(0deg 0% 40%);
+  --color-gray-30: hsl(0deg 0% 30%);
+  --color-gray-20: hsl(0deg 0% 20%);
+  --color-gray-10: hsl(0deg 0% 10%);
+  --color-black: hsl(0deg 0% 0%);
 
-    --color-primary: hsl(120deg 70% 40%);
-    --color-primary-lighter: hsl(120deg 90% 70%);
-    --color-primary-darker: hsl(120deg 70% 36%);
-    --color-primary-section: hsl(120deg 20% 90%);
-    --color-primary-fade: hsl(120deg 70% 95%);
-    --color-primary-opposite: var(--color-gray-98);
+  --color-primary: hsl(120deg 70% 40%);
+  --color-primary-lighter: hsl(120deg 90% 70%);
+  --color-primary-darker: hsl(120deg 70% 36%);
+  --color-primary-section: hsl(120deg 20% 90%);
+  --color-primary-fade: hsl(120deg 70% 95%);
+  --color-primary-opposite: var(--color-gray-98);
 
-    --color-secondary: hsl(30deg 96% 60%);
+  --color-secondary: hsl(30deg 96% 60%);
 
-    --color-box-shadow-subtle: hsl(0deg 0% 10% / 12%);
-    --box-shadow-subtle: 0 0.2rem 0.5rem 0 var(--color-box-shadow-subtle);
+  --color-box-shadow-subtle: hsl(0deg 0% 10% / 12%);
+  --box-shadow-subtle: 0 0.2rem 0.5rem 0 var(--color-box-shadow-subtle);
 
-    --border-radius: 0.25rem;
+  --border-radius: 0.25rem;
 
-    --outline-focus-visible: 0.2rem dashed var(--color-gray-10);
+  --outline-focus-visible: 0.2rem dashed var(--color-gray-10);
 
-    --full-width: 120rem;
-    --full-width-padding-inline: calc(max(100% - var(--full-width), 4rem) / 2);
+  --full-width: 120rem;
+  --full-width-padding-inline: calc(max(100% - var(--full-width), 4rem) / 2);
 
-    --animation-duration-fast: 0.2s;
-    --animation-duration-normal: 0.5s;
-    --animation-duration-slow: 1s;
+  --animation-duration-fast: 0.2s;
+  --animation-duration-normal: 0.5s;
+  --animation-duration-slow: 1s;
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 html {
-    color-scheme: light;
+  color-scheme: light;
 
-    scroll-behavior: smooth;
-    scroll-padding: 6rem;
+  scroll-behavior: smooth;
+  scroll-padding: 6rem;
 
-    font-family: Vazirmatn, sans-serif;
-    font-size: 62.5%;
+  font-family: Vazirmatn, sans-serif;
+  font-size: 62.5%;
 }
 
 input,
@@ -67,78 +67,78 @@ datalist,
 output,
 option,
 optgroup {
-    font-family: inherit;
+  font-family: inherit;
 }
 
 p {
-    line-height: 1.5;
+  line-height: 1.5;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 img {
-    display: block;
+  display: block;
 
-    block-size: auto;
-    max-inline-size: 100%;
+  block-size: auto;
+  max-inline-size: 100%;
 }
 
 body {
-    background-color: var(--color-gray-98);
-    color: var(--color-gray-10);
+  background-color: var(--color-gray-98);
+  color: var(--color-gray-10);
 
-    display: grid;
-    grid-template-rows: auto 1fr auto;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 
-    min-block-size: 100vh;
-    min-block-size: 100dvh;
+  min-block-size: 100vh;
+  min-block-size: 100dvh;
 
-    font-size: 1.6rem;
+  font-size: 1.6rem;
 }
 
 a:where(:not(.button, .logo, .cta)) {
-    color: inherit;
+  color: inherit;
 
-    position: relative;
+  position: relative;
 
-    text-decoration: none;
+  text-decoration: none;
 
+  &::after {
+    content: "";
+
+    background-color: currentcolor;
+    opacity: 0;
+
+    position: absolute;
+    inset-block-end: 0;
+    inset-inline: 0;
+
+    display: block;
+
+    block-size: 0.1rem;
+    inline-size: 100%;
+
+    transform: scaleX(0);
+
+    transition: var(--animation-duration-fast) ease-in-out;
+    transition-property: transform, opacity;
+  }
+
+  &:hover {
     &::after {
-        content: "";
+      opacity: 1;
 
-        background-color: currentcolor;
-        opacity: 0;
-
-        position: absolute;
-        inset-block-end: 0;
-        inset-inline: 0;
-
-        display: block;
-
-        block-size: 0.1rem;
-        inline-size: 100%;
-
-        transform: scaleX(0);
-
-        transition: var(--animation-duration-fast) ease-in-out;
-        transition-property: transform, opacity;
+      transform: scaleX(1);
     }
+  }
 
-    &:hover {
-        &::after {
-            opacity: 1;
-
-            transform: scaleX(1);
-        }
-    }
-
-    &:focus-visible {
-        outline: var(--outline-focus-visible);
-    }
+  &:focus-visible {
+    outline: var(--outline-focus-visible);
+  }
 }
 
 .keep-it-together {
-    white-space: nowrap;
+  white-space: nowrap;
 }

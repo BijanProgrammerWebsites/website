@@ -1,37 +1,37 @@
 @use "/src/styles/utils";
 
 main {
-    > section {
-        display: grid;
-        gap: 3em;
+  > section {
+    display: grid;
+    gap: 3em;
 
-        padding-block: 4rem;
-        padding-inline: var(--full-width-padding-inline);
+    padding-block: 4rem;
+    padding-inline: var(--full-width-padding-inline);
 
-        h2 {
-            @include utils.font-size-clamp(32, 48);
-        }
-
-        h3 {
-            @include utils.font-size-clamp(24, 36);
-        }
-
-        &:nth-of-type(2n) {
-            background-color: var(--color-primary-section);
-        }
+    h2 {
+      @include utils.font-size-clamp(32, 48);
     }
 
-    .divider {
-        background-color: var(--color-primary-section);
-
-        block-size: 8rem;
-
-        &.wide-to-narrow {
-            clip-path: polygon(0% -1%, 100% -1%, 0% 100%);
-        }
-
-        &.narrow-to-wide {
-            clip-path: polygon(0% 100%, 100% -1%, 100% 100%);
-        }
+    h3 {
+      @include utils.font-size-clamp(24, 36);
     }
+
+    &:nth-of-type(2n) {
+      background-color: var(--color-primary-section);
+    }
+  }
+
+  .divider {
+    background-color: var(--color-primary-section);
+
+    block-size: 8rem;
+
+    &.wide-to-narrow {
+      clip-path: polygon(0% -1%, 100% -1%, 0% 100%);
+    }
+
+    &.narrow-to-wide {
+      clip-path: polygon(0% 100%, 100% -1%, 100% 100%);
+    }
+  }
 }

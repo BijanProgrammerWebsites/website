@@ -1,102 +1,102 @@
 @use "/src/styles/utils";
 
 header {
-    background-color: var(--color-gray-98);
+  background-color: var(--color-gray-98);
 
-    position: sticky;
-    inset-block-start: 0;
-    z-index: 2;
+  position: sticky;
+  inset-block-start: 0;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+
+  padding-block: 2rem;
+  padding-inline: var(--full-width-padding-inline);
+
+  .logo {
+    color: inherit;
 
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
+    gap: 0.5rem;
 
-    padding-block: 2rem;
-    padding-inline: var(--full-width-padding-inline);
+    font-size: 2.4rem;
 
-    .logo {
-        color: inherit;
+    text-decoration: none;
 
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
+    svg {
+      --size: 1.5em;
 
-        font-size: 2.4rem;
-
-        text-decoration: none;
-
-        svg {
-            --size: 1.5em;
-
-            block-size: var(--size);
-            inline-size: var(--size);
-        }
-
-        h1 {
-            font-size: inherit;
-        }
+      block-size: var(--size);
+      inline-size: var(--size);
     }
 
-    .button {
-        font-size: 2.4rem;
+    h1 {
+      font-size: inherit;
     }
+  }
 
-    .button.close {
-        z-index: 2;
-    }
+  .button {
+    font-size: 2.4rem;
+  }
 
-    &.stuck {
-        box-shadow: var(--box-shadow-subtle);
-    }
+  .button.close {
+    z-index: 2;
+  }
+
+  &.stuck {
+    box-shadow: var(--box-shadow-subtle);
+  }
 }
 
 @media (width < 1000px) {
-    header {
-        nav {
-            background-color: var(--color-gray-98);
+  header {
+    nav {
+      background-color: var(--color-gray-98);
 
-            position: fixed;
-            inset: 0;
-            overflow: auto;
-            z-index: 1;
+      position: fixed;
+      inset: 0;
+      overflow: auto;
+      z-index: 1;
 
-            display: grid;
-            align-content: start;
+      display: grid;
+      align-content: start;
 
-            padding: inherit;
+      padding: inherit;
 
-            font-size: 2.4rem;
+      font-size: 2.4rem;
 
-            ul {
-                display: grid;
-                gap: 2rem;
-            }
-        }
-
-        .hidden {
-            display: none;
-        }
+      ul {
+        display: grid;
+        gap: 2rem;
+      }
     }
+
+    .hidden {
+      display: none;
+    }
+  }
 }
 
 @media (width >= 1000px) {
-    header {
-        .button.menu {
-            display: none;
-        }
-
-        .button.close {
-            display: none;
-        }
-
-        nav {
-            font-size: 1.6rem;
-
-            ul {
-                display: flex;
-                gap: 2rem;
-            }
-        }
+  header {
+    .button.menu {
+      display: none;
     }
+
+    .button.close {
+      display: none;
+    }
+
+    nav {
+      font-size: 1.6rem;
+
+      ul {
+        display: flex;
+        gap: 2rem;
+      }
+    }
+  }
 }

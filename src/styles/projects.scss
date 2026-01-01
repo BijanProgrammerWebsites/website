@@ -1,121 +1,121 @@
 @use "/src/styles/utils";
 
 #projects {
-    > ul {
+  > ul {
+    display: grid;
+    gap: 16rem;
+
+    > li {
+      display: grid;
+      justify-items: center;
+      gap: 2rem;
+
+      .info {
         display: grid;
-        gap: 16rem;
+        justify-items: center;
+        gap: 2rem;
 
-        > li {
-            display: grid;
-            justify-items: center;
-            gap: 2rem;
+        text-align: center;
 
-            .info {
-                display: grid;
-                justify-items: center;
-                gap: 2rem;
+        .title {
+          a {
+            color: inherit;
 
-                text-align: center;
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
 
-                .title {
-                    a {
-                        color: inherit;
+            @include utils.font-size-clamp(24, 28);
+            font-weight: 700;
 
-                        display: inline-flex;
-                        align-items: center;
-                        gap: 1rem;
-
-                        @include utils.font-size-clamp(24, 28);
-                        font-weight: 700;
-
-                        text-decoration: none;
-                    }
-                }
-
-                .description {
-                    max-inline-size: 70ch;
-
-                    @include utils.font-size-clamp(16, 18);
-                    line-height: 1.5;
-                }
-
-                .tags {
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: center;
-                    gap: 2rem;
-
-                    li {
-                        flex: 0 0 4rem;
-
-                        aspect-ratio: 1 / 1;
-
-                        svg {
-                            block-size: 100%;
-                            inline-size: 100%;
-                            object-fit: contain;
-                        }
-                    }
-                }
-
-                .links {
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: center;
-                    gap: 1rem;
-
-                    li {
-                        .button {
-                            svg {
-                                block-size: 1.5em;
-                            }
-                        }
-                    }
-                }
-            }
-
-            .mockup {
-                display: grid;
-                place-items: center;
-
-                img {
-                    max-block-size: 40rem;
-                    inline-size: auto;
-                }
-            }
+            text-decoration: none;
+          }
         }
+
+        .description {
+          max-inline-size: 70ch;
+
+          @include utils.font-size-clamp(16, 18);
+          line-height: 1.5;
+        }
+
+        .tags {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 2rem;
+
+          li {
+            flex: 0 0 4rem;
+
+            aspect-ratio: 1 / 1;
+
+            svg {
+              block-size: 100%;
+              inline-size: 100%;
+              object-fit: contain;
+            }
+          }
+        }
+
+        .links {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 1rem;
+
+          li {
+            .button {
+              svg {
+                block-size: 1.5em;
+              }
+            }
+          }
+        }
+      }
+
+      .mockup {
+        display: grid;
+        place-items: center;
+
+        img {
+          max-block-size: 40rem;
+          inline-size: auto;
+        }
+      }
     }
+  }
 }
 
 @media (width >= 1000px) {
-    #projects {
-        > ul {
-            > li {
-                grid-template-columns: 1fr 1fr;
-                align-items: center;
+  #projects {
+    > ul {
+      > li {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
 
-                .info {
-                    justify-items: start;
+        .info {
+          justify-items: start;
 
-                    text-align: start;
+          text-align: start;
 
-                    .tags {
-                        justify-content: start;
-                    }
+          .tags {
+            justify-content: start;
+          }
 
-                    .links {
-                        justify-content: start;
-                    }
-                }
-
-                .mockup {
-                    order: 2;
-
-                    img {
-                        max-block-size: 50rem;
-                    }
-                }
-            }
+          .links {
+            justify-content: start;
+          }
         }
+
+        .mockup {
+          order: 2;
+
+          img {
+            max-block-size: 50rem;
+          }
+        }
+      }
     }
+  }
 }

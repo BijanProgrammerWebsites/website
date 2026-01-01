@@ -1,268 +1,268 @@
 ---
-import {Image} from 'astro:assets';
+import { Image } from "astro:assets";
 
-import angularIcon from '@assets/brands/angular.svg';
-import reactIcon from '@assets/brands/react.svg';
-import sassIcon from '@assets/brands/sass.svg';
-import nextJsIcon from '@assets/brands/next-js.svg';
-import antDesignIcon from '@assets/brands/ant-design.svg';
-import muiIcon from '@assets/brands/mui.svg';
-import swaggerIcon from '@assets/brands/swagger.svg';
-import javascriptIcon from '@assets/brands/javascript.svg';
-import typescriptIcon from '@assets/brands/typescript.svg';
-import highchartsIcon from '@assets/brands/highcharts.svg';
-import docusaurusIcon from '@assets/brands/docusaurus.svg';
-import jwtIcon from '@assets/brands/jwt.svg';
-import gsapIcon from '@assets/brands/gsap.svg';
-import gitIcon from '@assets/brands/git.svg';
-import githubIcon from '@assets/brands/github.svg';
-import nodeJsIcon from '@assets/brands/node-js.svg';
-import cSharpIcon from '@assets/brands/c-sharp.svg';
-import pythonIcon from '@assets/brands/python.svg';
-import postgresqlIcon from '@assets/brands/postgresql.svg';
-import mongodbIcon from '@assets/brands/mongodb.svg';
-import mysqlIcon from '@assets/brands/mysql.svg';
-import postmanIcon from '@assets/brands/postman.svg';
-import jestIcon from '@assets/brands/jest.svg';
-import cypressIcon from '@assets/brands/cypress.svg';
-import storybookIcon from '@assets/brands/storybook.svg';
-import jqueryIcon from '@assets/brands/jquery.svg';
-import azureIcon from '@assets/brands/azure.svg';
-import jiraIcon from '@assets/brands/jira.svg';
-import confluenceIcon from '@assets/brands/confluence.svg';
-import trelloIcon from '@assets/brands/trello.svg';
-import aspDotnetCoreIcon from '@assets/brands/asp-dotnet-core.svg';
-import nginxIcon from '@assets/brands/nginx.svg';
-import xunitIcon from '@assets/brands/xunit.svg';
-import entityFrameworkCoreIcon from '@assets/brands/entity-framework-core.svg';
-import prismaIcon from '@assets/brands/prisma.svg';
-import gulpIcon from '@assets/brands/gulp.svg';
-import mapboxIcon from '@assets/brands/mapbox.svg';
-import elasticsearchIcon from '@assets/brands/elasticsearch.svg';
-import kibanaIcon from '@assets/brands/kibana.svg';
-import puppeteerIcon from '@assets/brands/puppeteer.svg';
-import rxjsIcon from '@assets/brands/rxjs.svg';
-import reduxIcon from '@assets/brands/redux.svg';
+import angularIcon from "@assets/brands/angular.svg";
+import reactIcon from "@assets/brands/react.svg";
+import sassIcon from "@assets/brands/sass.svg";
+import nextJsIcon from "@assets/brands/next-js.svg";
+import antDesignIcon from "@assets/brands/ant-design.svg";
+import muiIcon from "@assets/brands/mui.svg";
+import swaggerIcon from "@assets/brands/swagger.svg";
+import javascriptIcon from "@assets/brands/javascript.svg";
+import typescriptIcon from "@assets/brands/typescript.svg";
+import highchartsIcon from "@assets/brands/highcharts.svg";
+import docusaurusIcon from "@assets/brands/docusaurus.svg";
+import jwtIcon from "@assets/brands/jwt.svg";
+import gsapIcon from "@assets/brands/gsap.svg";
+import gitIcon from "@assets/brands/git.svg";
+import githubIcon from "@assets/brands/github.svg";
+import nodeJsIcon from "@assets/brands/node-js.svg";
+import cSharpIcon from "@assets/brands/c-sharp.svg";
+import pythonIcon from "@assets/brands/python.svg";
+import postgresqlIcon from "@assets/brands/postgresql.svg";
+import mongodbIcon from "@assets/brands/mongodb.svg";
+import mysqlIcon from "@assets/brands/mysql.svg";
+import postmanIcon from "@assets/brands/postman.svg";
+import jestIcon from "@assets/brands/jest.svg";
+import cypressIcon from "@assets/brands/cypress.svg";
+import storybookIcon from "@assets/brands/storybook.svg";
+import jqueryIcon from "@assets/brands/jquery.svg";
+import azureIcon from "@assets/brands/azure.svg";
+import jiraIcon from "@assets/brands/jira.svg";
+import confluenceIcon from "@assets/brands/confluence.svg";
+import trelloIcon from "@assets/brands/trello.svg";
+import aspDotnetCoreIcon from "@assets/brands/asp-dotnet-core.svg";
+import nginxIcon from "@assets/brands/nginx.svg";
+import xunitIcon from "@assets/brands/xunit.svg";
+import entityFrameworkCoreIcon from "@assets/brands/entity-framework-core.svg";
+import prismaIcon from "@assets/brands/prisma.svg";
+import gulpIcon from "@assets/brands/gulp.svg";
+import mapboxIcon from "@assets/brands/mapbox.svg";
+import elasticsearchIcon from "@assets/brands/elasticsearch.svg";
+import kibanaIcon from "@assets/brands/kibana.svg";
+import puppeteerIcon from "@assets/brands/puppeteer.svg";
+import rxjsIcon from "@assets/brands/rxjs.svg";
+import reduxIcon from "@assets/brands/redux.svg";
 
-type Skill = {title: string; image: typeof reactIcon};
+type Skill = { title: string; image: typeof reactIcon };
 
 const perfectSkills: Skill[] = [
-    {
-        title: 'React',
-        image: reactIcon,
-    },
-    {
-        title: 'Next.js',
-        image: nextJsIcon,
-    },
-    {
-        title: 'Angular',
-        image: angularIcon,
-    },
-    {
-        title: 'Material UI',
-        image: muiIcon,
-    },
-    {
-        title: 'Ant Design',
-        image: antDesignIcon,
-    },
-    {
-        title: 'JavaScript',
-        image: javascriptIcon,
-    },
-    {
-        title: 'TypeScript',
-        image: typescriptIcon,
-    },
-    {
-        title: 'Node.js',
-        image: nodeJsIcon,
-    },
-    {
-        title: 'Swagger',
-        image: swaggerIcon,
-    },
-    {
-        title: 'JWT',
-        image: jwtIcon,
-    },
-    {
-        title: 'GSAP',
-        image: gsapIcon,
-    },
-    {
-        title: 'Git',
-        image: gitIcon,
-    },
-    {
-        title: 'GitHub',
-        image: githubIcon,
-    },
-    {
-        title: 'Sass',
-        image: sassIcon,
-    },
-    {
-        title: 'Highcharts',
-        image: highchartsIcon,
-    },
-    {
-        title: 'Docusaurus',
-        image: docusaurusIcon,
-    },
+  {
+    title: "React",
+    image: reactIcon,
+  },
+  {
+    title: "Next.js",
+    image: nextJsIcon,
+  },
+  {
+    title: "Angular",
+    image: angularIcon,
+  },
+  {
+    title: "Material UI",
+    image: muiIcon,
+  },
+  {
+    title: "Ant Design",
+    image: antDesignIcon,
+  },
+  {
+    title: "JavaScript",
+    image: javascriptIcon,
+  },
+  {
+    title: "TypeScript",
+    image: typescriptIcon,
+  },
+  {
+    title: "Node.js",
+    image: nodeJsIcon,
+  },
+  {
+    title: "Swagger",
+    image: swaggerIcon,
+  },
+  {
+    title: "JWT",
+    image: jwtIcon,
+  },
+  {
+    title: "GSAP",
+    image: gsapIcon,
+  },
+  {
+    title: "Git",
+    image: gitIcon,
+  },
+  {
+    title: "GitHub",
+    image: githubIcon,
+  },
+  {
+    title: "Sass",
+    image: sassIcon,
+  },
+  {
+    title: "Highcharts",
+    image: highchartsIcon,
+  },
+  {
+    title: "Docusaurus",
+    image: docusaurusIcon,
+  },
 ];
 
 const goodSkills: Skill[] = [
-    {
-        title: 'Redux',
-        image: reduxIcon,
-    },
-    {
-        title: 'Storybook',
-        image: storybookIcon,
-    },
-    {
-        title: 'Jest',
-        image: jestIcon,
-    },
-    {
-        title: 'Cypress',
-        image: cypressIcon,
-    },
-    {
-        title: 'Puppeteer',
-        image: puppeteerIcon,
-    },
-    {
-        title: 'jQuery',
-        image: jqueryIcon,
-    },
-    {
-        title: 'PostgreSQL',
-        image: postgresqlIcon,
-    },
-    {
-        title: 'MongoDB',
-        image: mongodbIcon,
-    },
-    {
-        title: 'MySQL',
-        image: mysqlIcon,
-    },
-    {
-        title: 'Postman',
-        image: postmanIcon,
-    },
-    {
-        title: 'C#',
-        image: cSharpIcon,
-    },
-    {
-        title: 'Python',
-        image: pythonIcon,
-    },
-    {
-        title: 'Azure',
-        image: azureIcon,
-    },
-    {
-        title: 'Jira',
-        image: jiraIcon,
-    },
-    {
-        title: 'Confluence',
-        image: confluenceIcon,
-    },
-    {
-        title: 'Trello',
-        image: trelloIcon,
-    },
+  {
+    title: "Redux",
+    image: reduxIcon,
+  },
+  {
+    title: "Storybook",
+    image: storybookIcon,
+  },
+  {
+    title: "Jest",
+    image: jestIcon,
+  },
+  {
+    title: "Cypress",
+    image: cypressIcon,
+  },
+  {
+    title: "Puppeteer",
+    image: puppeteerIcon,
+  },
+  {
+    title: "jQuery",
+    image: jqueryIcon,
+  },
+  {
+    title: "PostgreSQL",
+    image: postgresqlIcon,
+  },
+  {
+    title: "MongoDB",
+    image: mongodbIcon,
+  },
+  {
+    title: "MySQL",
+    image: mysqlIcon,
+  },
+  {
+    title: "Postman",
+    image: postmanIcon,
+  },
+  {
+    title: "C#",
+    image: cSharpIcon,
+  },
+  {
+    title: "Python",
+    image: pythonIcon,
+  },
+  {
+    title: "Azure",
+    image: azureIcon,
+  },
+  {
+    title: "Jira",
+    image: jiraIcon,
+  },
+  {
+    title: "Confluence",
+    image: confluenceIcon,
+  },
+  {
+    title: "Trello",
+    image: trelloIcon,
+  },
 ];
 
 const normalSkills: Skill[] = [
-    {
-        title: 'ASP.NET Core',
-        image: aspDotnetCoreIcon,
-    },
-    {
-        title: 'Entity Framework Core',
-        image: entityFrameworkCoreIcon,
-    },
-    {
-        title: 'xUnit.net',
-        image: xunitIcon,
-    },
-    {
-        title: 'NGINX',
-        image: nginxIcon,
-    },
-    {
-        title: 'RxJS',
-        image: rxjsIcon,
-    },
-    {
-        title: 'Prisma',
-        image: prismaIcon,
-    },
-    {
-        title: 'Gulp.js',
-        image: gulpIcon,
-    },
-    {
-        title: 'Elasticsearch',
-        image: elasticsearchIcon,
-    },
-    {
-        title: 'Kibana',
-        image: kibanaIcon,
-    },
-    {
-        title: 'Mapbox',
-        image: mapboxIcon,
-    },
+  {
+    title: "ASP.NET Core",
+    image: aspDotnetCoreIcon,
+  },
+  {
+    title: "Entity Framework Core",
+    image: entityFrameworkCoreIcon,
+  },
+  {
+    title: "xUnit.net",
+    image: xunitIcon,
+  },
+  {
+    title: "NGINX",
+    image: nginxIcon,
+  },
+  {
+    title: "RxJS",
+    image: rxjsIcon,
+  },
+  {
+    title: "Prisma",
+    image: prismaIcon,
+  },
+  {
+    title: "Gulp.js",
+    image: gulpIcon,
+  },
+  {
+    title: "Elasticsearch",
+    image: elasticsearchIcon,
+  },
+  {
+    title: "Kibana",
+    image: kibanaIcon,
+  },
+  {
+    title: "Mapbox",
+    image: mapboxIcon,
+  },
 ];
 ---
 
 <section id="hard-skills">
-    <h2>مهارت‌های فنی</h2>
-    <div class="group perfect">
-        <h3>تسلط کامل</h3>
-        <ul class="skills">
-            {
-                perfectSkills.map((skill) => (
-                    <li>
-                        <Image src={skill.image} alt="" />
-                        <div class="title">{skill.title}</div>
-                    </li>
-                ))
-            }
-        </ul>
-    </div>
-    <div class="group good">
-        <h3>تسلط کافی</h3>
-        <ul class="skills">
-            {
-                goodSkills.map((skill) => (
-                    <li>
-                        <Image src={skill.image} alt="" />
-                        <div class="title">{skill.title}</div>
-                    </li>
-                ))
-            }
-        </ul>
-    </div>
-    <div class="group normal">
-        <h3>سابقه استفاده</h3>
-        <ul class="skills">
-            {
-                normalSkills.map((skill) => (
-                    <li>
-                        <Image src={skill.image} alt="" />
-                        <div class="title">{skill.title}</div>
-                    </li>
-                ))
-            }
-        </ul>
-    </div>
+  <h2>مهارت‌های فنی</h2>
+  <div class="group perfect">
+    <h3>تسلط کامل</h3>
+    <ul class="skills">
+      {
+        perfectSkills.map((skill) => (
+          <li>
+            <Image src={skill.image} alt="" />
+            <div class="title">{skill.title}</div>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+  <div class="group good">
+    <h3>تسلط کافی</h3>
+    <ul class="skills">
+      {
+        goodSkills.map((skill) => (
+          <li>
+            <Image src={skill.image} alt="" />
+            <div class="title">{skill.title}</div>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+  <div class="group normal">
+    <h3>سابقه استفاده</h3>
+    <ul class="skills">
+      {
+        normalSkills.map((skill) => (
+          <li>
+            <Image src={skill.image} alt="" />
+            <div class="title">{skill.title}</div>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
 </section>

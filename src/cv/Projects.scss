@@ -1,65 +1,65 @@
 .projects {
+  display: grid;
+  gap: var(--cv-gutter-900);
+
+  > li {
     display: grid;
-    gap: var(--cv-gutter-900);
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    justify-items: center;
+    gap: var(--cv-gutter-700);
 
-    > li {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        align-items: center;
-        justify-items: center;
-        gap: var(--cv-gutter-700);
+    .info {
+      display: grid;
+      justify-items: start;
+      gap: var(--cv-gutter-400);
 
-        .info {
-            display: grid;
-            justify-items: start;
-            gap: var(--cv-gutter-400);
+      text-align: start;
 
-            text-align: start;
+      .title {
+        a {
+          color: inherit;
 
-            .title {
-                a {
-                    color: inherit;
+          display: inline-flex;
+          align-items: center;
+          gap: var(--cv-gutter-400);
 
-                    display: inline-flex;
-                    align-items: center;
-                    gap: var(--cv-gutter-400);
+          font-size: 1.4rem;
+          font-weight: 700;
 
-                    font-size: 1.4rem;
-                    font-weight: 700;
+          text-decoration: none;
 
-                    text-decoration: none;
-
-                    svg {
-                        display: none;
-                    }
-                }
-            }
-
-            .description {
-                max-inline-size: 70ch;
-
-                line-height: 1.5;
-            }
-
-            .tags {
-                display: none;
-            }
-
-            .links {
-                display: none;
-            }
+          svg {
+            display: none;
+          }
         }
+      }
 
-        .mockup {
-            order: 2;
+      .description {
+        max-inline-size: 70ch;
 
-            display: grid;
-            place-items: center;
+        line-height: 1.5;
+      }
 
-            img {
-                max-block-size: 50mm;
-                inline-size: auto;
-            }
-        }
+      .tags {
+        display: none;
+      }
+
+      .links {
+        display: none;
+      }
     }
+
+    .mockup {
+      order: 2;
+
+      display: grid;
+      place-items: center;
+
+      img {
+        max-block-size: 50mm;
+        inline-size: auto;
+      }
+    }
+  }
 }

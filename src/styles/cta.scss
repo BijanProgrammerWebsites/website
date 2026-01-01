@@ -1,119 +1,122 @@
 @use "/src/styles/utils";
 
 .cta {
-    color: var(--color-primary-opposite);
+  color: var(--color-primary-opposite);
 
-    display: inline-flex;
-    align-items: center;
-    gap: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
 
-    padding: 2rem 3rem;
+  padding: 2rem 3rem;
 
-    transform: skewX(15deg);
+  transform: skewX(15deg);
 
-    @include utils.font-size-clamp(18, 24);
-    font-weight: 700;
+  @include utils.font-size-clamp(18, 24);
+  font-weight: 700;
 
-    text-decoration: none;
+  text-decoration: none;
 
+  &::before {
+    content: "";
+
+    background-color: var(--color-primary);
+    box-shadow: -0.6rem 0.6rem 0 var(--color-gray-10);
+
+    position: absolute;
+    inset: 0;
+
+    transform-origin: right;
+
+    transition-duration: var(--animation-duration-normal);
+    transition-property: inset, box-shadow;
+  }
+
+  .title,
+  .icon {
+    transform: skewX(-15deg);
+  }
+
+  .icon {
+    position: relative;
+
+    display: grid;
+    place-items: center;
+
+    transition: var(--animation-duration-normal);
+
+    svg {
+      block-size: 1em;
+      inline-size: auto;
+
+      path {
+        fill: var(--color-primary-opposite);
+
+        transition: transform var(--animation-duration-normal);
+
+        &:nth-of-type(1) {
+          transform: translateX(-2rem);
+        }
+
+        &:nth-of-type(3) {
+          transform: translateX(2rem);
+        }
+      }
+    }
+  }
+
+  &:hover {
     &::before {
-        content: "";
+      box-shadow: -1rem 1rem 0 var(--color-secondary);
 
-        background-color: var(--color-primary);
-        box-shadow: -0.6rem 0.6rem 0 var(--color-gray-10);
-
-        position: absolute;
-        inset: 0;
-
-        transform-origin: right;
-
-        transition-duration: var(--animation-duration-normal);
-        transition-property: inset, box-shadow;
-    }
-
-    .title,
-    .icon {
-        transform: skewX(-15deg);
+      inset-inline-end: -2rem;
     }
 
     .icon {
-        position: relative;
+      translate: -2rem;
 
-        display: grid;
-        place-items: center;
+      svg {
+        path {
+          &:nth-of-type(1) {
+            transform: translateX(0%);
 
-        transition: var(--animation-duration-normal);
+            animation: cta-color-animation var(--animation-duration-slow) linear
+              infinite 0.2s;
+          }
 
-        svg {
-            block-size: 1em;
-            inline-size: auto;
+          &:nth-of-type(2) {
+            transform: translateX(0%);
 
-            path {
-                fill: var(--color-primary-opposite);
+            animation: cta-color-animation var(--animation-duration-slow) linear
+              infinite 0.4s;
+          }
 
-                transition: transform var(--animation-duration-normal);
+          &:nth-of-type(3) {
+            transform: translateX(0%);
 
-                &:nth-of-type(1) {
-                    transform: translateX(-2rem);
-                }
-
-                &:nth-of-type(3) {
-                    transform: translateX(2rem);
-                }
-            }
+            animation: cta-color-animation var(--animation-duration-slow) linear
+              infinite 0.4s;
+          }
         }
+      }
     }
+  }
 
-    &:hover {
-        &::before {
-            box-shadow: -1rem 1rem 0 var(--color-secondary);
-
-            inset-inline-end: -2rem;
-        }
-
-        .icon {
-            translate: -2rem;
-
-            svg {
-                path {
-                    &:nth-of-type(1) {
-                        transform: translateX(0%);
-
-                        animation: cta-color-animation var(--animation-duration-slow) linear infinite 0.2s;
-                    }
-
-                    &:nth-of-type(2) {
-                        transform: translateX(0%);
-
-                        animation: cta-color-animation var(--animation-duration-slow) linear infinite 0.4s;
-                    }
-
-                    &:nth-of-type(3) {
-                        transform: translateX(0%);
-
-                        animation: cta-color-animation var(--animation-duration-slow) linear infinite 0.4s;
-                    }
-                }
-            }
-        }
-    }
-
-    &:focus-visible {
-        outline: var(--outline-focus-visible);
-        outline-offset: 1rem;
-    }
+  &:focus-visible {
+    outline: var(--outline-focus-visible);
+    outline-offset: 1rem;
+  }
 }
 
 @keyframes cta-color-animation {
-    0% {
-        fill: var(--color-primary-opposite);
-    }
+  0% {
+    fill: var(--color-primary-opposite);
+  }
 
-    50% {
-        fill: var(--color-secondary);
-    }
+  50% {
+    fill: var(--color-secondary);
+  }
 
-    100% {
-        fill: var(--color-primary-opposite);
-    }
+  100% {
+    fill: var(--color-primary-opposite);
+  }
 }

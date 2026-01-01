@@ -1,18 +1,18 @@
 footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
 
-    padding-block: 2rem;
-    padding-inline: var(--full-width-padding-inline);
+  padding-block: 2rem;
+  padding-inline: var(--full-width-padding-inline);
 
-    text-align: center;
+  text-align: center;
 }
 
 @media (width >= 1000px) {
-    footer {
-        flex-direction: row;
-        justify-content: space-between;
-    }
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }

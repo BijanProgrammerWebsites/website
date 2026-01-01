@@ -1,59 +1,63 @@
 ---
-import {Image} from 'astro:assets';
+import { Image } from "astro:assets";
 
-import shafafstuMockup from '@assets/mockups/shafafstu.webp';
+import shafafstuMockup from "@assets/mockups/shafafstu.webp";
 
-import htmlIcon from '@assets/brands/html.svg';
-import cssIcon from '@assets/brands/css.svg';
-import javascriptIcon from '@assets/brands/javascript.svg';
+import htmlIcon from "@assets/brands/html.svg";
+import cssIcon from "@assets/brands/css.svg";
+import javascriptIcon from "@assets/brands/javascript.svg";
 
-import externalLinkIcon from '@assets/icons/external-link.svg?raw';
-import githubIcon from '@assets/icons/github.svg?raw';
+import externalLinkIcon from "@assets/icons/external-link.svg?raw";
+import githubIcon from "@assets/icons/github.svg?raw";
 ---
 
 <li>
-    <div class="mockup">
-        <Image src={shafafstuMockup} alt="" />
+  <div class="mockup">
+    <Image src={shafafstuMockup} alt="" />
+  </div>
+  <div class="info">
+    <div class="title">
+      <a href="https://shafafstu.ir/" target="_blank">
+        وب‌سایت shafafstu.ir
+        <Fragment set:html={externalLinkIcon} />
+      </a>
     </div>
-    <div class="info">
-        <div class="title">
-            <a href="https://shafafstu.ir/" target="_blank">
-                وب‌سایت shafafstu.ir
-                <Fragment set:html={externalLinkIcon} />
-            </a>
-        </div>
-        <p class="description">
-            این وب‌سایت رو به سفارش گروه شفافیت مصوبات شوراهای مدارس زدم.
-            <br />
-            با توجه به اینکه مخاطب سایت قشر نوجوان بود، سعی کردم از طراحی مینیمال و مدرن استفاده کنم و سبک پروژه رو کمی به
-            سمت فانتزی‌شدن ببرم.
-            <br />
-            با اینکه حجم پروژه کم بود اما تنوع المان‌ها نسبتاً زیاد بود. مثلاً از المان‌های نمودار، مودال، Timeline، فرم،
-            Testimonial و Carousel استفاده شده.
-            <br />
-        </p>
-        <ul class="tags">
-            <li><Image src={htmlIcon} alt="HTML" /></li>
-            <li><Image src={cssIcon} alt="CSS" /></li>
-            <li><Image src={javascriptIcon} alt="JavaScript" /></li>
-        </ul>
-        <ul class="links">
-            <li>
-                <a class="button button--primary" href="https://shafafstu.ir/" target="_blank">
-                    مشاهده وب‌سایت
-                    <Fragment set:html={externalLinkIcon} />
-                </a>
-            </li>
-            <li>
-                <a
-                    class="button button--github"
-                    href="https://github.com/BijanProgrammerFreelancing/parscoders-480942-shafafstu"
-                    target="_blank"
-                >
-                    مشاهده کد
-                    <Fragment set:html={githubIcon} />
-                </a>
-            </li>
-        </ul>
-    </div>
+    <p class="description">
+      این وب‌سایت رو به سفارش گروه شفافیت مصوبات شوراهای مدارس زدم.
+      <br />
+      با توجه به اینکه مخاطب سایت قشر نوجوان بود، سعی کردم از طراحی مینیمال و مدرن
+      استفاده کنم و سبک پروژه رو کمی به سمت فانتزی‌شدن ببرم.
+      <br />
+      با اینکه حجم پروژه کم بود اما تنوع المان‌ها نسبتاً زیاد بود. مثلاً از المان‌های
+      نمودار، مودال، Timeline، فرم، Testimonial و Carousel استفاده شده.
+      <br />
+    </p>
+    <ul class="tags">
+      <li><Image src={htmlIcon} alt="HTML" /></li>
+      <li><Image src={cssIcon} alt="CSS" /></li>
+      <li><Image src={javascriptIcon} alt="JavaScript" /></li>
+    </ul>
+    <ul class="links">
+      <li>
+        <a
+          class="button button--primary"
+          href="https://shafafstu.ir/"
+          target="_blank"
+        >
+          مشاهده وب‌سایت
+          <Fragment set:html={externalLinkIcon} />
+        </a>
+      </li>
+      <li>
+        <a
+          class="button button--github"
+          href="https://github.com/BijanProgrammerFreelancing/parscoders-480942-shafafstu"
+          target="_blank"
+        >
+          مشاهده کد
+          <Fragment set:html={githubIcon} />
+        </a>
+      </li>
+    </ul>
+  </div>
 </li>

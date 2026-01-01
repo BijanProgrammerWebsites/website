@@ -1,62 +1,69 @@
 ---
-import linkedinIcon from '@assets/socials/linkedin.svg?raw';
-import telegramIcon from '@assets/socials/telegram.svg?raw';
-import githubIcon from '@assets/socials/github.svg?raw';
-import websiteIcon from '@assets/socials/website.svg?raw';
+import linkedinIcon from "@assets/socials/linkedin.svg?raw";
+import telegramIcon from "@assets/socials/telegram.svg?raw";
+import githubIcon from "@assets/socials/github.svg?raw";
+import websiteIcon from "@assets/socials/website.svg?raw";
 
-import CopyButton from '@components/CopyButton.astro';
+import CopyButton from "@components/CopyButton.astro";
 ---
 
 <section id="contact">
-    <h2>تماس با من</h2>
-    <ul>
-        <li class="linkedin">
-            <div class="icon">
-                <Fragment set:html={linkedinIcon} />
-            </div>
-            <div class="text">
-                <div class="title">LinkedIn</div>
-                <div class="username">
-                    <a href="https://www.linkedin.com/in/bijanprogrammer/" target="_blank">BijanProgrammer</a>
-                </div>
-            </div>
-            <CopyButton content="BijanProgrammer" />
-        </li>
-        <li class="telegram">
-            <div class="icon">
-                <Fragment set:html={telegramIcon} />
-            </div>
-            <div class="text">
-                <div class="title">Telegram</div>
-                <div class="username">
-                    <a href="https://t.me/BijanEisapour/" target="_blank">BijanEisapour</a>
-                </div>
-            </div>
-            <CopyButton content="BijanEisapour" />
-        </li>
-        <li class="github">
-            <div class="icon">
-                <Fragment set:html={githubIcon} />
-            </div>
-            <div class="text">
-                <div class="title">GitHub</div>
-                <div class="username">
-                    <a href="https://github.com/BijanProgrammer/" target="_blank">BijanProgrammer</a>
-                </div>
-            </div>
-            <CopyButton content="BijanProgrammer" />
-        </li>
-        <li class="website">
-            <div class="icon">
-                <Fragment set:html={websiteIcon} />
-            </div>
-            <div class="text">
-                <div class="title">Website</div>
-                <div class="username">
-                    <a href="https://bijanprogrammer.com/" target="_blank">BijanProgrammer.com</a>
-                </div>
-            </div>
-            <CopyButton content="https://bijanprogrammer.com/" />
-        </li>
-    </ul>
+  <h2>تماس با من</h2>
+  <ul>
+    <li class="linkedin">
+      <div class="icon">
+        <Fragment set:html={linkedinIcon} />
+      </div>
+      <div class="text">
+        <div class="title">LinkedIn</div>
+        <div class="username">
+          <a href="https://www.linkedin.com/in/bijanprogrammer/" target="_blank"
+            >BijanProgrammer</a
+          >
+        </div>
+      </div>
+      <CopyButton content="BijanProgrammer" />
+    </li>
+    <li class="telegram">
+      <div class="icon">
+        <Fragment set:html={telegramIcon} />
+      </div>
+      <div class="text">
+        <div class="title">Telegram</div>
+        <div class="username">
+          <a href="https://t.me/BijanEisapour/" target="_blank">BijanEisapour</a
+          >
+        </div>
+      </div>
+      <CopyButton content="BijanEisapour" />
+    </li>
+    <li class="github">
+      <div class="icon">
+        <Fragment set:html={githubIcon} />
+      </div>
+      <div class="text">
+        <div class="title">GitHub</div>
+        <div class="username">
+          <a href="https://github.com/BijanProgrammer/" target="_blank"
+            >BijanProgrammer</a
+          >
+        </div>
+      </div>
+      <CopyButton content="BijanProgrammer" />
+    </li>
+    <li class="website">
+      <div class="icon">
+        <Fragment set:html={websiteIcon} />
+      </div>
+      <div class="text">
+        <div class="title">Website</div>
+        <div class="username">
+          <a href="https://bijanprogrammer.com/" target="_blank"
+            >BijanProgrammer.com</a
+          >
+        </div>
+      </div>
+      <CopyButton content="https://bijanprogrammer.com/" />
+    </li>
+  </ul>
 </section>

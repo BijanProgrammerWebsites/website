@@ -1,88 +1,88 @@
 ---
-import '@styles/cv.scss';
-import '@cv/HardSkills.scss';
-import '@cv/SoftSkills.scss';
-import '@cv/Jobs.scss';
-import '@cv/Projects.scss';
-import '@cv/Education.scss';
-import '@cv/Honors.scss';
-import '@cv/Teaching.scss';
-import '@cv/English.scss';
+import "@styles/cv.scss";
+import "@cv/HardSkills.scss";
+import "@cv/SoftSkills.scss";
+import "@cv/Jobs.scss";
+import "@cv/Projects.scss";
+import "@cv/Education.scss";
+import "@cv/Honors.scss";
+import "@cv/Teaching.scss";
+import "@cv/English.scss";
 
-import Layout from '@layouts/Layout.astro';
+import Layout from "@layouts/Layout.astro";
 
-import Brief from '@cv/Brief.astro';
-import Header from '@cv/Header.astro';
-import Introduction from '@cv/Introduction.astro';
-import HardSkills from '@cv/HardSkills.astro';
-import SoftSkills from '@cv/SoftSkills.astro';
-import Honors from '@cv/Honors.astro';
-import Teaching from '@cv/Teaching.astro';
-import English from '@cv/English.astro';
+import Brief from "@cv/Brief.astro";
+import Header from "@cv/Header.astro";
+import Introduction from "@cv/Introduction.astro";
+import HardSkills from "@cv/HardSkills.astro";
+import SoftSkills from "@cv/SoftSkills.astro";
+import Honors from "@cv/Honors.astro";
+import Teaching from "@cv/Teaching.astro";
+import English from "@cv/English.astro";
 
-import Education from '@sections/Education.astro';
+import Education from "@sections/Education.astro";
 
-import MohaymenTeamLeadJob from '@jobs/MohaymenTeamLeadJob.astro';
-import MohaymenFrontendDeveloperJob from '@jobs/MohaymenFrontendDeveloperJob.astro';
-import CodeStarInternshipOfficer from '@jobs/CodeStarInternshipOfficer.astro';
+import MohaymenTeamLeadJob from "@jobs/MohaymenTeamLeadJob.astro";
+import MohaymenFrontendDeveloperJob from "@jobs/MohaymenFrontendDeveloperJob.astro";
+import CodeStarInternshipOfficer from "@jobs/CodeStarInternshipOfficer.astro";
 
-import CodeStarProject from '@projects/CodeStarProject.astro';
-import SchortProject from '@projects/SchortProject.astro';
-import ShafafstuProject from '@projects/ShafafstuProject.astro';
+import CodeStarProject from "@projects/CodeStarProject.astro";
+import SchortProject from "@projects/SchortProject.astro";
+import ShafafstuProject from "@projects/ShafafstuProject.astro";
 ---
 
 <Layout>
-    <main>
-        <div class="sheet">
-            <div class="side">
-                <Brief />
-            </div>
-            <div class="content">
-                <Header />
-                <Introduction />
-                <HardSkills />
-                <SoftSkills />
-            </div>
-        </div>
-        <div class="sheet">
-            <div class="side"></div>
-            <div class="content">
-                <section>
-                    <h2>سوابق شغلی</h2>
-                    <ul class="jobs">
-                        <MohaymenTeamLeadJob />
-                        <MohaymenFrontendDeveloperJob />
-                    </ul>
-                </section>
-            </div>
-        </div>
-        <div class="sheet">
-            <div class="side"></div>
-            <div class="content">
-                <section>
-                    <h2>ادامه سوابق شغلی</h2>
-                    <ul class="jobs">
-                        <CodeStarInternshipOfficer />
-                    </ul>
-                </section>
-                <section>
-                    <h2>پروژه‌ها</h2>
-                    <ul class="projects">
-                        <SchortProject />
-                        <CodeStarProject />
-                        <ShafafstuProject />
-                    </ul>
-                </section>
-            </div>
-        </div>
-        <div class="sheet">
-            <div class="side"></div>
-            <div class="content">
-                <Honors />
-                <Teaching />
-                <Education />
-                <English />
-            </div>
-        </div>
-    </main>
+  <main>
+    <div class="sheet">
+      <div class="side">
+        <Brief />
+      </div>
+      <div class="content">
+        <Header />
+        <Introduction />
+        <HardSkills />
+        <SoftSkills />
+      </div>
+    </div>
+    <div class="sheet">
+      <div class="side"></div>
+      <div class="content">
+        <section>
+          <h2>سوابق شغلی</h2>
+          <ul class="jobs">
+            <MohaymenTeamLeadJob />
+            <MohaymenFrontendDeveloperJob />
+          </ul>
+        </section>
+      </div>
+    </div>
+    <div class="sheet">
+      <div class="side"></div>
+      <div class="content">
+        <section>
+          <h2>ادامه سوابق شغلی</h2>
+          <ul class="jobs">
+            <CodeStarInternshipOfficer />
+          </ul>
+        </section>
+        <section>
+          <h2>پروژه‌ها</h2>
+          <ul class="projects">
+            <SchortProject />
+            <CodeStarProject />
+            <ShafafstuProject />
+          </ul>
+        </section>
+      </div>
+    </div>
+    <div class="sheet">
+      <div class="side"></div>
+      <div class="content">
+        <Honors />
+        <Teaching />
+        <Education />
+        <English />
+      </div>
+    </div>
+  </main>
 </Layout>

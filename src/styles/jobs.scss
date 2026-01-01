@@ -1,141 +1,141 @@
 @use "/src/styles/utils";
 
 #jobs {
-    > ul {
+  > ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(50rem, 100%), 1fr));
+    gap: 2rem;
+
+    > li {
+      background-color: var(--color-gray-98);
+      box-shadow: var(--box-shadow-subtle);
+
+      display: grid;
+      align-content: space-between;
+      gap: 2rem;
+
+      padding: 2rem;
+
+      border-radius: var(--border-radius);
+
+      .info {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(min(50rem, 100%), 1fr));
+        align-content: start;
+        gap: 0 1rem;
+
+        .header {
+          .title {
+            margin-block-start: 0.5rem;
+
+            @include utils.font-size-clamp(24, 28);
+            font-weight: 700;
+
+            line-height: 1.2;
+          }
+
+          .duration {
+            opacity: 0.5;
+
+            font-size: 1.4rem;
+          }
+
+          .corporate {
+            opacity: 0.8;
+          }
+        }
+
+        .description {
+          display: grid;
+          align-content: start;
+
+          max-inline-size: 70ch;
+
+          > *:not(:has(+ ul)) {
+            margin-block-end: 2rem;
+          }
+
+          ul {
+            list-style: disc inside;
+          }
+        }
+      }
+
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
         gap: 2rem;
 
-        > li {
-            background-color: var(--color-gray-98);
-            box-shadow: var(--box-shadow-subtle);
+        li {
+          flex: 0 0 4rem;
 
-            display: grid;
-            align-content: space-between;
-            gap: 2rem;
+          aspect-ratio: 1 / 1;
 
-            padding: 2rem;
-
-            border-radius: var(--border-radius);
-
-            .info {
-                display: grid;
-                align-content: start;
-                gap: 0 1rem;
-
-                .header {
-                    .title {
-                        margin-block-start: 0.5rem;
-
-                        @include utils.font-size-clamp(24, 28);
-                        font-weight: 700;
-
-                        line-height: 1.2;
-                    }
-
-                    .duration {
-                        opacity: 0.5;
-
-                        font-size: 1.4rem;
-                    }
-
-                    .corporate {
-                        opacity: 0.8;
-                    }
-                }
-
-                .description {
-                    display: grid;
-                    align-content: start;
-
-                    max-inline-size: 70ch;
-
-                    > *:not(:has(+ ul)) {
-                        margin-block-end: 2rem;
-                    }
-
-                    ul {
-                        list-style: disc inside;
-                    }
-                }
-            }
-
-            .tags {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 2rem;
-
-                li {
-                    flex: 0 0 4rem;
-
-                    aspect-ratio: 1 / 1;
-
-                    img {
-                        block-size: 100%;
-                        inline-size: 100%;
-                        object-fit: contain;
-                    }
-                }
-            }
+          img {
+            block-size: 100%;
+            inline-size: 100%;
+            object-fit: contain;
+          }
         }
+      }
     }
+  }
 }
 
 @media (width < 600px) {
-    #jobs {
-        > ul {
-            > li {
-                .info {
-                    justify-items: center;
-                    gap: 2rem;
+  #jobs {
+    > ul {
+      > li {
+        .info {
+          justify-items: center;
+          gap: 2rem;
 
-                    text-align: center;
+          text-align: center;
 
-                    .logo {
-                        max-block-size: 10rem;
+          .logo {
+            max-block-size: 10rem;
 
-                        img {
-                            max-block-size: 100%;
-                            inline-size: auto;
-                        }
-                    }
-
-                    .description {
-                        text-align: start;
-                    }
-                }
-
-                .tags {
-                    justify-content: center;
-                }
+            img {
+              max-block-size: 100%;
+              inline-size: auto;
             }
+          }
+
+          .description {
+            text-align: start;
+          }
         }
+
+        .tags {
+          justify-content: center;
+        }
+      }
     }
+  }
 }
 
 @media (width >= 600px) {
-    #jobs {
-        > ul {
-            > li {
-                .info {
-                    grid-template-areas: "header logo" "description description";
-                    grid-template-columns: 1fr 8rem;
+  #jobs {
+    > ul {
+      > li {
+        .info {
+          grid-template-areas: "header logo" "description description";
+          grid-template-columns: 1fr 8rem;
 
-                    .header {
-                        grid-area: header;
-                    }
+          .header {
+            grid-area: header;
+          }
 
-                    .logo {
-                        grid-area: logo;
-                    }
+          .logo {
+            grid-area: logo;
+          }
 
-                    .description {
-                        grid-area: description;
+          .description {
+            grid-area: description;
 
-                        margin-block-start: 2rem;
-                    }
-                }
-            }
+            margin-block-start: 2rem;
+          }
         }
+      }
     }
+  }
 }

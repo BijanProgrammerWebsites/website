@@ -1,42 +1,42 @@
 #education {
-    > ul {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: var(--cv-gutter-700);
+  > ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--cv-gutter-700);
 
-        > li {
-            display: grid;
-            grid-template-columns: 8mm 1fr;
-            align-content: start;
-            gap: 0 var(--cv-gutter-400);
+    > li {
+      display: grid;
+      grid-template-columns: 8mm 1fr;
+      align-content: start;
+      gap: 0 var(--cv-gutter-400);
 
-            .logo {
-                min-block-size: 100%;
-                block-size: 0;
+      .logo {
+        min-block-size: 100%;
+        block-size: 0;
 
-                img {
-                    block-size: 100%;
-                    inline-size: 100%;
-                    object-fit: contain;
-                }
-            }
-
-            .text {
-                .title {
-                    margin-block-start: var(--cv-gutter-100);
-
-                    font-size: 1.4rem;
-                    font-weight: 700;
-
-                    line-height: 1.2;
-                }
-
-                .duration {
-                    opacity: 0.7;
-
-                    font-size: 1rem;
-                }
-            }
+        img {
+          block-size: 100%;
+          inline-size: 100%;
+          object-fit: contain;
         }
+      }
+
+      .text {
+        .title {
+          margin-block-start: var(--cv-gutter-100);
+
+          font-size: 1.4rem;
+          font-weight: 700;
+
+          line-height: 1.2;
+        }
+
+        .duration {
+          opacity: 0.7;
+
+          font-size: 1rem;
+        }
+      }
     }
+  }
 }

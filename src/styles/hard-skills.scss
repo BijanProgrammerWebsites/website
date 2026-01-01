@@ -1,46 +1,46 @@
 @use "/src/styles/utils";
 
 #hard-skills {
-    .group {
-        display: grid;
+  .group {
+    display: grid;
+    gap: 1rem;
+
+    .skills {
+      direction: ltr;
+
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+
+      li {
+        flex: 1 0 auto;
+
+        background-color: var(--color-gray-98);
+        box-shadow: var(--box-shadow-subtle);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
         gap: 1rem;
 
-        .skills {
-            direction: ltr;
+        padding: 2rem;
 
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
+        border-radius: var(--border-radius);
 
-            li {
-                flex: 1 0 auto;
+        @include utils.font-size-clamp(16, 24);
 
-                background-color: var(--color-gray-98);
-                box-shadow: var(--box-shadow-subtle);
+        text-align: center;
 
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: 1rem;
-
-                padding: 2rem;
-
-                border-radius: var(--border-radius);
-
-                @include utils.font-size-clamp(16, 24);
-
-                text-align: center;
-
-                img {
-                    block-size: 2em;
-                    inline-size: auto;
-                    object-fit: contain;
-                }
-
-                .title {
-                    line-height: 1;
-                }
-            }
+        img {
+          block-size: 2em;
+          inline-size: auto;
+          object-fit: contain;
         }
+
+        .title {
+          line-height: 1;
+        }
+      }
     }
+  }
 }

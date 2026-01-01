@@ -1,130 +1,132 @@
 ---
-import {Image} from 'astro:assets';
+import { Image } from "astro:assets";
 
-import codestarLogo from '@assets/logos/codestar.svg';
+import codestarLogo from "@assets/logos/codestar.svg";
 
-import swaggerIcon from '@assets/brands/swagger.svg';
-import docusaurusIcon from '@assets/brands/docusaurus.svg';
-import jwtIcon from '@assets/brands/jwt.svg';
-import nodeJsIcon from '@assets/brands/node-js.svg';
-import mysqlIcon from '@assets/brands/mysql.svg';
-import cypressIcon from '@assets/brands/cypress.svg';
-import puppeteerIcon from '@assets/brands/puppeteer.svg';
+import swaggerIcon from "@assets/brands/swagger.svg";
+import docusaurusIcon from "@assets/brands/docusaurus.svg";
+import jwtIcon from "@assets/brands/jwt.svg";
+import nodeJsIcon from "@assets/brands/node-js.svg";
+import mysqlIcon from "@assets/brands/mysql.svg";
+import cypressIcon from "@assets/brands/cypress.svg";
+import puppeteerIcon from "@assets/brands/puppeteer.svg";
 ---
 
 <li>
-    <div class="info">
-        <div class="logo">
-            <Image src={codestarLogo} alt="" />
-        </div>
-        <div class="header">
-            <div class="duration">دی 1400 تا شهریور 1401</div>
-            <div class="title">مسئول برگزاری کارآموزی کداستار</div>
-            <div class="corporate">شرکت فناوری اطلاعات و ارتباطات مهیمن</div>
-        </div>
-        <div class="description">
-            <p>
-                تابستان 1399 به‌عنوان
-                <strong>کارآموز</strong>
-                وارد اولین دورۀ کارآموزی کداستار شدم؛ پس از طی‌کردن دوره و استخدام در شرکت، زمستان 1399 به‌عنوان
-                <strong>منتور</strong>
-                در برگزاری دوره سهیم بودم. تابستان 1400 به‌عنوان
-                <strong>مسئول دورۀ فرانت‌اند</strong>
-                و در نهایت تابستان 1401 به‌عنوان
-                <strong>مسئول کل دوره</strong>
-                حضور داشتم.
-            </p>
-            <p>
-                <strong>در بالاترین منسب اجرایی</strong>، مسئولیت‌های مهمی بر عهدۀ من بود:
-            </p>
-            <ul>
-                <li>
-                    برگزاری جلسات متعدد و متنوع
-                    <strong>از ماه‌ها قبل</strong>
-                    در جهت
-                    <strong>برنامه‌ریزی اصولی</strong>
-                    و
-                    <strong>به‌موقع</strong>
-                </li>
-                <li>
-                    <strong>تقسیم وظایف</strong>
-                    و نظارت بر
-                    <strong>اجرای صحیح</strong>
-                    آن‌ها
-                </li>
-                <li>
-                    <strong>تدوین ساختار مستندات آموزشی</strong>
-                    و نظارت بر روند بازنویسی آن‌ها
-                </li>
-                <li>
-                    <strong>مشارکت در طراحی سوالات</strong>
-                    آزمون ورودی فرانت‌اند و
-                    <strong>نظارت</strong>
-                    بر روند طراحی سوالات آزمون ورودی مهندسی نرم‌افزار
-                </li>
-                <li>
-                    برنامه‌ریزی و
-                    <strong>زمان‌بندی جلسات مصاحبه</strong>
-                </li>
-                <li>
-                    چیدن
-                    <strong>ساختار هرمی تیم‌ها</strong>
-                    در جهت تسهیل فرآیند مدیریت
-                </li>
-                <li>
-                    برنامه‌ریزی و زمان‌بندی
-                    <strong>کارگاه‌ها</strong>،
-                    {` `}
-                    <strong>جلسات فنی</strong>
-                    و
-                    <strong>جلسات سرگرمی</strong>
-                </li>
-                <li>
-                    <strong>نظارت بر تشکیل کارگاه‌ها</strong>
-                    و حضور مؤثر کارآموزها
-                </li>
-                <li>
-                    نظارت بر
-                    <strong>ضبط و انتشار</strong>
-                    ویدئوهای آموزشی
-                </li>
-                <li>
-                    برگزاری
-                    <strong>جلسات روزانه با کارآموزها</strong>
-                    و حصول اطمینان از
-                    <strong>رضایت آن‌ها</strong>
-                </li>
-                <li>
-                    برگزاری جلسات سرگرمی در جهت
-                    <strong>تحکیم روابط دوستانه</strong>
-                    و
-                    <strong>ایجاد نشاط و سرزندگی</strong>
-                    بین منتورها و کارآموزها
-                </li>
-                <li>
-                    برگزاری
-                    <strong>جلسات روزانه</strong>
-                    با منتورها در جهت
-                    <strong>نظارت بر روند کارآموزی</strong>
-                </li>
-                <li>
-                    برگزاری
-                    <strong>جلسات هفتگی</strong>
-                    با تیم
-                    <strong>سرمایه انسانی</strong>
-                    در جهت اطمینان از
-                    <strong>سلامت روال‌ها و فرآیندها</strong>
-                </li>
-            </ul>
-        </div>
+  <div class="info">
+    <div class="logo">
+      <Image src={codestarLogo} alt="" />
     </div>
-    <ul class="tags">
-        <li><Image src={nodeJsIcon} alt="Node.js" /></li>
-        <li><Image src={swaggerIcon} alt="Swagger" /></li>
-        <li><Image src={docusaurusIcon} alt="Docusaurus" /></li>
-        <li><Image src={jwtIcon} alt="JWT" /></li>
-        <li><Image src={mysqlIcon} alt="MySQL" /></li>
-        <li><Image src={puppeteerIcon} alt="Puppeteer" /></li>
-        <li><Image src={cypressIcon} alt="Cypress" /></li>
-    </ul>
+    <div class="header">
+      <div class="duration">دی 1400 تا شهریور 1401</div>
+      <div class="title">مسئول برگزاری کارآموزی کداستار</div>
+      <div class="corporate">شرکت فناوری اطلاعات و ارتباطات مهیمن</div>
+    </div>
+    <div class="description">
+      <p>
+        تابستان 1399 به‌عنوان
+        <strong>کارآموز</strong>
+        وارد اولین دورۀ کارآموزی کداستار شدم؛ پس از طی‌کردن دوره و استخدام در شرکت،
+        زمستان 1399 به‌عنوان
+        <strong>منتور</strong>
+        در برگزاری دوره سهیم بودم. تابستان 1400 به‌عنوان
+        <strong>مسئول دورۀ فرانت‌اند</strong>
+        و در نهایت تابستان 1401 به‌عنوان
+        <strong>مسئول کل دوره</strong>
+        حضور داشتم.
+      </p>
+      <p>
+        <strong>در بالاترین منسب اجرایی</strong>، مسئولیت‌های مهمی بر عهدۀ من
+        بود:
+      </p>
+      <ul>
+        <li>
+          برگزاری جلسات متعدد و متنوع
+          <strong>از ماه‌ها قبل</strong>
+          در جهت
+          <strong>برنامه‌ریزی اصولی</strong>
+          و
+          <strong>به‌موقع</strong>
+        </li>
+        <li>
+          <strong>تقسیم وظایف</strong>
+          و نظارت بر
+          <strong>اجرای صحیح</strong>
+          آن‌ها
+        </li>
+        <li>
+          <strong>تدوین ساختار مستندات آموزشی</strong>
+          و نظارت بر روند بازنویسی آن‌ها
+        </li>
+        <li>
+          <strong>مشارکت در طراحی سوالات</strong>
+          آزمون ورودی فرانت‌اند و
+          <strong>نظارت</strong>
+          بر روند طراحی سوالات آزمون ورودی مهندسی نرم‌افزار
+        </li>
+        <li>
+          برنامه‌ریزی و
+          <strong>زمان‌بندی جلسات مصاحبه</strong>
+        </li>
+        <li>
+          چیدن
+          <strong>ساختار هرمی تیم‌ها</strong>
+          در جهت تسهیل فرآیند مدیریت
+        </li>
+        <li>
+          برنامه‌ریزی و زمان‌بندی
+          <strong>کارگاه‌ها</strong>،
+          {` `}
+          <strong>جلسات فنی</strong>
+          و
+          <strong>جلسات سرگرمی</strong>
+        </li>
+        <li>
+          <strong>نظارت بر تشکیل کارگاه‌ها</strong>
+          و حضور مؤثر کارآموزها
+        </li>
+        <li>
+          نظارت بر
+          <strong>ضبط و انتشار</strong>
+          ویدئوهای آموزشی
+        </li>
+        <li>
+          برگزاری
+          <strong>جلسات روزانه با کارآموزها</strong>
+          و حصول اطمینان از
+          <strong>رضایت آن‌ها</strong>
+        </li>
+        <li>
+          برگزاری جلسات سرگرمی در جهت
+          <strong>تحکیم روابط دوستانه</strong>
+          و
+          <strong>ایجاد نشاط و سرزندگی</strong>
+          بین منتورها و کارآموزها
+        </li>
+        <li>
+          برگزاری
+          <strong>جلسات روزانه</strong>
+          با منتورها در جهت
+          <strong>نظارت بر روند کارآموزی</strong>
+        </li>
+        <li>
+          برگزاری
+          <strong>جلسات هفتگی</strong>
+          با تیم
+          <strong>سرمایه انسانی</strong>
+          در جهت اطمینان از
+          <strong>سلامت روال‌ها و فرآیندها</strong>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <ul class="tags">
+    <li><Image src={nodeJsIcon} alt="Node.js" /></li>
+    <li><Image src={swaggerIcon} alt="Swagger" /></li>
+    <li><Image src={docusaurusIcon} alt="Docusaurus" /></li>
+    <li><Image src={jwtIcon} alt="JWT" /></li>
+    <li><Image src={mysqlIcon} alt="MySQL" /></li>
+    <li><Image src={puppeteerIcon} alt="Puppeteer" /></li>
+    <li><Image src={cypressIcon} alt="Cypress" /></li>
+  </ul>
 </li>

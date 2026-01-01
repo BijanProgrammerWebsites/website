@@ -1,114 +1,114 @@
 @use "/src/styles/utils";
 
 .button {
-    background-color: var(--background-color);
-    color: var(--color);
+  background-color: var(--background-color);
+  color: var(--color);
 
-    position: relative;
-    isolation: isolate;
+  position: relative;
+  isolation: isolate;
 
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
 
-    padding: 1rem 2rem;
+  padding: 1rem 2rem;
 
-    border-radius: var(--border-radius);
+  border-radius: var(--border-radius);
 
-    text-decoration: none;
+  text-decoration: none;
 
-    cursor: pointer;
+  cursor: pointer;
 
-    @include utils.font-size-clamp(16, 18);
+  @include utils.font-size-clamp(16, 18);
+
+  &::before {
+    --padding: 0;
+
+    content: "";
+
+    background-color: var(--background-color-hover);
+    opacity: 0;
+
+    position: absolute;
+    inset: calc(-1 * var(--padding));
+    z-index: -1;
+
+    block-size: 100%;
+    inline-size: 100%;
+
+    transition: opacity var(--animation-duration-fast) ease-in-out;
+  }
+
+  svg {
+    --size: 1.25em;
+
+    block-size: var(--size);
+    inline-size: var(--size);
+  }
+
+  &:hover {
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  &:focus-visible {
+    outline: none;
 
     &::before {
-        --padding: 0;
+      opacity: 1;
 
-        content: "";
+      outline: var(--outline-focus-visible);
 
-        background-color: var(--background-color-hover);
-        opacity: 0;
-
-        position: absolute;
-        inset: calc(-1 * var(--padding));
-        z-index: -1;
-
-        block-size: 100%;
-        inline-size: 100%;
-
-        transition: opacity var(--animation-duration-fast) ease-in-out;
+      transition: none;
     }
+  }
 
-    svg {
-        --size: 1.25em;
+  &--primary {
+    --background-color: var(--color-primary);
+    --background-color-hover: var(--color-primary-darker);
+    --color: var(--color-primary-opposite);
+  }
 
-        block-size: var(--size);
-        inline-size: var(--size);
-    }
+  &--github {
+    --background-color: var(--color-gray-10);
+    --background-color-hover: var(--color-gray-20);
+    --color: var(--color-gray-90);
+  }
 
-    &:hover {
-        &::before {
-            opacity: 1;
-        }
-    }
+  &--icon {
+    --background-color: transparent;
+    --background-color-hover: var(--color-gray-90);
+    --color: inherit;
+    --padding: 0.5rem;
 
-    &:focus-visible {
-        outline: none;
+    background-color: transparent;
 
-        &::before {
-            opacity: 1;
+    display: inline-grid;
+    place-items: center;
 
-            outline: var(--outline-focus-visible);
+    padding: 0;
 
-            transition: none;
-        }
+    border: none;
+
+    &::before {
+      --padding: 0.5rem;
+
+      block-size: unset;
+      inline-size: unset;
+
+      border-radius: 999rem;
     }
 
     &--primary {
-        --background-color: var(--color-primary);
-        --background-color-hover: var(--color-primary-darker);
-        --color: var(--color-primary-opposite);
+      --background-color: transparent;
+      --background-color-hover: var(--color-primary-fade);
+      --color: var(--color-primary);
     }
+  }
 
-    &--github {
-        --background-color: var(--color-gray-10);
-        --background-color-hover: var(--color-gray-20);
-        --color: var(--color-gray-90);
-    }
-
-    &--icon {
-        --background-color: transparent;
-        --background-color-hover: var(--color-gray-90);
-        --color: inherit;
-        --padding: 0.5rem;
-
-        background-color: transparent;
-
-        display: inline-grid;
-        place-items: center;
-
-        padding: 0;
-
-        border: none;
-
-        &::before {
-            --padding: 0.5rem;
-
-            block-size: unset;
-            inline-size: unset;
-
-            border-radius: 999rem;
-        }
-
-        &--primary {
-            --background-color: transparent;
-            --background-color-hover: var(--color-primary-fade);
-            --color: var(--color-primary);
-        }
-    }
-
-    &--large {
-        @include utils.font-size-clamp(18, 24);
-    }
+  &--large {
+    @include utils.font-size-clamp(18, 24);
+  }
 }

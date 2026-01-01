@@ -1,11 +1,11 @@
 name: Deploy
 on:
-    push:
-        branches: [master]
+  push:
+    branches: [master]
 
 jobs:
-    deploy:
-        uses: BijanProgrammerWebsites/hub/.github/workflows/deploy-astro.yml@master
-        with:
-            host: bijanprogrammer.com
-            base-href: /
+  deploy:
+    uses: BijanProgrammerWebsites/hub/.github/workflows/deploy-astro.yml@master
+    with:
+      host: bijanprogrammer.com
+      base-href: /

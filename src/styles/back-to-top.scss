@@ -1,37 +1,37 @@
 #back-to-top {
-    --background-color: var(--color-gray-10);
-    --background-color-hover: var(--color-gray-10);
-    --color: var(--color-gray-98);
+  --background-color: var(--color-gray-10);
+  --background-color-hover: var(--color-gray-10);
+  --color: var(--color-gray-98);
 
-    --inset: 4rem;
+  --inset: 4rem;
 
-    opacity: 1;
+  opacity: 1;
 
-    position: fixed;
-    inset-block-end: var(--inset);
-    inset-inline-end: var(--inset);
-    z-index: 1;
+  position: fixed;
+  inset-block-end: var(--inset);
+  inset-inline-end: var(--inset);
+  z-index: 1;
 
-    font-size: 2.4rem;
+  font-size: 2.4rem;
 
-    transition: var(--animation-duration-fast) ease-in-out;
-    transition-property: transform, opacity;
+  transition: var(--animation-duration-fast) ease-in-out;
+  transition-property: transform, opacity;
 
+  &::before {
+    opacity: 0.7;
+
+    transition: opacity var(--animation-duration-fast);
+  }
+
+  &:hover {
     &::before {
-        opacity: 0.7;
-
-        transition: opacity var(--animation-duration-fast);
+      opacity: 1;
     }
+  }
 
-    &:hover {
-        &::before {
-            opacity: 1;
-        }
-    }
+  &.hidden {
+    opacity: 0;
 
-    &.hidden {
-        opacity: 0;
-
-        transform: translateY(calc(var(--inset) + var(--padding) + 100% + 0px));
-    }
+    transform: translateY(calc(var(--inset) + var(--padding) + 100% + 0px));
+  }
 }

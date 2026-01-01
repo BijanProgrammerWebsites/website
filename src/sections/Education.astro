@@ -1,32 +1,32 @@
 ---
-import {Image} from 'astro:assets';
+import { Image } from "astro:assets";
 
-import khuLogo from '@assets/logos/khu.png';
-import helli4Logo from '@assets/logos/helli4.png';
+import khuLogo from "@assets/logos/khu.png";
+import helli4Logo from "@assets/logos/helli4.png";
 ---
 
 <section id="education">
-    <h2>سوابق تحصیلی</h2>
-    <ul>
-        <li>
-            <div class="logo">
-                <Image src={khuLogo} alt="" />
-            </div>
-            <div class="text">
-                <div class="title">لیسانس مهندسی کامپیوتر</div>
-                <div class="institute">دانشگاه خوارزمی کرج</div>
-                <div class="duration">مهر 1397 تا شهریور 1401</div>
-            </div>
-        </li>
-        <li>
-            <div class="logo">
-                <Image src={helli4Logo} alt="" />
-            </div>
-            <div class="text">
-                <div class="title">دیپلم ریاضی فیزیک</div>
-                <div class="institute">دبیرستان علامه حلی 4 تهران (تیزهوشان)</div>
-                <div class="duration">مهر 1393 تا خرداد 1397</div>
-            </div>
-        </li>
-    </ul>
+  <h2>سوابق تحصیلی</h2>
+  <ul>
+    <li>
+      <div class="logo">
+        <Image src={khuLogo} alt="" />
+      </div>
+      <div class="text">
+        <div class="title">لیسانس مهندسی کامپیوتر</div>
+        <div class="institute">دانشگاه خوارزمی کرج</div>
+        <div class="duration">مهر 1397 تا شهریور 1401</div>
+      </div>
+    </li>
+    <li>
+      <div class="logo">
+        <Image src={helli4Logo} alt="" />
+      </div>
+      <div class="text">
+        <div class="title">دیپلم ریاضی فیزیک</div>
+        <div class="institute">دبیرستان علامه حلی 4 تهران (تیزهوشان)</div>
+        <div class="duration">مهر 1393 تا خرداد 1397</div>
+      </div>
+    </li>
+  </ul>
 </section>
