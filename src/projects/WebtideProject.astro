@@ -1,0 +1,66 @@
+---
+import { Image } from "astro:assets";
+
+import webtideMockup from "@assets/mockups/webtide.webp";
+
+import nextJsIcon from "@assets/brands/next-js.svg";
+import sassIcon from "@assets/brands/sass.svg";
+import typescriptIcon from "@assets/brands/typescript.svg";
+
+import externalLinkIcon from "@assets/icons/external-link.svg?raw";
+import githubIcon from "@assets/icons/github.svg?raw";
+---
+
+<li>
+  <div class="mockup">
+    <Image src={webtideMockup} alt="" />
+  </div>
+  <div class="info">
+    <div class="title">
+      <a href="https://webtide.ir/" target="_blank">
+        وب‌سایت webtide.ir
+        <Fragment set:html={externalLinkIcon} />
+      </a>
+    </div>
+    <p class="description">
+      این وب‌سایت رو برای معرفی یک تیم برنامه‌نویسی توسعه دادم.
+      <br />
+      طراحی UI توسط یک فرد حرفه‌ای انجام شده بود و چالش اصلی این کار، تطابق 100درصدی
+      با طرح و پیاده‌سازی Responsive بود به‌طوری که سایت در تمام صفحات، از گوشی موبایل
+      تا مانیتور کامپیوتر، به‌خوبی نمایش داده بشه.
+      <br />
+
+      همچنین انیمیشن‌های متنوعی برای نمایش لیست‌های مختلف استفاده شده تا جذابیت
+      کار بیشتر بشه.
+      <br />
+      برای پیاده‌سازی از Next.js استفاده کردم که برای SEO مشکلی پیش نیاد.
+    </p>
+    <ul class="tags">
+      <li><Image src={nextJsIcon} alt="Next.js" /></li>
+      <li><Image src={typescriptIcon} alt="TypeScript" /></li>
+      <li><Image src={sassIcon} alt="Sass" /></li>
+    </ul>
+    <ul class="links">
+      <li>
+        <a
+          class="button button--primary"
+          href="https://webtide.ir/"
+          target="_blank"
+        >
+          مشاهده وب‌سایت
+          <Fragment set:html={externalLinkIcon} />
+        </a>
+      </li>
+      <li>
+        <a
+          class="button button--github"
+          href="https://github.com/BijanProgrammerWebsites/webtide"
+          target="_blank"
+        >
+          مشاهده کد
+          <Fragment set:html={githubIcon} />
+        </a>
+      </li>
+    </ul>
+  </div>
+</li>

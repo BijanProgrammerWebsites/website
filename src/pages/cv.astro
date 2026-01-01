@@ -27,8 +27,10 @@ import MohaymenFrontendDeveloperJob from "@jobs/MohaymenFrontendDeveloperJob.ast
 import CodeStarInternshipOfficer from "@jobs/CodeStarInternshipOfficer.astro";
 
 import CodeStarProject from "@projects/CodeStarProject.astro";
+import PassaidProject from "@projects/PassaidProject.astro";
 import SchortProject from "@projects/SchortProject.astro";
 import ShafafstuProject from "@projects/ShafafstuProject.astro";
+import WebtideProject from "@projects/WebtideProject.astro";
 ---
 
 <Layout>
@@ -68,9 +70,9 @@ import ShafafstuProject from "@projects/ShafafstuProject.astro";
         <section>
           <h2>پروژه‌ها</h2>
           <ul class="projects">
+            <WebtideProject />
             <SchortProject />
             <CodeStarProject />
-            <ShafafstuProject />
           </ul>
         </section>
       </div>
@@ -78,8 +80,20 @@ import ShafafstuProject from "@projects/ShafafstuProject.astro";
     <div class="sheet">
       <div class="side"></div>
       <div class="content">
+        <section>
+          <h2>ادامه پروژه‌ها</h2>
+          <ul class="projects">
+            <ShafafstuProject />
+            <PassaidProject />
+          </ul>
+        </section>
         <Honors />
         <Teaching />
+      </div>
+    </div>
+    <div class="sheet">
+      <div class="side"></div>
+      <div class="content">
         <Education />
         <English />
       </div>

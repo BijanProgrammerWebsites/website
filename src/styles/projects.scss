@@ -50,7 +50,8 @@
 
             aspect-ratio: 1 / 1;
 
-            svg {
+            svg,
+            img {
               block-size: 100%;
               inline-size: 100%;
               object-fit: contain;
