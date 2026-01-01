@@ -3,12 +3,16 @@ import { Image } from "astro:assets";
 
 import bijanImage from "@assets/images/bijan-eisapour.webp";
 
+import aparatIcon from "@assets/socials/aparat.svg?raw";
 import emailIcon from "@assets/socials/email.svg?raw";
 import linkedinIcon from "@assets/socials/linkedin.svg?raw";
 import telegramIcon from "@assets/socials/telegram.svg?raw";
 import phoneIcon from "@assets/socials/phone.svg?raw";
 import githubIcon from "@assets/socials/github.svg?raw";
 import websiteIcon from "@assets/socials/website.svg?raw";
+import youtubeIcon from "@assets/socials/youtube.svg?raw";
+
+import qrCode from "@assets/qr-code/qr-code.svg?raw";
 
 import "./Brief.scss";
 
@@ -21,48 +25,6 @@ const age = (() => {
 
 <section id="brief">
   <Image class="me" src={bijanImage} alt="" loading="eager" />
-
-  <section class="contact">
-    <h2>اطلاعات تماس</h2>
-    <ul>
-      {
-        import.meta.env.MODE === "development" && (
-          <>
-            <li class="phone">
-              <div class="icon">
-                <Fragment set:html={phoneIcon} />
-              </div>
-              <div class="text">
-                <a href={`tel:${import.meta.env.PHONE_NUMBER}`}>
-                  {import.meta.env.PHONE_NUMBER_TITLE}
-                </a>
-              </div>
-            </li>
-            <li class="email">
-              <div class="icon">
-                <Fragment set:html={emailIcon} />
-              </div>
-              <div class="text">
-                <a href={`mailto:${import.meta.env.EMAIL}`}>
-                  {import.meta.env.EMAIL}
-                </a>
-              </div>
-            </li>
-          </>
-        )
-      }
-      <li class="website">
-        <div class="icon">
-          <Fragment set:html={websiteIcon} />
-        </div>
-        <div class="text">
-          <a href="https://bijanprogrammer.com/" target="_blank"
-            >BijanProgrammer.com</a
-          >
-        </div>
-      </li>
-    </ul>
-  </section>
   <section class="personal">
     <h2>اطلاعات فردی</h2>
     <ul>
@@ -88,39 +50,132 @@ const age = (() => {
       </li>
     </ul>
   </section>
+  <section class="contact">
+    <h2>اطلاعات تماس</h2>
+    <ul>
+      {
+        import.meta.env.MODE === "development" && (
+          <li>
+            <div class="icon">
+              <Fragment set:html={phoneIcon} />
+              شماره تلفن
+            </div>
+            <div class="text">
+              <a href={`tel:${import.meta.env.PHONE_NUMBER}`}>
+                {import.meta.env.PHONE_NUMBER_TITLE}
+              </a>
+            </div>
+          </li>
+        )
+      }
+      <li>
+        <div class="icon">
+          <Fragment set:html={telegramIcon} />
+          تلگرام
+        </div>
+        <div class="text">
+          <a href="https://t.me/BijanEisapour/" target="_blank">
+            @BijanEisapour
+          </a>
+        </div>
+      </li>
+      {
+        import.meta.env.MODE === "development" && (
+          <li>
+            <div class="icon">
+              <Fragment set:html={emailIcon} />
+              ایمیل
+            </div>
+            <div class="text">
+              <a href={`mailto:${import.meta.env.EMAIL}`}>
+                {import.meta.env.EMAIL}
+              </a>
+            </div>
+          </li>
+        )
+      }
+    </ul>
+  </section>
   <section class="social">
     <h2>شبکه‌های اجتماعی</h2>
     <ul>
-      <li class="linkedin">
+      <li>
         <div class="icon">
           <Fragment set:html={linkedinIcon} />
+          LinkedIn
         </div>
         <div class="text">
-          <a href="https://www.linkedin.com/in/bijanprogrammer/" target="_blank"
-            >@BijanProgrammer</a
+          <a
+            href="https://www.linkedin.com/in/bijanprogrammer/"
+            target="_blank"
           >
+            @BijanProgrammer
+          </a>
         </div>
       </li>
-      <li class="telegram">
-        <div class="icon">
-          <Fragment set:html={telegramIcon} />
-        </div>
-        <div class="text">
-          <a href="https://t.me/BijanEisapour/" target="_blank"
-            >@BijanEisapour</a
-          >
-        </div>
-      </li>
-      <li class="github">
+      <li>
         <div class="icon">
           <Fragment set:html={githubIcon} />
+          GitHub
         </div>
         <div class="text">
-          <a href="https://github.com/BijanProgrammer/" target="_blank"
-            >@BijanProgrammer</a
-          >
+          <a href="https://github.com/BijanProgrammer/" target="_blank">
+            @BijanProgrammer
+          </a>
+        </div>
+      </li>
+      <li>
+        <div class="icon">
+          <Fragment set:html={youtubeIcon} />
+          YouTube
+        </div>
+        <div class="text">
+          <a href="https://www.youtube.com/@BijanProgrammer" target="_blank">
+            @BijanProgrammer
+          </a>
+        </div>
+      </li>
+      <li>
+        <div class="icon">
+          <Fragment set:html={aparatIcon} />
+          آپارات
+        </div>
+        <div class="text">
+          <a href="https://www.aparat.com/BijanProgrammer" target="_blank">
+            @BijanProgrammer
+          </a>
         </div>
       </li>
     </ul>
+  </section>
+  <section class="references">
+    <h2>ارجاعات</h2>
+    <ul>
+      <li>
+        <div class="icon">سایت شخصی</div>
+        <div class="text">
+          <a href="https://bijanprogrammer.com/" target="_blank">
+            BijanProgrammer.com
+          </a>
+        </div>
+      </li>
+      <li>
+        <div class="icon">دوره‌های آموزشی</div>
+        <div class="text">
+          <a href="https://codective.ir/" target="_blank">codective.ir</a>
+        </div>
+      </li>
+      <li>
+        <div class="icon">آموزش‌های متنی</div>
+        <div class="text">
+          <a href="https://docs.codective.ir/" target="_blank">
+            docs.codective.ir
+          </a>
+        </div>
+      </li>
+    </ul>
+  </section>
+  <section class="qr-code">
+    <Fragment set:html={qrCode} />
   </section>
 </section>

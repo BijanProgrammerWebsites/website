@@ -1,7 +1,9 @@
 #brief {
-  display: grid;
-  align-content: start;
+  display: flex;
+  flex-direction: column;
   gap: var(--cv-gutter-700);
+
+  block-size: 100%;
 
   padding: var(--cv-gutter-700);
 
@@ -48,13 +50,30 @@
     }
 
     &.contact,
-    &.social {
+    &.social,
+    &.references {
       ul {
         li {
+          .icon {
+            display: flex;
+            gap: 1ch;
+          }
+
           .text {
             direction: ltr;
           }
         }
+      }
+    }
+
+    &.qr-code {
+      margin-block-start: auto;
+
+      svg {
+        block-size: auto;
+        inline-size: 100%;
+
+        border-radius: 1rem;
       }
     }
   }
