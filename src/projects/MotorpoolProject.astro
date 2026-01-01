@@ -1,0 +1,56 @@
+---
+import { Image } from "astro:assets";
+
+import motorpoolMockup from "@assets/mockups/motorpool.webp";
+
+import htmlIcon from "@assets/brands/html.svg";
+import cssIcon from "@assets/brands/css.svg";
+
+import externalLinkIcon from "@assets/icons/external-link.svg?raw";
+import githubIcon from "@assets/icons/github.svg?raw";
+---
+
+<li>
+  <div class="mockup">
+    <Image src={motorpoolMockup} alt="" />
+  </div>
+  <div class="info">
+    <div class="title">
+      <a href="https://motorpool.ir/" target="_blank">
+        وب‌سایت motorpool.ir
+        <Fragment set:html={externalLinkIcon} />
+      </a>
+    </div>
+    <p class="description">
+      سایت معرفی یک فروشگاه خدمات VIP خودرو که به عنوان نمونه برای یک مشتری
+      خارجی توسعه دادم که شامل قسمت‌های مختلف مثل معرفی، خدمات، نمونه کار، فرم
+      تماس با ما، مشخصات و آدرس میشه.
+    </p>
+    <ul class="tags">
+      <li><Image src={htmlIcon} alt="HTML" /></li>
+      <li><Image src={cssIcon} alt="CSS" /></li>
+    </ul>
+    <ul class="links">
+      <li>
+        <a
+          class="button button--primary"
+          href="https://motorpool.ir/"
+          target="_blank"
+        >
+          مشاهده وب‌سایت
+          <Fragment set:html={externalLinkIcon} />
+        </a>
+      </li>
+      <li>
+        <a
+          class="button button--github"
+          href="https://github.com/BijanProgrammerWebsites/motorpool"
+          target="_blank"
+        >
+          مشاهده کد
+          <Fragment set:html={githubIcon} />
+        </a>
+      </li>
+    </ul>
+  </div>
+</li>
