@@ -63,7 +63,7 @@ body {
 
     margin: 0;
 
-    page-break-after: always;
+    break-after: page;
 
     > .side {
         background-color: var(--cv-color-primary);
