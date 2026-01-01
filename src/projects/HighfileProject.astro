@@ -1,0 +1,58 @@
+---
+import { Image } from "astro:assets";
+
+import highfileMockup from "@assets/mockups/highfile.webp";
+
+import htmlIcon from "@assets/brands/html.svg";
+import cssIcon from "@assets/brands/css.svg";
+
+import externalLinkIcon from "@assets/icons/external-link.svg?raw";
+import githubIcon from "@assets/icons/github.svg?raw";
+---
+
+<li>
+  <div class="mockup">
+    <Image src={highfileMockup} alt="" />
+  </div>
+  <div class="info">
+    <div class="title">
+      <a href="https://highfile.ir/" target="_blank">
+        وب‌سایت highfile.ir
+        <Fragment set:html={externalLinkIcon} />
+      </a>
+    </div>
+    <p class="description">
+      برای انجام پروژه‌ی دانشگاه نیاز بود تا یک سایت توسعه بدیم و از مطالبی که
+      در طول ترم یاد گرفته بودیم، در فرآیند پیاده‌سازی استفاده کنیم.
+      <br />
+      برای این کار به دنبال یک طرح استاندارد گشتم و با استفاده از HTML و CSS به صورت
+      Responsive پیاده‌سازیش کردم.
+    </p>
+    <ul class="tags">
+      <li><Image src={htmlIcon} alt="HTML" /></li>
+      <li><Image src={cssIcon} alt="CSS" /></li>
+    </ul>
+    <ul class="links">
+      <li>
+        <a
+          class="button button--primary"
+          href="https://highfile.ir/"
+          target="_blank"
+        >
+          مشاهده وب‌سایت
+          <Fragment set:html={externalLinkIcon} />
+        </a>
+      </li>
+      <li>
+        <a
+          class="button button--github"
+          href="https://github.com/BijanProgrammerWebsites/highfile"
+          target="_blank"
+        >
+          مشاهده کد
+          <Fragment set:html={githubIcon} />
+        </a>
+      </li>
+    </ul>
+  </div>
+</li>
