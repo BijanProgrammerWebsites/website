@@ -1,0 +1,59 @@
+---
+import { Image } from "astro:assets";
+
+import swiftlogixMockup from "@assets/mockups/swiftlogix.webp";
+
+import reactIcon from "@assets/brands/react.svg";
+import cssIcon from "@assets/brands/css.svg";
+
+import externalLinkIcon from "@assets/icons/external-link.svg?raw";
+import githubIcon from "@assets/icons/github.svg?raw";
+---
+
+<li>
+  <div class="mockup">
+    <Image src={swiftlogixMockup} alt="" />
+  </div>
+  <div class="info">
+    <div class="title">
+      <a href="https://swiftlogix.ir/" target="_blank">
+        وب‌سایت swiftlogix.ir
+        <Fragment set:html={externalLinkIcon} />
+      </a>
+    </div>
+    <p class="description">
+      تو Live Stream برای آموزش Responsiveکردن سایت، طرح رو از فیگما پیدا و
+      پیاده‌سازی کردم که شامل یه Landing Page با المان‌های پرکاربرده که رو تمام
+      صفحات به درستی نمایش داده میشه.
+      <br />
+      با توجه به اینکه تو حالت Desktop و Mobile از المان‌های تکراری استفاده می‌شد،
+      پروژه رو با React پیاده‌سازی کردم تا بتونم از Componentهاش استفاده کنم.
+    </p>
+    <ul class="tags">
+      <li><Image src={reactIcon} alt="React" /></li>
+      <li><Image src={cssIcon} alt="CSS" /></li>
+    </ul>
+    <ul class="links">
+      <li>
+        <a
+          class="button button--primary"
+          href="https://swiftlogix.ir/"
+          target="_blank"
+        >
+          مشاهده وب‌سایت
+          <Fragment set:html={externalLinkIcon} />
+        </a>
+      </li>
+      <li>
+        <a
+          class="button button--github"
+          href="https://github.com/CodectiveOrg/swiftlogix"
+          target="_blank"
+        >
+          مشاهده کد
+          <Fragment set:html={githubIcon} />
+        </a>
+      </li>
+    </ul>
+  </div>
+</li>
